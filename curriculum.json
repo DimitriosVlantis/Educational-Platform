@@ -1,0 +1,547 @@
+{
+  "fields":[
+    {
+      "name": "Computer Science",
+      "blocks": [
+      {
+        "number": 1,
+        "courses": [
+          {
+            "name": "Introduction To Programming With C++",
+            "projects": ["Build a UNIX Command Line Utility (e.g. count the characters/digits/punctuation/words/sentences/paragraphs in a txt document)"],
+            "textbooks":
+            [
+              "Programming Principles and Practice Using C++"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Introduction To Computer Science",
+            "projects": ["Informational project on version control systems"],
+            "textbooks":
+            [
+              "Computer Science Distilled: Learn the Art of Solving Computational Problems",
+              "Computer Science: An Overview"
+            ],
+            "supplemental_material": [
+              "Chapters 1-4, 8-9, 11, 13-17 from Computer Science: The Hardware, Software And Heart Of IT"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Introduction To Hardware",
+            "projects": ["Informational project on motherboards"],
+            "textbooks":
+            [
+              "Write Great Code I: Understanding The Machine"
+            ],
+            "supplemental_material": [
+              "Write Great Code II: Thinking Low-Level, Writing High-Level"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "courses": [
+          {
+            "name": "Programming With C++ #2",
+            "projects": ["Build a simple GUI To Do List storing and retrieving information using the file system"],
+            "textbooks":
+            [
+              "The C++ Programming Language",
+              "Effective C++"
+            ],
+            "supplemental_material":
+            [
+              "C++ Best Practices",
+              "C++ Concurrency In Action"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Computer Organization & Assembly Language",
+            "projects": ["Build a Calculator using RISC Assembly language"],
+            "textbooks":
+            [
+              "Computer Organization and Design: The Hardware-Software Interface",
+              "Programming from the Ground Up"
+            ],
+            "supplemental_material":
+            [
+              "Linkers & Loaders"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Data Structures With C++",
+            "projects": ["Implement different Data Structures"],
+            "textbooks":
+            [
+              "Data Structures And Algorithms In C++",
+              "Data Structures And Algorithms Made Easy"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "courses": [
+          {
+            "name": "Automata & Computational Theory",
+            "projects": ["Build a grammar for a JSON parser/serializer and implement it with C++"],
+            "textbooks":
+            [
+              "Introduction to the Theory of Computation"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Algorithms & Advanced Data Structures With C++",
+            "projects": ["Build a UNIX file system"],
+            "textbooks":
+            [
+              "Introduction To Algorithms",
+              "Advanced Data Structures"
+            ],
+            "supplemental_material": [
+              "Analysis of Algorithms"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Operating Systems & Systems Programming With C",
+            "projects": ["Build a Stopwatch Application with C and POSIX threads"],
+            "textbooks":
+            [
+              "Modern Operating Systems",
+              "Learn C the Hard Way"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Reverse Engineering: Advanced Assembly Language",
+            "projects": ["Reverse engineer the assembly code of a compiled password protected program to gain unauthorized access"],
+            "textbooks":
+            [
+              "Reverse Engineering for Beginners: Understanding Assembly Language"
+            ],
+            "supplemental_material": [
+              "The Art of Assembly Language"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "courses": [
+          {
+            "name": "Software Design, Principles & Paradigms With C++",
+            "projects": ["Build 3 different Pomodoro Timer Applications with GUI using Object-Oriented, Functional and Procedural Programming and Design Patterns"],
+            "textbooks":
+            [
+              "Object-Oriented Analysis & Design with Applications",
+              "GOF Design Patterns",
+              "Functional Programming in C++"
+            ],
+            "supplemental_material": [
+              "Dive Into Design Patterns",
+              "Use Cases Handbook",
+              "UML Distilled",
+              "Multi-Paradigm Design for C++",
+              "Practical C++ Design"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Databases",
+            "projects": ["Build a Student and Personnel Database application for a University"],
+            "textbooks":
+            [
+              "Database System Concepts",
+              "Seven Databases in Seven Weeks"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Computer Architecture",
+            "projects": [],
+            "textbooks":
+            [
+              "Computer Organization and Architecture: Designing for Performance"
+            ],
+            "supplemental_material": [
+              "Computer Architecture: A Quantitative Approach"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Computer Networks",
+            "projects": ["Build your own TCP/IP Stack with C++ based on Berkley Sockets"],
+            "textbooks":
+            [
+              "Computer Networks"
+            ],
+            "supplemental_material": [
+              "The Illustrated Network How TCP-IP Works in a Modern Network",
+              "CompTIA Network+ Certification",
+              "Beej's Guide To Network Programming Using Internet Sockets",
+              "C++ Network Programming"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "courses": [
+          {
+            "name": "Introduction To Web Development",
+            "projects": ["Design and develop an Autobiography/CV/Portfolio website for yourself"],
+            "textbooks":
+            [
+              "MDN Learning Path"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Software Development Lifecycle",
+            "projects": ["Mock an SDLC by going through each phase while designing a Chatting application"],
+            "textbooks":
+            [
+              "Requirements Analysis & System Design",
+              "Modern C++ Design: Generic Programming and Design Patterns Applied"
+            ],
+            "supplemental_material": [
+              "Software Engineering",
+              "Write Great Code III: Engineering Software",
+              "Design Patterns in Modern C++",
+              "Optimized C++",
+              "Structure And Interpretation Of Computer Programs"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Distributed Systems & Android Development with native C++",
+            "projects": ["Develop an Android Workout Logger"],
+            "textbooks":
+            [
+              "Distributed Systems - Tanenbaum",
+              "Google Android Kotlin Bootcamp Path and the NDK"
+            ],
+            "supplemental_material": [
+              "Distributed Systems: An Algorithmic Approach"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Electronics & Digital Circuits",
+            "projects": ["(Optional) Try to develop a Remote Controlled Car Toy! (Arduino/Raspberry PI)"],
+            "textbooks":
+            [
+              "Electronics All-In-One for Dummies",
+              "Hacking Electronics Learning Electronics with Arduino and Raspberry Pi"
+            ],
+            "supplemental_material": [
+              "Electrical Circuit Theory and Technology",
+              "Top-Down Digital VLSI Design: From Architectures to Gate-Level Circuits and FPGAs"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "courses": [
+          {
+            "name": "Backend Development with JavaScript",
+            "projects": ["Develop the Chatting application you designed in the SDLC course"],
+            "textbooks":
+            [
+              "You Don't Know JS Series",
+              "Node.js Web Development"
+            ],
+            "supplemental_material": [
+              "Advanced Node.js Web Development",
+              "Node.js Design Patterns"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Algorithms #2 & Algorithmic Design",
+            "projects": ["Build an Algorithm Visualizer with either C++/Electron.js on desktop or with JavaScript on the web"],
+            "textbooks":
+            [
+              "The Algorithm Design Manual",
+              "Advanced Data Structures: Theory and Applications"
+            ],
+            "supplemental_material": [
+              "The Art of Computer Programming Volumes by Knuth",
+              "Sequential & Parallel Algorithms And Data Structures: The Basic Toolbox"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Communication Networks",
+            "projects": ["Informational project on 5G/6G"],
+            "textbooks":
+            [
+              "Data and Computer Communications",
+              "Wireless Communication Networks & Systems"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Artificial Intelligence With C++",
+            "projects": ["Build a simple Weather Prediction Agent"],
+            "textbooks":
+            [
+              "Artificial Intelligence: A Modern Approach"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "courses": [
+          {
+            "name": "Systems Security",
+            "projects": ["Build a simple Virus"],
+            "textbooks":
+            [
+              "Computer Security: Principles & Practice",
+              "CompTIA Security+"
+            ],
+            "supplemental_material": [
+              "Security Engineering: A Guide To Building Dependable Distributed Systems",
+              "The Art Of Software Security Assessment",
+              "Password Authentication For Web And Mobile Apps"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Advanced Databases & Database Design",
+            "projects": ["Design and develop an Advanced Database System for a Social Networking app utilizing at least 2 different DBMSs (e.g. graph, relational)"],
+            "textbooks":
+            [
+              "Database Internals: A Deep-Dive into How Distributed Data Systems Work",
+              "Database Modeling And Design"
+            ],
+            "supplemental_material": [
+              "Database Systems: A Practical Approach to Design, Implementation & Management",
+              "Principles Of Distributed Database Systems"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Parallel Programming",
+            "projects": ["??? (Something with CUDA/C/C++ and GPU/MPI programming)"],
+            "textbooks":
+            [
+              "Introduction to Parallel Computing",
+              "Parallel Programming Concepts and Practice"
+            ],
+            "supplemental_material": [
+              "Introduction to Parallel Computing From Algorithms to Programming on State-of-the-Art Platforms",
+              "Parallel Programming For Modern High Performance Computing Systems",
+              "Programming Massively Parallel Processors A Hands-On Approach",
+              "Structured Parallel Programming Patterns for Efficient Computation",
+              "Multicore and GPU Programming",
+              "Pro TBB C++ Parallel Programming with Threading Building Blocks",
+              "Parallel Programming For Multicore & Cluster Systems"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Computer Graphics & Game Development",
+            "projects": ["Build an Arcade Shooting Game"],
+            "textbooks":
+            [
+              "Fundamentals of Computer Graphics",
+              "Game Engine Architecture"
+            ],
+            "supplemental_material": [
+              "C++ Reactive Programming",
+              "Game Programming Patterns",
+              "Computer Graphics: Principles and Practice",
+              "Essential Mathematics for Games and Interactive Applications",
+              "Game Design: Theory Practice",
+              "Game Mechanics: Advanced Game Design",
+              "Game Programming Algorithms and Techniques: A Platform-Agnostic Approach",
+              "Physics for Game Developers: Science, Math & Code for Realistic Effects"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "courses": [
+          {
+            "name": "Agile & DevOps",
+            "projects": ["Build a Calendar application using Agile Methodology, Version Control, CI/CD and ship with Docker"],
+            "textbooks":
+            [
+              "Agile Software Development Principles, Patterns & Practices",
+              "Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation"
+            ],
+            "supplemental_material": [
+              "DevOps Katas",
+              "Clean Code",
+              "Modern C++ Programming with Test-Driven Development: Code Better, Sleep Better",
+              "Dive Into Refactoring",
+              "xUnit Test Patterns: Refactoring Test Code",
+              "Refactoring: Improving the Design of Existing Code",
+              "Refactoring to Patterns",
+              "Understanding the Four Rules of Simple Design",
+              "BDD in Action: Behavior-Driven Development for the Whole Software Lifecycle",
+              "Test Driven Development By Example"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Machine Learning",
+            "projects": ["Build a Face Recognition application"],
+            "textbooks":
+            [
+              "Hands-On Machine Learning with C++"
+            ],
+            "supplemental_material":[],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Network Security, Cybersecurity & Cryptography",
+            "projects": ["Harden your Chatting app or build a Firewall"],
+            "textbooks":
+            [
+              "Network Security Essentials",
+              "Effective Cybersecurity"
+            ],
+            "supplemental_material": [
+              "Cryptography & Network Security"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Blockchain, Data Mining & Python",
+            "projects": ["Build a Web Crawler"],
+            "textbooks":
+            [
+              "Learn Python 3 the Hard Way: Rough Cuts",
+              "Introduction to Data Mining"
+            ],
+            "supplemental_material": [
+              "Mastering Bitcoin: Programming the Open Blockchain",
+              "Learn More Python the Hard Way: The Next Step for New Python Programmers",
+              "Data Visualization Guide: Clear Introduction to Data Mining, Analysis & Visualization"
+            ],
+            "description": "",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "courses": [
+          {
+            "name": "Embedded Systems Programming",
+            "projects": ["Build a Temperature Sensor on real hardware!"],
+            "textbooks":
+            [
+              "Hands-On Embedded Programming with C++17",
+              "Making Embedded Systems: Design Patterns for Great Software"
+            ],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Compilers",
+            "projects": ["Build a mini C Compiler or C Interpreter"],
+            "textbooks":
+            [
+              "Compilers: Principles, Techniques And Tools"
+            ],
+            "supplemental_material": [
+              "Advanced C and C++ Compiling"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Distributed Systems #2",
+            "projects": [],
+            "textbooks":
+            [
+              "Designing Distributed Systems: Patterns And Paradigms For Scalable, Reliable Services"
+            ],
+            "supplemental_material": [
+              "Distributed Computing Principles, Algorithms, and Systems"
+            ],
+            "description": "",
+            "image": ""
+          },
+          {
+            "name": "Case Study: Design & Develop A Programming Language",
+            "projects": [],
+            "textbooks": [],
+            "supplemental_material": [],
+            "description": "",
+            "image": ""
+          }
+        ]}
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "blocks":[
+      ]
+    },
+    {
+      "name": "Logistics",
+      "blocks":[
+      ]
+    }
+  ]
+}
