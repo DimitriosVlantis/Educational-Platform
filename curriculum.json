@@ -541,6 +541,48 @@
     {
       "name": "Logistics",
       "blocks":[
+        {
+          "number": "1",
+          "courses":[
+            {
+              "name": "Financial Logistics",
+              "projects":[],
+              "textbooks":["Modern Financial Logistics, Antonios Georgopoulos"],
+              "supplemental_material": [],
+              "description": "Financial Logistics, is the science that deals with the systematic gathering, computing and provision of financial information, which is essential for decision making",
+              "image": ""
+            },
+            {
+              "name": "Microfinancial Theory",
+              "projects":[],
+              "textbooks":["Microfinancial, Paul Krugman & Robin Wells"],
+              "supplemental_material":[],
+              "description": "The microfinancial emphasises in the decisions of atomic blocks and the consiquencies of those decisions",
+              "image":""
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "courses":[
+            {
+              "name": "Macrofinancial Theory",
+              "projects":[],
+              "textbooks":["Macrofinancial Principles and Politics, William Baumol & Alan Blinder"],
+              "supplemental_material":[],
+              "descriprion": "Examines the behaviors of wholeeconomies. That is, how the actions of the economic units,affect the whole economy and how they shape themEconomic measures",
+              "image":""
+            },
+            {
+              "name": "Basic Principles of Civil Law",
+              "projects":[],
+              "textbooks": "Basic Principles of Civil Law, Pinelopi Agallopoulou",
+              "supplemental_material":[],
+              "descriprion": "Civil law is the set of heteronomous rules that regulate in a mandatory way the social coexistence of people",
+              "image": ""
+            }
+          ]
+        }
       ]
     }
   ]
