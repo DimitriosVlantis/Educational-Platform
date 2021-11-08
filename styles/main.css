@@ -111,7 +111,7 @@ header img {
     height: min(0.4em, 0.6vmin);
     margin: auto;
     padding: 0;
-    background-color: #080808;
+    background-color: var(--text-color);
     border-radius: 2px;
     transform: translateZ(0) rotate(0);
 }
