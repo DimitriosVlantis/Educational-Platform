@@ -1,0 +1,242 @@
+/* Fonts */
+
+/* fira-sans */
+/* normal */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-100.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-100.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+} /* thin */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-200.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-200.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal;
+} /* light */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-300.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-300.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+} /* semi-light */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-400.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-400.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+} /* regular */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-500.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-500.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+} /* medium */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-600.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-600.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+} /* medium */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-700.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-700.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+} /* bold */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-800.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-800.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 800;
+    font-style: normal;
+} /* extra bold */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-900.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-900.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 900;
+    font-style: normal;
+} /* super bold */
+/* italic */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-100-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-100-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 100;
+    font-style: italic;
+} /* thin */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-200-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-200-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 200;
+    font-style: italic;
+} /* light */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-300-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-300-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+} /* semi-light */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-400-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-400-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+} /* light */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-500-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-500-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic;
+} /* medium */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-600-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-600-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 600;
+    font-style: italic;
+} /* regular */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-700-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-700-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+} /* bold */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-800-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-800-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 800;
+    font-style: italic;
+} /* extra bold */
+@font-face {
+    font-family: fira-sans;
+    src: local('Fira Sans'),
+    url(../assets/fonts/fira-sans/woff-2/fira-sans-900-italic.woff2) format("woff2"),
+    url(../assets/fonts/fira-sans/woff/fira-sans-900-italic.woff) format("woff"),
+    url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
+    font-weight: 900;
+    font-style: italic;
+} /* super bold */
+/* roboto-slab */
+@font-face {
+    font-family: roboto-slab;
+    src: local('Roboto Slab'),
+    url(../assets/fonts/roboto-slab/woff-2/roboto-slab-variable.woff2) format("woff2"),
+    url(../assets/fonts/roboto-slab/woff/roboto-slab-variable.woff) format("woff"),
+    url(../assets/fonts/roboto-slab/ttf/roboto-slab-variable.ttf) format("truetype");
+}
+
+:root {
+    --brand-color: #FA5FC1ff;
+    --accent-color: #F0B6DBff;
+    --complimentary-color: #c1fa5f;/*#DDEF53ff;*/
+    --text-color: #080808ff;
+    --title-color: #4B2C4Eff;
+    --link-color: #066063ff;
+    --link-color-hover: #990899ff;
+    --hover-color: var(--complimentary-color);
+    --focus-color: #5ffad1;/*#74fa5f;*/
+    --background-color: #FEFFEA; /*fafafaff*/
+
+    --font-family-title: roboto-slab;
+    --font-family-text: fira-sans;
+    --font-size: calc(1em + (48 - 14)*((100vw - 320px)/(7680 - 320 - 16)));
+    --line-height: calc(1.3em + (1.5 - 1.2)*((100vw - 320px)/(7680 - 320 - 16)));
+}
+
+html {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family-text);
+    line-height: var(--line-height);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
+a, a:link, a:visited {
+    color: var(--link-color);
+}
+
+a:focus {
+    color: var(--focus-color);
+}
+
+a:hover {
+    color: var(--link-color-hover);
+}
+
+::-moz-selection {
+    background: var(--background-color);
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--background-color);
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--complimentary-color);
+    border-radius: 0.4em;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--brand-color);
+}
