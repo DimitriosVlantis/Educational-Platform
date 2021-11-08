@@ -10,9 +10,12 @@ header {
     left: 50%;
     transform: translateX(-50%);
     height: max(10vh, 150px);
+    border-bottom: 5px solid var(--brand-color);
+    padding: 0 5%;
 }
-header img {
-    width: max(10vh, 175px);;
+.logo {
+    width: max(7.5vh, 112px);
+    border-radius: 50%;
 }
 .primary-navigation {
     position: fixed;
@@ -53,9 +56,9 @@ header img {
 }
 
 .button-wrapper {
-    width: min(6.25em, 9.375vmin);
-    height: min(6.25em, 9.375vmin);
-    padding: min(0.75em, 1.125vmin) min(0.67em, 1.005vmin);
+    width: min(4.65em, 7vmin);
+    height: min(4.65em, 7vmin);
+    padding: min(0.5625em, 0.85vmin) min(0.5em, 0.75vmin);
     cursor: pointer;
     background-color: var(--brand-color);
     border-radius: 50%;
@@ -183,7 +186,7 @@ header img {
         transform: translateY(-200%);
     }
     85%, 100% {
-        transform: translateY(-325%);
+        transform: translateY(-250%);
     }
 }
 @keyframes jump-3 {
