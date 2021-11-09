@@ -1,3 +1,9 @@
+/*
+*   Menu button event listener. On click, add open class to required elements and remove close class, or the opposite
+*   depending on the state of the button. Keep the state in a variable and update it on each button click.
+*   Acquire the necessary elements through querySelector and getElementById and store them in const, keep the menu
+*   state values in a JavaScript object.
+*/
 const menu_button_toggle = document.getElementById('menu-toggle'),
     button_wrapper = document.querySelector('.button-wrapper'),
     navigation = document.querySelector('.primary-navigation'),
