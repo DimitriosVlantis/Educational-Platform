@@ -9,7 +9,7 @@
     by 50% relatively to its width. This centers the header on the middle of the screen, leaving equal space left and
     right. Give a height of 10% of the vertical screen space but no more than 150px so that it leaves enough screen
     real estate on smaller devices. Add a bottom border to separate the header visually from the content.
-    Adding z-index to keep the header and menu on top of the call to action button which needs z-index for the 3D effect.
+    Adding z-index to keep the header and menu on top of the rest of the content.
 */
 header {
     display: flex;
@@ -23,7 +23,7 @@ header {
     height: max(10vh, 150px);
     border-bottom: 5px solid var(--brand-color);
     padding: 0 5%;
-    z-index: 3;
+    z-index: 1;
 }
 
 /*
@@ -36,7 +36,7 @@ header {
 
 /*
     Center the navigation on the center of the screen. Using 100vh height to make it span the whole device height.
-    Using fixed position, top, left, translateX(-50%) as described previously above. z-index 4 to be on top of header.
+    Using fixed position, top, left, translateX(-50%) as described previously above. z-index 2 to be on top of header.
     Transition for animation effect on appearing. Visually the menu is hidden using scale(0) but remains accessible
     through HTML (so screen readers have access to it). Keyboard users can still expand the menu through the button
     as described below. On button click, the hidden menu appears with visual effect.
@@ -50,7 +50,7 @@ header {
     align-items: center;
     transform: translateX(-50%) scale(0);
     transition: transform 0.6s ease-in-out 0.15s;
-    z-index: 4;
+    z-index: 2;
 }
 
 /*
@@ -316,14 +316,34 @@ header {
 
 /* 3D Button - Begin */
 
+/*
+    Call to action link made appear as a 3D button.
+    Relative positioning to absolute place children elements. Inline-flex display to have flex flow within but make the
+    link (box) retain its inline functionality and not span entire row.
+    Text decoration to remove underline.
+    Perspective to give an angle (perspective) while the link rotates to make the 3D effect slightly more realistic.
+*/
 .cta-link {
     position: relative;
-    z-index: 1;
     display: inline-flex;
     text-decoration: none;
-    perspective: 1000px;
+    perspective: 50vmax;
 }
 
+/*
+    Set the wrapper (span) to inline-block to retain inline functionality and also have block level properties.
+    Set width to the full width of the parent.
+    Change the transform origin, meaning the point from where a transformation starts. Originally is (0, 0), which at a
+    box would be the upper left corner. We set it to 50% 50% (x-axis, y-axis) to place it on the center of the box in
+    2 dimensional space. The third value sets the origin of the z-axis, essentially dictating how close or far away the
+    user will interpret the box moving from him. By setting a small negative value proportional to the size of the text
+    we make it appear so that the movement happens backwards and slightly in place. The larger the value, the closer to
+    the user to box appears, the smaller, the further away.
+    transform-style: preserve-3d makes the children of the 3D element preserve their stacking context in the 3D space
+    and not flatten down to 2 dimensional space.
+    The transition dictates how the transformation will occur, and the cubic bezier function dictates how the object will
+    transform in time using the bezier parametric function.
+*/
 .link-3d-wrapper {
     display: inline-block;
     width: 100%;
@@ -332,14 +352,25 @@ header {
     transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+/*
+    On link hover, rotate the button 90 degrees to show its bottom side.
+*/
 .cta-link:hover .link-3d-wrapper {
     transform: rotateX(90deg);
 }
 
+/*
+    Make the box inline with flex flow inside it. Make the width the full of the parent element.
+    Add padding at this point because each side of the button (front, back) has different background color (so the
+    colors can't be applied directly to the link element and its background-color is transparent) and the padding at
+    the link element wouldn't be colored.
+    Backface visibility dictates whether the hidden sides of the 3D box are showing. Since the perspective is small,
+    there is rotation and the backgrounds aren't transparent there isn't any visible change but for maintenance
+    reasons we decided to keep it because if we change the opacity level a small line appears below the button.
+*/
 .link-3d-front,
 .link-3d-back {
     display: inline-flex;
-    white-space: nowrap;
     width: 100%;
     padding: calc(0.25 * 1.25em);
     backface-visibility: hidden;
@@ -347,15 +378,17 @@ header {
 }
 
 .link-3d-front {
-    position: relative;
-    z-index: 2;
     color: var(--text-color);
     background-color: var(--brand-color);
 }
 
+/*
+    Absolutely positioning the backface of the button which is a separate element so that it appears on the same place.
+    Then we add -90 degrees rotation on the x-axis to "hide" it below the other button.
+    We change its origin to happen from its relative center of the x-axis and from its relative top on the y-axis.
+*/
 .link-3d-back {
     position: absolute;
-    z-index: 1;
     top: 100%;
     left: 0;
     color: var(--text-color);
