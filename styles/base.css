@@ -209,7 +209,7 @@ a, a:link, a:visited {
     color: var(--link-color);
 }
 
-a:focus {
+a:focus, a:active {
     color: var(--focus-color);
 }
 
