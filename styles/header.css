@@ -1,0 +1,315 @@
+/* Header/menu - Begin */
+
+/*
+    Using flex to center align items vertically and space-between to move them to the edges of the container
+    Adding padding left and right to slightly push the logo and the button inwards in the container
+    (space-around could have been better, but it adds too much padding on big screens)
+    Reducing the width of the header for aesthetic reasons. Using position to fix its position on the top of the screen
+    Using left: 50% to start the menu from the center of the screen horizontally and transformX(-50%) to move it back
+    by 50% relatively to its width. This centers the header on the middle of the screen, leaving equal space left and
+    right. Give a height of 10% of the vertical screen space but no more than 150px so that it leaves enough screen
+    real estate on smaller devices. Add a bottom border to separate the header visually from the content.
+    Adding z-index to keep the header and menu on top of the rest of the content.
+*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    position: fixed;
+    top: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: max(10vh, 150px);
+    border-bottom: 5px solid var(--brand-color);
+    padding: 0 5%;
+    z-index: 1;
+}
+
+/*
+    Give a maximum width on the logo image - smaller than the header. Using border radius to make the image circular.
+*/
+.logo {
+    width: max(7.5vh, 112px);
+    border-radius: 50%;
+}
+
+/*
+    Center the navigation on the center of the screen. Using 100vh height to make it span the whole device height.
+    Using fixed position, top, left, translateX(-50%) as described previously above. z-index 2 to be on top of header.
+    Transition for animation effect on appearing. Visually the menu is hidden using scale(0) but remains accessible
+    through HTML (so screen readers have access to it). Keyboard users can still expand the menu through the button
+    as described below. On button click, the hidden menu appears with visual effect.
+*/
+.primary-navigation {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.6s ease-in-out 0.15s;
+    z-index: 2;
+}
+
+/*
+    Removing list dots, list padding, and list margin to center to list items on screen.
+*/
+.primary-navigation ul {
+    list-style-type: none;
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    Adding top/bottom padding between list items to separate them visually and not let them fall on each other.
+*/
+.primary-navigation ul li {
+    padding: 15% 0;
+}
+
+/*
+    Give different colors on link states since we are using the brand color as a background and contrast ratios change.
+    We try to provide enough contrast through big letters and right coloring to the visually impaired users while
+    maintaining proper branding through coloring. We try to make each meaningful state recognizable through colors
+    and outline.
+*/
+.primary-navigation ul li a, .primary-navigation ul li a:link {
+    color: var(--text-color);
+}
+
+.primary-navigation ul li a:focus, .primary-navigation ul li a:active {
+    color: var(--focus-color);
+}
+
+.primary-navigation ul li a:focus {
+    /* Add focus outline - //TODO */
+}
+
+.primary-navigation ul li a:hover {
+    color: var(--complimentary-color);
+}
+
+/*
+    On button click, when.open class is added through JavaScript to indicate the menu opening, maintain the the
+    positioning through the X-axis translation and scale the menu to original size to make it appear visually.
+*/
+.primary-navigation.open {
+    transform: translateX(-50%) scale(1);
+}
+
+/*
+    Add a button wrapper class to create the double circle (box-shadow/background-color) effect on opening.
+    Bow shadow starts as invincible though 0 spread 0 blur and on button click spreads to 100vmax with proper transition.
+    Background color of the wrapper is visible while the button is closed but it is over-painted from the button's
+    background-color on button click (actually using another element for background effect for reasons explained below).
+    Using special measuring values for dimensions to make the button big enough on big screens but not to big, and small
+    enough on smaller screens but not to small to be clickable.
+    Using cursor pointer to make the mouse icon indicate that the button is clickable. Transitioning the the box-shadow
+    for the visual effect. The special dimension values will dictate the line dimensions.
+    Adding position relative so that we can absolutely position child elements.
+*/
+.button-wrapper {
+    width: min(4.65em, 7vmin);
+    height: min(4.65em, 7vmin);
+    padding: min(0.5625em, 0.85vmin) min(0.5em, 0.75vmin);
+    cursor: pointer;
+    background-color: var(--brand-color);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 0 0 var(--brand-color);
+    transition: box-shadow 0.9s ease-in-out;
+}
+
+.button-wrapper.open {
+    box-shadow: 0 0 0 100vmax var(--brand-color);
+}
+
+/*
+    Using a span for a secondary background to have it scaled to 0 while class list does not contain .open. Two reasons
+    for this:
+        1) Buttons background does not start appearing from relative (0, 0) point so it will abruptly appear expanding
+        from button's border.
+        2) Button's border-radius should not be set to 50% to make it circular because it will mess the svg lines
+    Essentially we are creating four stacking contexts:
+        1) On the bottom is sitting the box-shadow of the parent/wrapper
+        2) On top of that is the background color of the wrapper
+        3) On top of that is the secondary's background background-color
+        4) Lastly, on top is the button's background, which is transparent.
+    Absolutely positioning the background in the top left corner relatively to its parent (wrapper) so that the button
+    is rendered in the circle's center.
+*/
+.button-secondary-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--complimentary-color);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.9s ease-in-out;
+}
+
+.button-wrapper.open .button-secondary-background {
+    transform: scale(1.5);
+}
+
+/*
+    Take the full space provided by the parent, place elements on the center, distribute the space evenly between them.
+*/
+.button-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    transition: transform 0.1s ease-out;
+}
+
+/*
+    Move the button slightly downwards on open because its dimensions change and it is not perfectly centered.
+*/
+.button-toggle.open {
+    transform: translateY(7.5%);
+}
+
+/*
+    Make the line a block element to apply width. Make it take the full width of its parent.
+*/
+.line {
+    display: block;
+    width: 100%;
+}
+
+/*
+    Using the after pseudo-element with content none to fill and animate the line. Use margin auto to center them
+    horizontally since we are using only the 85% of the width provided.
+*/
+.line:after {
+    content: '';
+    display: block;
+    width: 85%;
+    height: min(0.4em, 0.6vmin);
+    margin: auto;
+    padding: 0;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+
+/*
+    Forwards and reverse animations
+*/
+.open .line:first-child {
+    animation: jump-1 0.9s forwards ease;
+}
+
+.open .line:first-child:after {
+    animation: line-1 0.9s forwards ease-in-out;
+}
+
+.open .line:nth-child(2) {
+    animation: jump-2 0.9s forwards ease;
+}
+
+.open .line:nth-child(2):after {
+    animation: line-2 0.9s forwards ease-in-out;
+}
+
+.close .line:first-child {
+    animation: jump-1 0.9s reverse ease;
+}
+
+.close .line:first-child:after {
+    animation: line-1 0.9s reverse ease-in-out;
+}
+
+.close .line:nth-child(2) {
+    animation: jump-2 0.9s reverse ease;
+}
+
+.close .line:nth-child(2):after {
+    animation: line-2 0.9s reverse ease-in-out;
+}
+
+.open .line:last-child, .close .line:last-child {
+    animation: jump-3 0.9s forwards ease-out;
+}
+
+/*
+    The actual animations. Rotate the lines to create an X shape with a bottom line. Move them with translate to place
+    them in the right position. Numbers are experimental/empirical, but they seem to work properly across devices and
+    screens.
+*/
+@keyframes line-1 {
+    10% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(395deg);
+    }
+    90%, 100% {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes line-2 {
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    90%, 100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes jump-1 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200%);
+    }
+    90%, 100% {
+        transform: translateY(75%);
+    }
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-250%);
+    }
+}
+
+@keyframes jump-3 {
+    10% {
+        transform: translateY(-75%) rotate(15deg);
+    }
+    30% {
+        transform: translateY(-250%) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(75%) rotate(5deg);
+    }
+    80% {
+        transform: translateY(25%);
+    }
+}
+
+/* Header/menu - End */
