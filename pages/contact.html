@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+    <meta charset="UTF-8" /> <!-- character set -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- fluid layout -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell IE to interpret the document in the latest available version -->
+    <title>Educational Platform</title> <!-- title -->
+    <meta name="description" content="SEO description <!--TODO" /> <!-- Excerpt in search engine results -->
+    <meta name="theme-color" content="#FA5FC1ff" />
+    <!--
+        Set the theme color as the brand color (it appears in various places,
+        i.e. top of the Chrome browser on mobiles)
+     -->
+    <link rel="stylesheet" href="../styles/normalize.css" /> <!-- Include normalize CSS -->
+    <link rel="stylesheet" href="../styles/base.css" /> <!-- Include base CSS styles -->
+    <link rel="stylesheet" href="../styles/main.css" /> <!-- Include main CSS styles -->
+    <link rel="stylesheet" href="../styles/contact.css" /> <!-- Include contact CSS styles -->
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../assets/images/graphics/logo/logo.svg" alt="Logo" class="logo" />
+            <h1>Lecture Book</h1>
+        </div>
+        <nav class="primary-navigation close" aria-label="Primary navigation">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Fields</a>
+                </li>
+                <li>
+                    <a href="#">Paths</a>
+                </li>
+                <li>
+                    <a href="#">Courses</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="button-wrapper">
+            <span class="button-secondary-background"></span>
+            <button class="button-toggle" id="menu-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class=contact_us>
+            <h2 class="heading">Contact us!</h2>
+            <p class="description">
+                We are at your service to answer any question, 
+                just fill the contact form bellow and our 
+                team will come in touch with you as soon as possible.
+            </p>
+            <label class="form-element">
+                Name
+                <input type="text" name="name">
+            </label>
+            <label class="form-element">
+                Surname
+                <input type="text" name="surname">
+            </label>
+            <label class="form-element">
+                Email
+                <input type="text" name="email">
+            </label>
+            <label class="form-element">
+                Phone number
+                <input type="text" name="phone_number">
+            </label>
+            <label class="form-element">
+                Select theme
+                <select name="theme">
+                    <option value="fields">Fields</option>
+                    <option value="paths">Paths</option>
+                    <option value="tools">Tools</option>
+                    <option value="error">Error</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label class="form-element">
+                Question
+                <textarea name="question" rows="6" cols="50"></textarea>
+            </label>
+            <label class="form-element">
+                Attach file
+                <input type="file" name="attach_file" id="attach_file">
+            </label>
+            <a class="cta-link" href="#" aria-label="Join for free">
+                <span class="link-3d-wrapper">
+                    <em class="link-3d-front">Submit →</em>
+                    <em class="link-3d-back">Submit →</em>
+                </span>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <article class="links">
+            <h2 class="heading"></h2>
+            <ul class="useful-links">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </article>
+        <article class="links">
+            <h2 class="heading"></h2>
+            <ul class="content">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </article>
+        <article>
+            <ul class="social-media">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </article>
+        <article class="copyright">
+            <!--TODO: Add attribute citation in report-->
+            <h3></h3>
+        </article>
+    </footer>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/*
+This css file is responsible for the styling of the contact.html.
+The rest of the texture is loaded from the main.css and normilize.css
+*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:10em;
+    left:10%
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2em 0em;
+}
+
+input{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+select{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+textarea{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+#attach_file{
+    background-color: var(--accent-color);
+    border-radius: 0px;
+}
