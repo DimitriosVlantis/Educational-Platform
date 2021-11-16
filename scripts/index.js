@@ -8,7 +8,7 @@ const menu_button_toggle = document.getElementById('menu-toggle'),
     button_wrapper = document.querySelector('.button-wrapper'),
     navigation = document.querySelector('.primary-navigation'),
     menu_links = document.querySelectorAll('#primary-menu a[role="menuitem"]'),
-    menu_state = { open: 'open', close: 'close' };
+    menu_state = {open: 'open', close: 'close'};
 let button_class = menu_state.open;
 
 button_wrapper.addEventListener('click', () => {
@@ -19,6 +19,7 @@ button_wrapper.addEventListener('click', () => {
         navigation.classList.remove(button_class);
         button_class = menu_state.close;
         menu_button_toggle.setAttribute("aria-expanded", "false");
+        navigation.setAttribute("aria-expanded", "false");
         menu_links.forEach(link => link.setAttribute("tabindex", "-1"));
     } else if (menu_button_toggle.classList.contains(menu_state.close)) {
         menu_button_toggle.classList.remove(button_class);
@@ -26,6 +27,7 @@ button_wrapper.addEventListener('click', () => {
         navigation.classList.remove(button_class);
         button_class = menu_state.open;
         menu_button_toggle.setAttribute("aria-expanded", "true");
+        navigation.setAttribute("aria-expanded", "true");
         menu_links.forEach(link => link.setAttribute("tabindex", "0"));
     }
 
