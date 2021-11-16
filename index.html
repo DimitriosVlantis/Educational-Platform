@@ -19,43 +19,50 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="branding">
             <img src="./assets/images/graphics/logo/logo.svg" alt="Logo" class="logo" />
             <h1>Lecture Book</h1>
         </div>
+        <div class="button-wrapper">
+            <span class="button-secondary-background"></span>
+            <button
+                    class="button-toggle close"
+                    id="menu-toggle"
+                    aria-haspopup="true"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-label="Website links"
+            >
+                <span tabindex="-1" aria-hidden="true" class="line"></span>
+                <span tabindex="-1" aria-hidden="true" class="line"></span>
+                <span tabindex="-1" aria-hidden="true" class="line"></span>
+            </button>
+        </div>
         <nav class="primary-navigation close" aria-label="Primary navigation">
-            <ul>
-                <li>
-                    <a href="#">Home</a>
+            <ul role="menu" aria-labelledby="menu-toggle" id="primary-menu">
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Home</a>
                 </li>
-                <li>
-                    <a href="#">Fields</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Fields</a>
                 </li>
-                <li>
-                    <a href="#">Paths</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Paths</a>
                 </li>
-                <li>
-                    <a href="#">Courses</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Courses</a>
                 </li>
-                <li>
-                    <a href="#">About Us</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">About Us</a>
                 </li>
-                <li>
-                    <a href="#">Contact Us</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Contact Us</a>
                 </li>
-                <li>
-                    <a href="#">Log In/Sign Up</a>
+                <li role="none">
+                    <a tabindex="-1" role="menuitem" href="#">Log In/Sign Up</a>
                 </li>
             </ul>
         </nav>
-        <div class="button-wrapper">
-            <span class="button-secondary-background"></span>
-            <button class="button-toggle" id="menu-toggle">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-        </div>
     </header>
     <main>
         <section class="hero-section">
