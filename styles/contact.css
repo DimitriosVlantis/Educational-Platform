@@ -10,7 +10,6 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    top:10em;
     left:10%
 }
 
@@ -22,16 +21,23 @@ main{
 }
 
 input{
+    width: 100%;
     background-color: var(--accent-color);
     border-radius: 10px;
+    border: 2pt solid black;
 }
 
+
+
 select{
+    border: 2pt solid black;
+    width: 50%;
     background-color: var(--accent-color);
     border-radius: 10px;
 }
 
 textarea{
+    border: 2pt solid black;
     background-color: var(--accent-color);
     border-radius: 10px;
 }
