@@ -97,7 +97,7 @@ header {
     outline: transparent;
     background-color: var(--brand-color);
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--brand-color),
-                0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--complimentary-color);
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--complimentary-color);
 }
 
 .primary-navigation ul li a:after {

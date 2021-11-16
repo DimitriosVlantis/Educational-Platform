@@ -10,7 +10,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
-} /* thin */
+}
+
+/* thin */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -19,7 +21,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 200;
     font-style: normal;
-} /* light */
+}
+
+/* light */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -28,7 +32,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
-} /* semi-light */
+}
+
+/* semi-light */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -37,7 +43,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
-} /* regular */
+}
+
+/* regular */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -46,7 +54,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
-} /* medium */
+}
+
+/* medium */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -55,7 +65,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
-} /* bold */
+}
+
+/* bold */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -64,7 +76,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
-} /* bolder */
+}
+
+/* bolder */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -73,7 +87,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 800;
     font-style: normal;
-} /* extra bold */
+}
+
+/* extra bold */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -82,7 +98,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
-} /* super bold */
+}
+
+/* super bold */
 /* italic */
 @font-face {
     font-family: fira-sans;
@@ -92,7 +110,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 100;
     font-style: italic;
-} /* thin */
+}
+
+/* thin */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -101,7 +121,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 200;
     font-style: italic;
-} /* light */
+}
+
+/* light */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -110,7 +132,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 300;
     font-style: italic;
-} /* semi-light */
+}
+
+/* semi-light */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -119,7 +143,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
-} /* regular */
+}
+
+/* regular */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -128,7 +154,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
-} /* medium */
+}
+
+/* medium */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -137,7 +165,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 600;
     font-style: italic;
-} /* bold */
+}
+
+/* bold */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -146,7 +176,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
-} /* bolder */
+}
+
+/* bolder */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -155,7 +187,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 800;
     font-style: italic;
-} /* extra bold */
+}
+
+/* extra bold */
 @font-face {
     font-family: fira-sans;
     src: local('Fira Sans'),
@@ -164,7 +198,9 @@
     url(../assets/fonts/fira-sans/ttf/fira-sans-100.ttf) format("truetype");
     font-weight: 900;
     font-style: italic;
-} /* super bold */
+}
+
+/* super bold */
 /* roboto-slab */
 @font-face {
     font-family: roboto-slab;
@@ -186,19 +222,19 @@
 :root {
     --brand-color: #FA5FC1ff;
     --accent-color: #F0B6DBff;
-    --complimentary-color: #c1fa5f;/*#DDEF53ff;*/
+    --complimentary-color: #c1fa5f; /*#DDEF53ff;*/
     --text-color: #080808ff;
     --title-color: #4B2C4Eff;
     --link-color: #066063ff;
     --link-color-hover: #990899ff;
     --hover-color: var(--complimentary-color);
-    --focus-color: #5ffad1;/*#74fa5f;*/
+    --focus-color: #5ffad1; /*#74fa5f;*/
     --background-color: #FEFFEA; /*fafafaff*/
 
     --font-family-title: roboto-slab;
     --font-family-text: fira-sans;
-    --font-size: calc(1em + (48 - 14)*((100vw - 320px)/(7680 - 320 - 16)));
-    --line-height: calc(1.3em + (1.5 - 1.2)*((100vw - 320px)/(7680 - 320 - 16)));
+    --font-size: calc(1em + (48 - 14) * ((100vw - 320px) / (7680 - 320 - 16)));
+    --line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 320px) / (7680 - 320 - 16)));
     --text-font-weight: 300;
     --link-font-weight: 400;
     --title-font-weight: 400;
@@ -225,9 +261,9 @@ body {
     box-sizing: border-box;
     overflow-wrap: anywhere;
     transition: color 187.5ms ease-in-out,
-                background-color 0.25s ease-in-out,
-                border 0.25s ease-in-out,
-                box-shadow 0.25s ease-in-out;
+    background-color 0.25s ease-in-out,
+    border 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
     position: absolute;
     top: 0;
     padding: calc(max(10vh, 150px) + 2.5%) 5%;
@@ -294,10 +330,10 @@ a:focus, a:active, :focus {
     outline: transparent;
     background-color: var(--background-color);
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--background-color),
-                0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
     border-radius: 0.3em;
     transition: border 0.25s ease-in-out,
-                box-shadow 0.25s ease-in-out;
+    box-shadow 0.25s ease-in-out;
 }
 
 a:hover {
@@ -312,7 +348,7 @@ a::after {
     left: auto;
     right: 0;
     width: 0;
-    height: calc(var(--border-width) * 0.35 );
+    height: calc(var(--border-width) * 0.35);
     background-color: var(--complimentary-color);
     transition: width 0.25s ease-in-out;
 }
@@ -349,10 +385,10 @@ abbr::after {
     background: var(--text-color);
     color: var(--background-color);
     transition: opacity 0.25s ease-out,
-                background 0.25s ease-out,
-                color 0.25s ease-out,
-                padding 0.25s ease-out,
-                width 0.25s ease-out;
+    background 0.25s ease-out,
+    color 0.25s ease-out,
+    padding 0.25s ease-out,
+    width 0.25s ease-out;
 }
 
 abbr:active::after, abbr:focus::after {
