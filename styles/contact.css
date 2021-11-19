@@ -7,6 +7,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 60%;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -24,20 +25,18 @@ input{
     width: 100%;
     background-color: var(--accent-color);
     border-radius: 10px;
-    border: 2pt solid black;
+    border: 2pt solid var(--text-color);
 }
 
-
-
 select{
-    border: 2pt solid black;
+    border: 2pt solid var(--text-color);
     width: 50%;
     background-color: var(--accent-color);
     border-radius: 10px;
 }
 
 textarea{
-    border: 2pt solid black;
+    border: 2pt solid var(--text-color);
     background-color: var(--accent-color);
     border-radius: 10px;
 }
