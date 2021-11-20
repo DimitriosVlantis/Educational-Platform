@@ -1,0 +1,58 @@
+.hero-section {
+
+}
+
+.sponsors {
+    background-color: var(--accent-color);
+}
+
+.sponsors .heading {
+    text-decoration: none;
+    font-size: calc(var(--heading-font-size) * 0.7);
+    line-height: 1.1;
+    margin: 0 auto 1.5em auto;
+    text-align: center;
+}
+
+.sponsors .images-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 4vmin;
+}
+
+.sponsors img {
+    width: calc(33vw - 1em);
+    border-radius: 50%;
+    border: 0.2em solid var(--complimentary-color);
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
+}
+
+.educational-content section,
+section.educational-content {
+    padding: 0;
+    margin: 0;
+}
+
+.educational-content .heading,
+.educational-content .description {
+    margin: 5%;
+}
+
+.educational-content > .heading {
+    font-size: calc(var(--heading-font-size) * 0.9);
+}
+
+.educational-content .promo {
+    margin: 2.5em 0;
+}
+
+.promo .heading {
+    font-size: calc(var(--font-size) * 1.4);
+    line-height: 1.2;
+}
+
+.promo .heading,
+.promo .description {
+    margin-left: 7.5%;
+}

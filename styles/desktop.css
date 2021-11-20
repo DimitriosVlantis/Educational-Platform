@@ -1,0 +1,38 @@
+body {
+    padding: calc(max(10vh, 150px) + 2.5%) 5%;
+}
+
+header {
+    height: max(10vh, 150px);
+    border-bottom-width: 5px;
+}
+
+.branding h1 {
+    font-size: 2rem;
+}
+
+.logo {
+    width: max(7.5vh, 112px);
+}
+
+.button-wrapper {
+    width: min(4.65em, 7vmin);
+    height: min(4.65em, 7vmin);
+    padding: min(0.5625em, 0.85vmin) min(0.5em, 0.75vmin);
+}
+
+.primary-navigation ul {
+    font-size: 3em;
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-170%);
+    }
+}
