@@ -12,6 +12,8 @@
     display: inline-flex;
     text-decoration: none;
     perspective: 50vmax;
+    font-size: 1.5em;
+    margin-top: 1em;
 }
 
 /*
@@ -56,7 +58,7 @@
 .link-3d-back {
     display: inline-flex;
     width: 100%;
-    padding: calc(0.25 * 1.25em);
+    padding: 0.6em 1.5em;
     backface-visibility: hidden;
     font-family: var(--font-family-title);
 }
@@ -82,3 +84,53 @@
 }
 
 /* 3D Button - End */
+
+.heading {
+    margin: 0.8em 0;
+}
+
+.heading, .description {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.heading + .description {
+    margin-top: 0;
+}
+
+/* CTA - Begin */
+
+.cta {
+    width: calc(16em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CTA - End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

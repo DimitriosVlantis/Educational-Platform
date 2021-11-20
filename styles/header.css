@@ -15,14 +15,32 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     position: fixed;
+    left: 0;
     top: 0;
-    height: max(10vh, 150px);
-    border-bottom: 5px solid var(--brand-color);
-    padding: 2.5%;
+    height: max(7.5vh, 100px);
+    padding: 2.5% 7.5%;
     z-index: 1;
-    background-color: var(--background-color);
+    background: linear-gradient(90deg,
+    #ffffff00 0%,
+    var(--background-color) 5%,
+    var(--background-color) 95%,
+    #ffffff00 100%);
+}
+
+.header-border {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg,
+    #ffffff00 0%,
+    var(--brand-color) 5%,
+    var(--brand-color) 95%,
+    #ffffff00 100%);
+    z-index: 0;
 }
 
 /*
@@ -36,14 +54,14 @@ header {
 .branding h1 {
     margin: 0;
     padding: 0 0.3em;
-    font-size: 2rem;
+    font-size: 1.3em;
 }
 
 /*
     Give a maximum width on the logo image - smaller than the header. Using border radius to make the image circular.
 */
 .logo {
-    width: max(7.5vh, 112px);
+    width: max(5vh, 75px);
     border-radius: 50%;
 }
 
@@ -58,6 +76,7 @@ header {
     position: fixed;
     top: 50%;
     left: 50%;
+    width: max-content;
     display: flex;
     align-items: center;
     transform: translate(-50%, -50%) scale(0);
@@ -70,7 +89,7 @@ header {
 */
 .primary-navigation ul {
     list-style-type: none;
-    font-size: 3em;
+    font-size: 2em;
     padding: 0;
     margin: 0;
 }
@@ -128,9 +147,9 @@ header {
     Adding position relative so that we can absolutely position child elements.
 */
 .button-wrapper {
-    width: min(4.65em, 7vmin);
-    height: min(4.65em, 7vmin);
-    padding: min(0.5625em, 0.85vmin) min(0.5em, 0.75vmin);
+    width: min(7.5em, 16.25vmin);
+    height: min(7.5em, 16.25vmin);
+    padding: min(0.75em, 1vmin) min(0.75em, 1vmin);
     cursor: pointer;
     background-color: var(--brand-color);
     border-radius: 50%;
@@ -167,6 +186,7 @@ header {
     border-radius: 50%;
     transform: scale(0);
     transition: transform 0.9s ease-in-out;
+    z-index: 1;
 }
 
 .button-wrapper.open .button-secondary-background {
@@ -190,6 +210,7 @@ header {
     border: 0;
     outline: none;
     transition: transform 0.1s ease-out;
+    z-index: 1;
 }
 
 .button-toggle:focus {
@@ -335,7 +356,7 @@ header {
         transform: translateY(-200%);
     }
     85%, 100% {
-        transform: translateY(-170%);
+        transform: translateY(-500%);
     }
 }
 

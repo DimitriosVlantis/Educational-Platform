@@ -1,3 +1,5 @@
+import {default as Carousel} from './carousel.js';
+
 /*
 *   Menu button event listener. On click, add open class to required elements and remove close class, or the opposite
 *   depending on the state of the button. Keep the state in a variable and update it on each button click.
@@ -9,7 +11,7 @@ const menu_button_toggle = document.getElementById('menu-toggle'),
     navigation = document.querySelector('.primary-navigation'),
     menu_links = document.querySelectorAll('#primary-menu a[role="menuitem"]'),
     menu_state = {open: 'open', close: 'close'};
-let button_class = menu_state.open;
+let button_class = menu_state.close;
 
 button_wrapper.addEventListener('click', () => {
     menu_button_toggle.blur();
@@ -39,4 +41,12 @@ button_wrapper.addEventListener('click', () => {
 
 menu_button_toggle.addEventListener('focus', (event) => {
     event.preventDefault();
+});
+
+const carouselSections = Array.from(document.getElementsByClassName('educational-content'));
+carouselSections.push(document.getElementById('testimonials'));
+
+carouselSections.forEach(section => {
+    const sectionID = section.id;
+    new Carousel(sectionID);
 });
