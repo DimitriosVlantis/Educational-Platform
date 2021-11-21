@@ -1,4 +1,4 @@
-import {default as Carousel} from './carousel.js';
+import {default as Carousel} from './slider.js';
 
 /*
 *   Menu button event listener. On click, add open class to required elements and remove close class, or the opposite

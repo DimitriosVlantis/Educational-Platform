@@ -1,4 +1,4 @@
-class Carousel {
+class Slider {
     #_leftElement;
     #_rightElement;
     #_visible;
@@ -19,8 +19,10 @@ class Carousel {
         this.#_leftArrow = this.#_containerSection.querySelector(".left.arrow");
         this.#_rightArrow = this.#_containerSection.querySelector(".right.arrow");
         this.#_cardArray = this.#_containerSection.querySelectorAll(".card");
+        this.#setAriaSlideNumbers();
         this.#calcOrder();
         this.#setClassesAfterAnimation();
+        this.#setAriaAttributes();
         this.#addEventListeners();
     }
 
@@ -93,6 +95,7 @@ class Carousel {
             setTimeout(() => {
                 this.#calcOrder();
                 this.#setClassesAfterAnimation(direction);
+                this.#setAriaAttributes();
             }, 250);
             setTimeout(() => {
                 this.#_shouldSlide = true;
@@ -107,7 +110,49 @@ class Carousel {
         this.#_rightArrow.addEventListener('click', () => {
             this.#moveCards(this.#_direction.right);
         });
+        document.addEventListener('DOMContentLoaded', () => {
+            this.#makeCardsStandardHeight();
+        });
+        window.addEventListener('resize', () => {
+            this.#resetHeights();
+            this.#makeCardsStandardHeight();
+        });
+    }
+
+    #resetHeights() {
+        this.#_cardArray.forEach(el => el.style.removeProperty('height'));
+    }
+
+    #makeCardsStandardHeight() {
+        const maxHeight = (Array.from(this.#_cardArray)).reduce((maxHeight, curCard) => {
+            return Math.max(maxHeight, curCard.getBoundingClientRect().height)
+        }, 0);
+
+        this.#_cardArray.forEach(card => card.style.height = `${maxHeight}px`);
+        this.#stretchSliderHeight(maxHeight);
+    }
+
+    #stretchSliderHeight(height) {
+        this.#_containerSection.querySelector('.slider').style.height = `${height}px`;
+    }
+
+    #setAriaAttributes() {
+        const listItems = this.#_containerSection.querySelectorAll('li[aria-roledescription="slide"]');
+        listItems.forEach(item => {
+            if (item.querySelector('.card').classList.contains('visible')) {
+                item.setAttribute('aria-hidden', 'false');
+            } else {
+                item.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+
+    #setAriaSlideNumbers() {
+        const listItems = this.#_containerSection.querySelectorAll('li[aria-roledescription="slide"]');
+        listItems.forEach((item, index) => {
+            item.setAttribute('aria-label', `${index + 1} of ${listItems.length}`);
+        });
     }
 }
 
-export default Carousel;
+export default Slider;
