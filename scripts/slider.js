@@ -1,105 +1,168 @@
 class Slider {
-    #_leftElement;
-    #_rightElement;
-    #_visible;
     #_containerSectionName;
     #_containerSection;
     #_leftArrow;
     #_rightArrow;
-    #_cardArray;
+    #_cards;
     #_direction = {
         left: 'left',
         right: 'right'
     };
     #_shouldSlide = true;
+    #_breakpoints = [{breakpoint: {min: 0, max: Infinity}, cards: 0}];
+    #_slots;
+    #_positions;
+    #_numOfVisibleCards;
 
-    constructor(containerSection) {
+    constructor(containerSection, breakpoints) {
         this.#_containerSectionName = containerSection;
         this.#_containerSection = document.querySelector(`#${this.#_containerSectionName}`);
         this.#_leftArrow = this.#_containerSection.querySelector(".left.arrow");
         this.#_rightArrow = this.#_containerSection.querySelector(".right.arrow");
-        this.#_cardArray = this.#_containerSection.querySelectorAll(".card");
+        this.#_cards = this.#_containerSection.querySelectorAll(".card");
+        this.#_breakpoints = breakpoints;
+        this.#setCards();
         this.#setAriaSlideNumbers();
-        this.#calcOrder();
-        this.#setClassesAfterAnimation();
         this.#setAriaAttributes();
         this.#addEventListeners();
     }
 
-    /*
-    * 1. Add to visible element arrow direction class
-    * 2. Add to !(arrow direction) element visible class
-    * 3. Remove from !(arrow direction) element !(arrow direction) class
-    * 4. Wait 250ms
-    * 5. Remove visible class from outbound element
-    * 6. Recompute positions
-    * 7. Add hidden classes
-    * 8. Remove direction classes
-    * 9. Re-add direction classes
-    * */
-
-    #calcOrder() {
-        if (this.#_visible !== null && this.#_visible !== undefined) {
-            this.#_visible.classList.remove('visible');
+    #setCards() {
+        this.#createSlots();
+        this.#populateSlots();
+        this.#createPositions();
+        const buttonControl = this.#_containerSection.querySelector('.slider-controls');
+        if (this.#_numOfVisibleCards === this.#_cards.length) {
+            buttonControl.style.visibility = 'hidden';
+            for (const [index, card] of this.#_cards.entries()) {
+                card.style.left = `${this.#calculatePosition(index + 1)}px`;
+            }
+        } else {
+            if (buttonControl.style.visibility === 'hidden') {
+                buttonControl.style.visibility = 'visible';
+            }
+            for (const [index, card] of this.#_slots.entries()) {
+                card.style.left = `${this.#_positions[index]}px`;
+            }
         }
-        for (let i = 0; i < this.#_cardArray.length; ++i) {
-            if (this.#_cardArray[i].classList.contains("visible")) {
-                if (i === 0) {
-                    this.#_leftElement = this.#_cardArray[this.#_cardArray.length - 1];
-                } else {
-                    this.#_leftElement = this.#_cardArray[i - 1];
-                }
-                if (i === this.#_cardArray.length - 1) {
-                    this.#_rightElement = this.#_cardArray[0];
-                } else {
-                    this.#_rightElement = this.#_cardArray[i + 1];
-                }
-                this.#_visible = this.#_cardArray[i];
+    }
+
+    #createSlots() {
+        for (const el of this.#_breakpoints) {
+            if (window.innerWidth >= el.breakpoint.min && window.innerWidth < el.breakpoint.max) {
+                this.#_numOfVisibleCards = Math.min(el.cards, this.#_cards.length);
+                this.#_slots = new Array(this.#_cards.length);
                 break;
             }
         }
     }
 
-    #setClassesAfterAnimation() {
-        this.#_cardArray.forEach(card => {
-            if (!card.classList.contains('visible') && !card.classList.contains('hidden')) {
-                card.classList.add('hidden');
-            }
-            if (card.classList.contains(`${this.#_direction.left}`)) {
-                card.classList.remove(`${this.#_direction.left}`);
-            }
-            if (card.classList.contains(`${this.#_direction.right}`)) {
-                card.classList.remove(`${this.#_direction.right}`);
-            }
-        });
-
-        this.#_rightElement.classList.add(`${this.#_direction.right}`);
-        this.#_leftElement.classList.add(`${this.#_direction.left}`);
+    #calculatePosition(slot) {
+        const cardWidth = this.#_cards[0].getBoundingClientRect().width;
+        return (window.innerWidth / this.#_numOfVisibleCards) * (slot - 0.5)
+            - (cardWidth / 2);
     }
 
-    #setClassesBeforeAnimation(direction) {
-        const inboundElement = direction === this.#_direction.right ? this.#_leftElement : this.#_rightElement;
-        const outboundElement = this.#_visible;
-        const oppositeDirection = direction === this.#_direction.right ? this.#_direction.left : this.#_direction.right;
+    #createPositions() {
+        this.#_positions = new Array(this.#_slots.length);
+        for (let i = 0; i < this.#_positions.length; ++i) {
+            this.#_positions[i] = this.#calculatePosition(i);
+        }
+    }
 
-        outboundElement.classList.add(`${direction}`);
-        inboundElement.classList.remove('hidden');
-        inboundElement.classList.add('visible');
-        inboundElement.classList.remove(`${oppositeDirection}`);
+    #populateSlots() {
+        let cardIndex = 0;
+        for (let i = 1; i < this.#_slots.length; ++i) {
+            this.#_slots[i] = this.#_cards[cardIndex++];
+        }
+        if (this.#_slots.length === this.#_cards.length) {
+            this.#_slots[0] = this.#_cards[this.#_cards.length - 1];
+        }
+    }
+
+    #shiftCards(direction) {
+        const isLeft = direction === this.#_direction.left;
+        if (isLeft) {
+            const card = this.#_slots.shift();
+            this.#_slots.push(card);
+        } else {
+            const card = this.#_slots.pop();
+            this.#_slots.unshift(card);
+        }
+
+        for (const [index, card] of this.#_slots.entries()) {
+            if (index > 0 && index <= this.#_numOfVisibleCards) {
+                if (card.classList.contains('visible')) continue;
+                card.classList.add('visible');
+            } else {
+                if (!card.classList.contains('visible')) continue;
+                card.classList.remove('visible');
+            }
+        }
+    }
+
+    #animateOuterRightCard() {
+        const card = this.#_slots[0];
+        if (this.#_cards.length < this.#_numOfVisibleCards + 2) {
+            card.classList.add(`${this.#_direction.left}`);
+            card.style.left = `${this.#calculatePosition(this.#_numOfVisibleCards + 1)}px`;
+            setTimeout(() => {
+                card.classList.remove(`${this.#_direction.left}`);
+                card.style.left = `${this.#_positions[0]}px`;
+            }, 1000);
+        } else {
+            card.style.left = `${this.#_positions[0]}px`;
+        }
+    }
+
+    #animateOuterLeftCard() {
+        const card = this.#_slots[this.#_cards.length - 1];
+        if (this.#_cards.length < this.#_numOfVisibleCards + 2) {
+            card.style.left = `${this.#calculatePosition(this.#_numOfVisibleCards + 1)}px`;
+            setTimeout(() => {
+                card.classList.add(`${this.#_direction.left}`);
+                card.style.left = `${this.#_positions[this.#_cards.length - 1]}px`;
+            }, 1);
+            setTimeout(() => {
+                card.classList.remove(`${this.#_direction.left}`);
+            }, 1000);
+        } else {
+            card.style.left = `${this.#_positions[this.#_cards.length - 1]}px`;
+        }
+    }
+
+    #animateCards(direction) {
+        const isLeft = direction === this.#_direction.left;
+        this.#shiftCards(direction);
+
+        for (let index = 0; index < this.#_slots.length; ++index) {
+            if (isLeft && index === this.#_slots.length - 1) {
+                this.#animateOuterLeftCard();
+                continue;
+            }
+            if (!isLeft && index === 0) {
+                this.#animateOuterRightCard();
+                continue;
+            }
+            const card = this.#_slots[index];
+            setTimeout(() => {
+                card.classList.add(`${this.#_direction.left}`);
+                card.style.left = `${this.#_positions[index]}px`;
+            }, 1);
+            setTimeout(() => {
+                card.classList.remove(`${this.#_direction.left}`);
+            }, 1000);
+        }
     }
 
     #moveCards(direction) {
         if (this.#_shouldSlide) {
             this.#_shouldSlide = false;
-            this.#setClassesBeforeAnimation(direction);
-            setTimeout(() => {
-                this.#calcOrder();
-                this.#setClassesAfterAnimation(direction);
-                this.#setAriaAttributes();
-            }, 250);
+            this.#animateCards(direction);
+            this.#setAriaAttributes();
             setTimeout(() => {
                 this.#_shouldSlide = true;
-            }, 500);
+            }, 1000);
         }
     }
 
@@ -116,19 +179,20 @@ class Slider {
         window.addEventListener('resize', () => {
             this.#resetHeights();
             this.#makeCardsStandardHeight();
+            this.#setCards();
         });
     }
 
     #resetHeights() {
-        this.#_cardArray.forEach(el => el.style.removeProperty('height'));
+        this.#_cards.forEach(el => el.style.removeProperty('height'));
     }
 
     #makeCardsStandardHeight() {
-        const maxHeight = (Array.from(this.#_cardArray)).reduce((maxHeight, curCard) => {
+        const maxHeight = (Array.from(this.#_cards)).reduce((maxHeight, curCard) => {
             return Math.max(maxHeight, curCard.getBoundingClientRect().height)
         }, 0);
 
-        this.#_cardArray.forEach(card => card.style.height = `${maxHeight}px`);
+        this.#_cards.forEach(card => card.style.height = `${maxHeight}px`);
         this.#stretchSliderHeight(maxHeight);
     }
 

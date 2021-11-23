@@ -1,4 +1,4 @@
-import {default as Carousel} from './slider.js';
+import {default as Slider} from './slider.js';
 
 /*
 *   Menu button event listener. On click, add open class to required elements and remove close class, or the opposite
@@ -46,7 +46,13 @@ menu_button_toggle.addEventListener('focus', (event) => {
 const carouselSections = Array.from(document.getElementsByClassName('educational-content'));
 carouselSections.push(document.getElementById('testimonials'));
 
+const breakpoints = [
+    {breakpoint: {min: 0, max: 768}, cards: 1},
+    {breakpoint: {min: 768, max: 1080}, cards: 2},
+    {breakpoint: {min: 1080, max: 1440}, cards: 3},
+    {breakpoint: {min: 1440, max: Infinity}, cards: 4}
+]
 carouselSections.forEach(section => {
     const sectionID = section.id;
-    new Carousel(sectionID);
+    new Slider(sectionID, breakpoints);
 });

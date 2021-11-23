@@ -1,175 +1,179 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-us">
-<head>
-    <meta charset="UTF-8"/> <!-- character set -->
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <!-- fluid layout -->
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <!-- Tell IE to interpret the document in the latest available version -->
-    <title>Educational Platform</title> <!-- title -->
-    <meta content="SEO description <!--TODO" name="description"/> <!-- Excerpt in search engine results -->
-    <meta content="#FA5FC1ff" name="theme-color"/>
-    <!--
-        Set the theme color as the brand color (it appears in various places,
-        i.e. top of the Chrome browser on mobiles)
-     -->
-    <link href="./styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
-    <link href="./styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
-    <link href="./styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
-    <link href="./styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
-    <link href="./styles/home.css" rel="stylesheet"/> <!-- Include home CSS styles -->
-    <link href="./styles/slider.css" rel="stylesheet"/> <!-- Include slider CSS styles -->
-    <link href="./styles/small-tablet.css" rel="stylesheet" media="screen and (min-width: 30em) and (max-width: 48em)"/>
-    <link href="./styles/tablet.css" rel="stylesheet" media="screen and (min-width: 48em) and (max-width: 67.5em)"/>
-    <link href="./styles/small-desktop.css" rel="stylesheet" media="screen and (min-width: 67.5em) and (max-width: 90em)"/>
-    <link href="./styles/desktop.css" rel="stylesheet" media="screen and (min-width: 90em)"/>
-</head>
-<body>
-<header>
-    <div class="branding">
-        <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/>
-        <h1>Lecture Book</h1>
-    </div>
-    <div class="button-wrapper">
-        <span class="button-secondary-background"></span>
-        <button
-                aria-controls="primary-menu"
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-label="Website links"
-                class="button-toggle close"
-                id="menu-toggle"
-        >
-            <span aria-hidden="true" class="line" tabindex="-1"></span>
-            <span aria-hidden="true" class="line" tabindex="-1"></span>
-            <span aria-hidden="true" class="line" tabindex="-1"></span>
-        </button>
-    </div>
-    <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
-        <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Home</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Fields</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Paths</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Courses</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">About Us</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
-            </li>
-            <li role="none">
-                <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
-            </li>
-        </ul>
-    </nav>
-    <span class="header-border" tabindex="-1" aria-hidden="true"></span>
-</header>
-<main>
-    <section class="hero-section">
-        <article class="cta">
-            <h2 class="heading">Develop your Career</h2>
-            <p class="description">
-                You are presented with the unique opportunity to launch your dream career
-                utilizing the best resources online.
-                Will you take action?
-            </p>
-            <a aria-label="Join for free" class="cta-link" href="#">
+    <head>
+        <meta charset="UTF-8"/> <!-- character set -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <!-- fluid layout -->
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+                                <!-- Tell IE to interpret the document in the latest available version -->
+        <title>Educational Platform</title> <!-- title -->
+        <meta content="SEO description <!--TODO" name="description"/> <!-- Excerpt in search engine results -->
+        <meta content="#FA5FC1ff" name="theme-color"/>
+                                <!--
+                                    Set the theme color as the brand color (it appears in various places,
+                                    i.e. top of the Chrome browser on mobiles)
+                                 -->
+        <link href="./styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
+        <link href="./styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
+        <link href="./styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
+        <link href="./styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
+        <link href="./styles/home.css" rel="stylesheet"/> <!-- Include home CSS styles -->
+        <link href="./styles/slider.css" rel="stylesheet"/> <!-- Include slider CSS styles -->
+        <link href="./styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
+        <link href="./styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+        <link href="./styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)" rel="stylesheet"/>
+        <link href="./styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="branding">
+                <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/>
+                <h1>Lecture Book</h1>
+            </div>
+            <div class="button-wrapper">
+                <span class="button-secondary-background"></span>
+                <button
+                        aria-controls="primary-menu"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Website links"
+                        class="button-toggle close"
+                        id="menu-toggle"
+                >
+                    <span aria-hidden="true" class="line" tabindex="-1"></span>
+                    <span aria-hidden="true" class="line" tabindex="-1"></span>
+                    <span aria-hidden="true" class="line" tabindex="-1"></span>
+                </button>
+            </div>
+            <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+                <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Home</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Fields</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Paths</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Courses</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">About Us</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <span aria-hidden="true" class="header-border" tabindex="-1"></span>
+        </header>
+        <main>
+            <section class="hero-section">
+                <article class="cta">
+                    <h2 class="heading">Develop your Career</h2>
+                    <p class="description">
+                        You are presented with the unique opportunity to launch your dream career
+                        utilizing the best resources online.
+                        Will you take action?
+                    </p>
+                    <a aria-label="Join for free" class="cta-link" href="#">
                     <span class="link-3d-wrapper">
                         <em class="link-text link-3d-front">Join for free →</em>
                         <em class="link-text link-3d-back">Join for free →</em>
                     </span>
-            </a>
-        </article>
-        <img alt="" sizes="" src="" srcset="">
-    </section>
-    <section class="sponsors">
-        <h2 class="heading">Backed up by the best organizations.</h2>
-        <div class="images-wrapper">
-            <img
-                    src="./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg"
-                    alt="Athens University of Economics and Business logo"
-                    width="400"
-                    height="400"
-                    srcset=
-                            "
-                                ./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg 400w,
-                                ./assets/images/rasters/sponsors/aueb/aueb-200x200.jpg 200w,
-                                ./assets/images/rasters/sponsors/aueb/aueb-100x100.jpg 100w
-                            "
-                    sizes="
+                    </a>
+                </article>
+                <img alt="" sizes="" src="" srcset="">
+            </section>
+            <section class="sponsors">
+                <h2 class="heading">Backed up by the best organizations.</h2>
+                <div class="images-wrapper">
+                    <img
+                            alt="Athens University of Economics and Business logo"
+                            height="400"
+                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) calc(20vw - 4em),
                             calc(33vw - 2em)
                           "
-            />
-            <img
-                    src="./assets/images/rasters/sponsors/cia/cia-750x750.jpg"
-                    alt="Central Intelligence Agency logo"
-                    width="750"
-                    height="750"
-                    srcset=
+                            src="./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg"
+                            srcset=
+                                    "
+                                ./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg 400w,
+                                ./assets/images/rasters/sponsors/aueb/aueb-200x200.jpg 200w,
+                                ./assets/images/rasters/sponsors/aueb/aueb-100x100.jpg 100w
                             "
+                            width="400"
+                    />
+                    <img
+                            alt="Central Intelligence Agency logo"
+                            height="750"
+                            sizes="
+                            (min-width: 67.5em) 25vw,
+                            (min-width: 48em) calc(20vw - 4em),
+                            calc(33vw - 2em)
+                          "
+                            src="./assets/images/rasters/sponsors/cia/cia-750x750.jpg"
+                            srcset=
+                                    "
                                 ./assets/images/rasters/sponsors/cia/cia-750x750.jpg 750w,
                                 ./assets/images/rasters/sponsors/cia/cia-500x500.jpg 500w,
                                 ./assets/images/rasters/sponsors/cia/cia-200x200.jpg 200w,
                                 ./assets/images/rasters/sponsors/cia/cia-100x100.jpg 100w
                             "
-                    sizes="
+                            width="750"
+                    />
+                    <img
+                            alt="SpaceX logo"
+                            height="750"
+                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) calc(20vw - 4em),
                             calc(33vw - 2em)
                           "
-            />
-            <img
-                    src="./assets/images/rasters/sponsors/space-x/spaceX-750x750.jpg"
-                    alt="SpaceX logo"
-                    width="750"
-                    height="750"
-                    srcset=
-                            "
+                            src="./assets/images/rasters/sponsors/space-x/spaceX-750x750.jpg"
+                            srcset=
+                                    "
                                 ./assets/images/rasters/sponsors/space-x/spaceX-750x750.jpg 750w,
                                 ./assets/images/rasters/sponsors/space-x/spaceX-500x500.jpg 500w,
                                 ./assets/images/rasters/sponsors/space-x/spaceX-200x200.jpg 200w,
                                 ./assets/images/rasters/sponsors/space-x/spaceX-100x100.jpg 100w
                             "
-                    sizes="
+                            width="750"
+                    />
+                    <img
+                            alt="Crunchyroll logo"
+                            height="750"
+                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) calc(20vw - 4em),
                             calc(33vw - 2em)
                           "
-            />
-            <img
-                    src="./assets/images/rasters/sponsors/crunchyroll/crunchyroll-750x750.jpg"
-                    alt="Crunchyroll logo"
-                    width="750"
-                    height="750"
-                    srcset=
-                            "
+                            src="./assets/images/rasters/sponsors/crunchyroll/crunchyroll-750x750.jpg"
+                            srcset=
+                                    "
                                 ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-750x750.jpg 750w,
                                 ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-400x400.jpg 400w,
                                 ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-200x200.jpg 200w,
                                 ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-100x100.jpg 100w
                             "
-                    sizes="
+                            width="750"
+                    />
+                    <img
+                            alt="Red Bull Racing logo"
+                            height="1240"
+                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) calc(20vw - 4em),
                             calc(33vw - 2em)
                           "
-            />
-            <img
-                    src="./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1240x1240.jpg"
-                    alt="Red Bull Racing logo"
-                    width="1240"
-                    height="1240"
-                    srcset=
-                            "
+                            src="./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1240x1240.jpg"
+                            srcset=
+                                    "
                                 ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1240x1240.jpg 1240w,
                                 ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1080x1080.jpg 1080w,
                                 ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-750x750.jpg 750w,
@@ -177,43 +181,43 @@
                                 ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-200x200.jpg 200w,
                                 ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-100x100.jpg 100w
                             "
-                    sizes="
-                            (min-width: 67.5em) 25vw,
-                            (min-width: 48em) calc(20vw - 4em),
-                            calc(33vw - 2em)
-                          "
-            />
-        </div>
-    </section>
-    <section class="educational-content" id="fields">
-        <h2 class="heading">Fields</h2>
-        <section class="promo">
-            <h3 class="heading">
-                Join for exclusive curriculums curated by the top educational organizations around the world.
-            </h3>
-            <p class="description">
-                Get job-ready for an in-demand career.
-                Break into a new field like computer science or logistics.
-                No prior experience necessary to get started.
-            </p>
-        </section>
-        <article
-                class="slider"
-                role="region"
-                aria-roledescription="Slider"
-                aria-label="Slider of provided fields of study"
-                aria-live="polite"
-                id="fields-slider"
-        >
-            <fieldset aria-label="Slider buttons" aria-controls="fields-slider">
-                <button aria-label="Previous slider card" class="arrow left">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
-                    </svg>
-                </button>
-                <button aria-label="Next slider card" class="arrow right">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M11.611,
+                            width="1240"
+                    />
+                </div>
+            </section>
+            <section class="educational-content" id="fields">
+                <h2 class="heading">Fields</h2>
+                <section class="promo">
+                    <h3 class="heading">
+                        Join for exclusive curriculums curated by the top educational organizations around the world.
+                    </h3>
+                    <p class="description">
+                        Get job-ready for an in-demand career.
+                        Break into a new field like computer science or logistics.
+                        No prior experience necessary to get started.
+                    </p>
+                </section>
+                <article
+                        aria-label="Slider of provided fields of study"
+                        aria-live="polite"
+                        aria-roledescription="Slider"
+                        class="slider"
+                        id="fields-slider"
+                        role="region"
+                >
+                    <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                        <button aria-label="Previous slider card" class="arrow left">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                        fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Next slider card" class="arrow right">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M11.611,
                     10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
                     0.012-1.105c0.309-0.304,
                     0.803-0.293,
@@ -230,26 +234,27 @@
                     0.223c-0.203,
                     0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
                     0.012-1.104L11.611,
-                    10.049z"></path>
-                    </svg>
-                </button>
-            </fieldset>
-            <ul role="group">
-                <li aria-roledescription="slide">
-                    <article id="computer-science" class="card visible">
-                        <a href="#">
-                        <img
-                                src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                alt="Computer science illustration"
-                                width="2000"
-                                height="2000"
-                                sizes="
+                    10.049z" fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                    </fieldset>
+                    <ul role="group">
+                        <li aria-roledescription="slide">
+                            <article class="card" id="computer-science">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                srcset=
-                                        "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -260,41 +265,42 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                        />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Computer Science</a>
-                        </h3>
-                        <p class="description">
-                            Computer science is the study of computers and computing
-                            as well as their theoretical and practical applications.
-                            Computer science applies the principles of mathematics, engineering,
-                            and logic to a plethora of functions, including
-                            algorithm formulation, software and hardware development, and artificial
-                            intelligence.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="logistics" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Computer Science</a>
+                                </h3>
+                                <p class="description">
+                                    Computer science is the study of computers and computing
+                                    as well as their theoretical and practical applications.
+                                    Computer science applies the principles of mathematics, engineering,
+                                    and logic to a plethora of functions, including
+                                    algorithm formulation, software and hardware development, and artificial
+                                    intelligence.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="logistics">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -305,39 +311,40 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Logistics</a>
-                        </h3>
-                        <p class="description">
-                            Logistics is an application-oriented scientific
-                            discipline. It models and analyses economic systems as networks
-                            and flows of objects through time and space (specifically goods,
-                            information, money, and people) which create value for people.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="mathematics" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Logistics</a>
+                                </h3>
+                                <p class="description">
+                                    Logistics is an application-oriented scientific
+                                    discipline. It models and analyses economic systems as networks
+                                    and flows of objects through time and space (specifically goods,
+                                    information, money, and people) which create value for people.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="mathematics">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -348,62 +355,67 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Mathematics</a>
-                        </h3>
-                        <p class="description">
-                            The mathematical sciences are a group of areas of study that includes,
-                            in addition to mathematics, those academic disciplines that are primarily
-                            mathematical in nature but may not be universally considered subfields of
-                            mathematics proper.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-        </article>
-        <a aria-label="Join for free" class="cta-link" href="#">
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Mathematics</a>
+                                </h3>
+                                <p class="description">
+                                    The mathematical sciences are a group of areas of study that includes,
+                                    in addition to mathematics, those academic disciplines that are primarily
+                                    mathematical in nature but may not be universally considered subfields of
+                                    mathematics proper.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </article>
+                <a aria-label="Join for free" class="cta-link" href="#">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore courses →</em>
                 <em class="link-3d-back">Explore courses →</em>
             </span>
-        </a>
-    </section>
-    <section class="educational-content" id="popular-paths">
-        <h2 class="heading">Popular Paths</h2>
-        <section class="promo">
-            <h3 class="heading">
-                Take advantage of our highly specialized paths to take your skills to the next
-                level.
-            </h3>
-            <p class="description">
-                Choose a path from our expert-crafted list
-                and become an expert in the domain you like most.
-            </p>
-        </section>
-        <article
-                class="slider"
-                role="region"
-                aria-roledescription="Slider"
-                aria-label="Slider of provided fields of study"
-                aria-live="polite"
-                id="paths-slider"
-        >
-            <fieldset aria-label="Slider buttons" aria-controls="fields-slider">
-                <button aria-label="Previous slider card" class="arrow left">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
-                    </svg>
-                </button>
-                <button aria-label="Next slider card" class="arrow right">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M11.611,
+                </a>
+            </section>
+            <section class="educational-content" id="popular-paths">
+                <h2 class="heading">Popular Paths</h2>
+                <section class="promo">
+                    <h3 class="heading">
+                        Take advantage of our highly specialized paths to take your skills to the next
+                        level.
+                    </h3>
+                    <p class="description">
+                        Choose a path from our expert-crafted list
+                        and become an expert in the domain you like most.
+                    </p>
+                </section>
+                <article
+                        aria-label="Slider of provided fields of study"
+                        aria-live="polite"
+                        aria-roledescription="Slider"
+                        class="slider"
+                        id="paths-slider"
+                        role="region"
+                >
+                    <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                        <button aria-label="Previous slider card" class="arrow left">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                        fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Next slider card" class="arrow right">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M11.611,
                     10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
                     0.012-1.105c0.309-0.304,
                     0.803-0.293,
@@ -420,26 +432,27 @@
                     0.223c-0.203,
                     0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
                     0.012-1.104L11.611,
-                    10.049z"></path>
-                    </svg>
-                </button>
-            </fieldset>
-            <ul role="group">
-                <li aria-roledescription="slide">
-                    <article id="path-1" class="card visible">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                    10.049z" fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                    </fieldset>
+                    <ul role="group">
+                        <li aria-roledescription="slide">
+                            <article class="card" id="path-1">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -450,41 +463,42 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Computer Science</a>
-                        </h3>
-                        <p class="description">
-                            Computer science is the study of computers and computing
-                            as well as their theoretical and practical applications.
-                            Computer science applies the principles of mathematics, engineering,
-                            and logic to a plethora of functions, including
-                            algorithm formulation, software and hardware development, and artificial
-                            intelligence.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="path-2" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Computer Science</a>
+                                </h3>
+                                <p class="description">
+                                    Computer science is the study of computers and computing
+                                    as well as their theoretical and practical applications.
+                                    Computer science applies the principles of mathematics, engineering,
+                                    and logic to a plethora of functions, including
+                                    algorithm formulation, software and hardware development, and artificial
+                                    intelligence.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="path-2">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -495,39 +509,40 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Logistics</a>
-                        </h3>
-                        <p class="description">
-                            Logistics is an application-oriented scientific
-                            discipline. It models and analyses economic systems as networks
-                            and flows of objects through time and space (specifically goods,
-                            information, money, and people) which create value for people.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="path-3" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Logistics</a>
+                                </h3>
+                                <p class="description">
+                                    Logistics is an application-oriented scientific
+                                    discipline. It models and analyses economic systems as networks
+                                    and flows of objects through time and space (specifically goods,
+                                    information, money, and people) which create value for people.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="path-3">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -538,62 +553,67 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Mathematics</a>
-                        </h3>
-                        <p class="description">
-                            The mathematical sciences are a group of areas of study that includes,
-                            in addition to mathematics, those academic disciplines that are primarily
-                            mathematical in nature but may not be universally considered subfields of
-                            mathematics proper.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-        </article>
-        <a aria-label="Join for free" class="cta-link" href="#">
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Mathematics</a>
+                                </h3>
+                                <p class="description">
+                                    The mathematical sciences are a group of areas of study that includes,
+                                    in addition to mathematics, those academic disciplines that are primarily
+                                    mathematical in nature but may not be universally considered subfields of
+                                    mathematics proper.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </article>
+                <a aria-label="Join for free" class="cta-link" href="#">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore courses →</em>
                 <em class="link-3d-back">Explore courses →</em>
             </span>
-        </a>
-    </section>
-    <section class="educational-content" id="free-courses">
-        <h2 class="heading">Free Courses</h2>
-        <section class="promo">
-            <h3 class="heading">
-                Join our subscription-free courses to quick started
-                your career.
-            </h3>
-            <p class="description">
-                We have purposefully kept some of our courses free
-                so everyone can have an opportunity to change his future.
-            </p>
-        </section>
-        <article
-                class="slider"
-                role="region"
-                aria-roledescription="Slider"
-                aria-label="Slider of provided fields of study"
-                aria-live="polite"
-                id="courses-slider"
-        >
-            <fieldset aria-label="Slider buttons" aria-controls="fields-slider">
-                <button aria-label="Previous slider card" class="arrow left">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
-                    </svg>
-                </button>
-                <button aria-label="Next slider card" class="arrow right">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M11.611,
+                </a>
+            </section>
+            <section class="educational-content" id="free-courses">
+                <h2 class="heading">Free Courses</h2>
+                <section class="promo">
+                    <h3 class="heading">
+                        Join our subscription-free courses to quick started
+                        your career.
+                    </h3>
+                    <p class="description">
+                        We have purposefully kept some of our courses free
+                        so everyone can have an opportunity to change his future.
+                    </p>
+                </section>
+                <article
+                        aria-label="Slider of provided fields of study"
+                        aria-live="polite"
+                        aria-roledescription="Slider"
+                        class="slider"
+                        id="courses-slider"
+                        role="region"
+                >
+                    <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                        <button aria-label="Previous slider card" class="arrow left">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                        fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Next slider card" class="arrow right">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M11.611,
                     10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
                     0.012-1.105c0.309-0.304,
                     0.803-0.293,
@@ -610,26 +630,27 @@
                     0.223c-0.203,
                     0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
                     0.012-1.104L11.611,
-                    10.049z"></path>
-                    </svg>
-                </button>
-            </fieldset>
-            <ul role="group">
-                <li aria-roledescription="slide">
-                    <article id="course-1" class="card visible">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                    10.049z" fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                    </fieldset>
+                    <ul role="group">
+                        <li aria-roledescription="slide">
+                            <article class="card" id="course-1">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -640,41 +661,42 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Computer Science</a>
-                        </h3>
-                        <p class="description">
-                            Computer science is the study of computers and computing
-                            as well as their theoretical and practical applications.
-                            Computer science applies the principles of mathematics, engineering,
-                            and logic to a plethora of functions, including
-                            algorithm formulation, software and hardware development, and artificial
-                            intelligence.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="course-2" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Computer Science</a>
+                                </h3>
+                                <p class="description">
+                                    Computer science is the study of computers and computing
+                                    as well as their theoretical and practical applications.
+                                    Computer science applies the principles of mathematics, engineering,
+                                    and logic to a plethora of functions, including
+                                    algorithm formulation, software and hardware development, and artificial
+                                    intelligence.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="course-2">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -685,39 +707,40 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Logistics</a>
-                        </h3>
-                        <p class="description">
-                            Logistics is an application-oriented scientific
-                            discipline. It models and analyses economic systems as networks
-                            and flows of objects through time and space (specifically goods,
-                            information, money, and people) which create value for people.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="course-3" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Logistics</a>
+                                </h3>
+                                <p class="description">
+                                    Logistics is an application-oriented scientific
+                                    discipline. It models and analyses economic systems as networks
+                                    and flows of objects through time and space (specifically goods,
+                                    information, money, and people) which create value for people.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="course-3">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -728,68 +751,73 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Mathematics</a>
-                        </h3>
-                        <p class="description">
-                            The mathematical sciences are a group of areas of study that includes,
-                            in addition to mathematics, those academic disciplines that are primarily
-                            mathematical in nature but may not be universally considered subfields of
-                            mathematics proper.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-        </article>
-        <a aria-label="Join for free" class="cta-link" href="#">
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Mathematics</a>
+                                </h3>
+                                <p class="description">
+                                    The mathematical sciences are a group of areas of study that includes,
+                                    in addition to mathematics, those academic disciplines that are primarily
+                                    mathematical in nature but may not be universally considered subfields of
+                                    mathematics proper.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </article>
+                <a aria-label="Join for free" class="cta-link" href="#">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore courses →</em>
                 <em class="link-3d-back">Explore courses →</em>
             </span>
-        </a>
-    </section>
-    <section class="outcomes">
-        <!--TODO: Find image for background-->
-        <h2 class="heading">The outcomes of our students speak for themselves</h2>
-        <p class="description">
-            Take it or leave it .... your failure is not my problem.
-        </p>
-        <p class="report description">
-            <a href="#"></a>
-        </p>
-        <a aria-label="Join for free" class="cta-link" href="#">
+                </a>
+            </section>
+            <section class="outcomes">
+                <!--TODO: Find image for background-->
+                <h2 class="heading">The outcomes of our students speak for themselves</h2>
+                <p class="description">
+                    Take it or leave it .... your failure is not my problem.
+                </p>
+                <p class="report description">
+                    <a href="#"></a>
+                </p>
+                <a aria-label="Join for free" class="cta-link" href="#">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Join for free →</em>
                 <em class="link-3d-back">Join for free →</em>
             </span>
-        </a>
-    </section>
-    <section class="testimonials" id="testimonials">
-        <h2 class="heading"></h2>
-        <article
-                class="slider"
-                role="region"
-                aria-roledescription="Slider"
-                aria-label="Slider of provided fields of study"
-                aria-live="polite"
-                id="testimonials-slider"
-        >
-            <fieldset aria-label="Slider buttons" aria-controls="fields-slider">
-                <button aria-label="Previous slider card" class="arrow left">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
-                    </svg>
-                </button>
-                <button aria-label="Next slider card" class="arrow right">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M11.611,
+                </a>
+            </section>
+            <section class="testimonials" id="testimonials">
+                <h2 class="heading"></h2>
+                <article
+                        aria-label="Slider of provided fields of study"
+                        aria-live="polite"
+                        aria-roledescription="Slider"
+                        class="slider"
+                        id="testimonials-slider"
+                        role="region"
+                >
+                    <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                        <button aria-label="Previous slider card" class="arrow left">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                        fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Next slider card" class="arrow right">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                        d="M11.611,
                     10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
                     0.012-1.105c0.309-0.304,
                     0.803-0.293,
@@ -806,26 +834,27 @@
                     0.223c-0.203,
                     0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
                     0.012-1.104L11.611,
-                    10.049z"></path>
-                    </svg>
-                </button>
-            </fieldset>
-            <ul role="group">
-                <li aria-roledescription="slide">
-                    <article id="testimonial-1" class="card visible">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                    10.049z" fill="none"
+                                ></path>
+                            </svg>
+                        </button>
+                    </fieldset>
+                    <ul role="group">
+                        <li aria-roledescription="slide">
+                            <article class="card" id="testimonial-1">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -836,45 +865,46 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Computer Science</a>
-                        </h3>
-                        <ul class="info">
-                    <li class="job"></li>
-                    <li class="country"></li>
-                </ul>
-                        <p class="description">
-                            Computer science is the study of computers and computing
-                            as well as their theoretical and practical applications.
-                            Computer science applies the principles of mathematics, engineering,
-                            and logic to a plethora of functions, including
-                            algorithm formulation, software and hardware development, and artificial
-                            intelligence.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="testimonial-2" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Computer Science</a>
+                                </h3>
+                                <ul class="info">
+                                    <li class="job"></li>
+                                    <li class="country"></li>
+                                </ul>
+                                <p class="description">
+                                    Computer science is the study of computers and computing
+                                    as well as their theoretical and practical applications.
+                                    Computer science applies the principles of mathematics, engineering,
+                                    and logic to a plethora of functions, including
+                                    algorithm formulation, software and hardware development, and artificial
+                                    intelligence.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="testimonial-2">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -885,43 +915,44 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Logistics</a>
-                        </h3>
-                        <ul class="info">
-                    <li class="job"></li>
-                    <li class="country"></li>
-                </ul>
-                        <p class="description">
-                            Logistics is an application-oriented scientific
-                            discipline. It models and analyses economic systems as networks
-                            and flows of objects through time and space (specifically goods,
-                            information, money, and people) which create value for people.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li aria-roledescription="slide">
-                    <article id="testimonial-3" class="hidden card">
-                        <a href="#">
-                            <img
-                                    src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
-                                    alt="Computer science illustration"
-                                    width="2000"
-                                    height="2000"
-                                    sizes="
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Logistics</a>
+                                </h3>
+                                <ul class="info">
+                                    <li class="job"></li>
+                                    <li class="country"></li>
+                                </ul>
+                                <p class="description">
+                                    Logistics is an application-oriented scientific
+                                    discipline. It models and analyses economic systems as networks
+                                    and flows of objects through time and space (specifically goods,
+                                    information, money, and people) which create value for people.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                        <li aria-roledescription="slide">
+                            <article class="card" id="testimonial-3">
+                                <a href="#">
+                                    <img
+                                            alt="Computer science illustration"
+                                            height="2000"
+                                            sizes="
                             (min-width: 67.5em) 25vw,
                             (min-width: 48em) 35vw,
+                            (min-width: 30em) calc(67.5vw - 2em),
                             calc(80vw - 2em)
                           "
-                                    srcset=
-                                            "
+                                            src="./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                            srcset=
+                                                    "
                                 ./assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
@@ -932,63 +963,64 @@
                                 ./assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
                                 ./assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
                             "
-                            />
-                        </a>
-                        <h3 class="heading">
-                            <a href="#">Mathematics</a>
-                        </h3>
-                        <ul class="info">
-                    <li class="job"></li>
-                    <li class="country"></li>
+                                            width="2000"
+                                    />
+                                </a>
+                                <h3 class="heading">
+                                    <a href="#">Mathematics</a>
+                                </h3>
+                                <ul class="info">
+                                    <li class="job"></li>
+                                    <li class="country"></li>
+                                </ul>
+                                <p class="description">
+                                    The mathematical sciences are a group of areas of study that includes,
+                                    in addition to mathematics, those academic disciplines that are primarily
+                                    mathematical in nature but may not be universally considered subfields of
+                                    mathematics proper.
+                                </p>
+                                <div class="secondary-button-wrapper">
+                                    <a class="secondary-button" href="#">
+                                        Link
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <article class="links">
+                <h2 class="heading"></h2>
+                <ul class="useful-links">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
-                        <p class="description">
-                            The mathematical sciences are a group of areas of study that includes,
-                            in addition to mathematics, those academic disciplines that are primarily
-                            mathematical in nature but may not be universally considered subfields of
-                            mathematics proper.
-                        </p>
-                        <div class="secondary-button-wrapper">
-                            <a class="secondary-button" href="#">
-                                Link
-                            </a>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-        </article>
-    </section>
-</main>
-<footer>
-    <article class="links">
-        <h2 class="heading"></h2>
-        <ul class="useful-links">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </article>
-    <article class="links">
-        <h2 class="heading"></h2>
-        <ul class="content">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </article>
-    <article>
-        <ul class="social-media">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </article>
-    <article class="copyright">
-        <!--TODO: Add attribute citation in report-->
-        <h3></h3>
-    </article>
-</footer>
-<script type="module" src="./scripts/index.js"></script>
-</body>
+            </article>
+            <article class="links">
+                <h2 class="heading"></h2>
+                <ul class="content">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+            <article>
+                <ul class="social-media">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+            <article class="copyright">
+                <!--TODO: Add attribute citation in report-->
+                <h3></h3>
+            </article>
+        </footer>
+        <script src="./scripts/index.js" type="module"></script>
+    </body>
 </html>
