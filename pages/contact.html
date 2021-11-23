@@ -12,11 +12,15 @@
         Set the theme color as the brand color (it appears in various places,
         i.e. top of the Chrome browser on mobiles)
      -->
-    <link href="../styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
-    <link href="../styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
-    <link href="../styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
-    <link href="../styles/contact.css" rel="stylesheet"/> <!-- Include contact CSS styles -->
-    <link href="../styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
+     <link href="../styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
+     <link href="../styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
+     <link href="../styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
+     <link href="../styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
+     <link href="../styles/contact.css" rel="stylesheet"/> <!-- Include home CSS styles -->
+     <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
+     <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+     <link href="../styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)" rel="stylesheet"/>
+     <link href="../styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -73,46 +77,82 @@
             just fill the contact form bellow and our
             team will come in touch with you as soon as possible.
         </p>
-        <label class="form-element">
-            Name
-            <input name="name" type="text">
-        </label>
-        <label class="form-element">
-            Surname
-            <input name="surname" type="text">
-        </label>
-        <label class="form-element">
-            Email
-            <input name="email" type="text">
-        </label>
-        <label class="form-element">
-            Phone number
-            <input name="phone_number" type="text">
-        </label>
-        <label class="form-element">
-            Select theme
-            <select name="theme">
-                <option value="fields">Fields</option>
-                <option value="paths">Paths</option>
-                <option value="tools">Tools</option>
-                <option value="error">Error</option>
-                <option value="other">Other</option>
-            </select>
-        </label>
-        <label class="form-element">
-            Question
-            <textarea cols="50" name="question" rows="6"></textarea>
-        </label>
-        <label class="form-element">
-            Attach file
-            <input id="attach_file" name="attach_file" type="file">
-        </label>
+        <section class="form_structure">
+            <article class="form">
+                <label class="form-element">
+                    Name
+                    <input id="name" type="text"
+                    placeholder="e.g. Jack"
+                    required>
+                </label>
+                <label class="form-element">
+                    Surname
+                    <input id="surname" type="text"
+                    placeholder="e.g. Sparrow"
+                    required>
+                </label>
+                <label class="form-element">
+                    Email
+                    <input id="email" type="text"
+                    placeholder="e.g. name@gmail.gr"
+                    required>
+                </label>
+                <label class="form-element">
+                    Phone number
+                    <input id="phone_number" type="text"
+                    placeholder="e.g. 5555555555"
+                    required>
+                </label>
+                <label class="form-element">
+                    Select theme
+                    <select id="theme">
+                        <option value="fields">Fields</option>
+                        <option value="paths">Paths</option>
+                        <option value="tools">Tools</option>
+                        <option value="error">Error</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label class="form-element">
+                    Question
+                    <textarea cols="50" id="question" rows="6"></textarea>
+                </label>
+                <label class="form-element">
+                    Attach file
+                    <input id="attach_file" type="file">
+                </label>
+            </article>
+            <img
+                alt="Computer science illustration"
+                height="2000"
+                sizes="
+                    (min-width: 67.5em) 25vw,
+                    (min-width: 48em) 35vw,
+                    (min-width: 30em) calc(67.5vw - 2em),
+                    calc(80vw - 2em)
+                    "
+                                src="../assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg"
+                                srcset=
+                                        "
+                    ../assets/images/rasters/fields/computer-science/computer-science-2000x2000.jpg 2000w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-1440x1440.jpg 1440w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-1080x1080.jpg 1080w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-750x750.jpg 750w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-500x500.jpg 500w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-420x420.jpg 420w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-300x300.jpg 300w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-200x200.jpg 200w,
+                    ../assets/images/rasters/fields/computer-science/computer-science-100x100.jpg 100w
+                    "
+                width="2000"
+                />
+        </section>
         <a aria-label="Join for free" class="cta-link" href="#">
-                <span class="link-3d-wrapper">
-                    <em class="link-3d-front">Submit →</em>
-                    <em class="link-3d-back">Submit →</em>
-                </span>
-        </a>
+            <span class="link-3d-wrapper">
+                <em class="link-3d-front">Submit →</em>
+                <em class="link-3d-back">Submit →</em>
+            </span>
+    </a>
     </section>
 </main>
 <footer>

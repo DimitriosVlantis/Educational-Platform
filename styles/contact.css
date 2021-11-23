@@ -6,7 +6,7 @@ The rest of the texture is loaded from the main.css and normilize.css
 main{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,41 @@ main{
     left:10%
 }
 
+.contact_us > .description{
+    width: 60%;
+}
+
 .form-element{
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 2em 0em;
+    margin: 1.5em 0em;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 3em;
+    height: 100%;
+}
+
+.form_structure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: relative;
+    right: 10%;
+    background-color: white;
+    margin: 1.5em 1.5em;
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
+}
+
+.form_structure > img{
+    border-radius: 15px;
+    height: 100%;
 }
 
 input{
@@ -26,6 +56,7 @@ input{
     background-color: var(--accent-color);
     border-radius: 10px;
     border: 2pt solid var(--text-color);
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
 
 select{
@@ -33,15 +64,18 @@ select{
     width: 50%;
     background-color: var(--accent-color);
     border-radius: 10px;
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
 
 textarea{
     border: 2pt solid var(--text-color);
     background-color: var(--accent-color);
     border-radius: 10px;
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
 
 #attach_file{
     background-color: var(--accent-color);
     border-radius: 0px;
+    box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
