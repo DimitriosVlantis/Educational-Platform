@@ -1,83 +1,46 @@
-COMPUTER SCIENCE - The most important aspect of computer science is problem-solving, an essential skill for life.
-Students study the design, development and analysis of software and hardware used to solve problems in a variety of
-business, scientific and social contexts. Explore computer science paths and courses today.
-
-	PROGRAMMING - Learn all about how to become an expert computer programmer and write and test code that allows
-	computer applications and software programs to function properly using different programming languages and
-	programming paradigms.
-
-		OBJECT ORIENTED PROGRAMMING WITH JAVA - Discover object-oriented programming through the Java programming
-		language and learn how to properly design applications using polymorphism, encapsulation, inheritance,
-		composition and UML.
-		FUNCTIONAL PROGRAMMING WITH PYTHON - Discover functional programming through the Python programming language and
-		 learn how to design applications using immutability, disciplined state, referential transparency, pure
-		 functions and no side effects, and first class functions and high order functions.
-		REACTIVE (ASYNCHRONOUS) PROGRAMMING WITH C++ - Discover reactive programming through the C++ programming
-		language and learn how to properly design event-driven and asynchronous applications using uncertainty,
-		responsiveness, autonomy, consistency, dynamic handling, and time and space decoupling.
-	FRONT END - Learn all about how to become a front-end developer using cutting edge technology features and best
-	practices and turn professional designs into professional interactive web pages.
-		HTML - Discover how to write semantic HTML and enrich text content with the appropriate tags and attributes to
-		transform it to a professional web document ready for the world-wide web and the popular search engines.
+COMPUTER SCIENCE - The most important aspect of computer science is problem-solving, an essential skill for life. Students study the design, development and analysis of software and hardware used to solve problems in a variety of business, scientific and social contexts. Explore computer science paths and courses today.
+	PROGRAMMING - Learn all about how to become an expert computer programmer and write and test code that allows computer applications and software programs to function properly using different programming languages and programming paradigms.
+		OBJECT ORIENTED PROGRAMMING WITH JAVA - Discover object-oriented programming through the Java programming language and learn how to properly design applications using polymorphism, encapsulation, inheritance, composition and UML.
+		FUNCTIONAL PROGRAMMING WITH PYTHON - Discover functional programming through the Python programming language and learn how to design applications using immutability, disciplined state, referential transparency, pure functions and no side effects, and first class functions and high order functions.
+		REACTIVE (ASYNCHRONOUS) PROGRAMMING WITH C++ - Discover reactive programming through the C++ programming language and learn how to properly design event-driven and asynchronous applications using uncertainty, responsiveness, autonomy, consistency, dynamic handling, and time and space decoupling.
+	FRONT END - Learn all about how to become a front-end developer using cutting edge technology features and best practices and turn professional designs into professional interactive web pages.
+		HTML - Discover how to write semantic HTML and enrich text content with the appropriate tags and attributes to transform it to a professional web document ready for the world-wide web and the popular search engines.
 		CSS - Discover how to use Cascading Style Sheets to transform HTML documents to live and beautiful designs.
-		JAVASCRIPT - Discover how to use the most popular programming language, JavaScript, to solve difficult
-		programming problems, develop applications, transform web pages to web applications and consume information from
-		 APIs.
-	BACK END - Learn all about back-end development and how to develop applications and APIs that communicate with
-	distributed components like databases and different front-ends and use this knowledge to become an expert
-	problem-solver.
-		NODE.JS - Discover how to use node. js to bring event-driven programming to web servers, enabling development
-		of fast web servers in JavaScript. Create scalable servers without using threading, by using a simplified model
-		of event-driven programming that uses callbacks to signal the completion of a task.
-		MONGO DB - Discover how to use mongoDB, which is an open source NoSQL database management program. NoSQL is
-		used as an
-		alternative to
-		traditional relational databases. NoSQL databases are quite useful for working with large sets of distributed data. MongoDB is a tool that can manage document-oriented information, store or retrieve information.
-		DEV OPS - Learn the basic DevOps (a portmanteau of “development” and “operations”) principles to improve
-		collaboration between operations and development teams. Learn the practices and tools enabling automation,
-		defining practices, and implementing CI/CD pipelines to speed up your development and team collaboration.
+		JAVASCRIPT - Discover how to use the most popular programming language, JavaScript, to solve difficult programming problems, develop applications, transform web pages to web applications and consume information from APIs.
+	BACK END - Learn all about back-end development and how to develop applications and APIs that communicate with distributed components like databases and different front-ends and use this knowledge to become an expert problem-solver.
+		NODE.JS - Discover how to use node. js to bring event-driven programming to web servers, enabling development of fast web servers in JavaScript. Create scalable servers without using threading, by using a simplified model of event-driven programming that uses callbacks to signal the completion of a task.
+		MONGO DB - Discover how to use mongoDB, which is an open source NoSQL database management program. NoSQL is used as an alternative to traditional relational databases. NoSQL databases are quite useful for working with large sets of distributed data. MongoDB is a tool that can manage document-oriented information, store or retrieve information.
+		DEV OPS - Learn the basic DevOps (a portmanteau of “development” and “operations”) principles to improve collaboration between operations and development teams. Learn the practices and tools enabling automation, defining practices, and implementing CI/CD pipelines to speed up your development and team collaboration.
+MATHEMATICS - Math teaches us to think logically; to identify and state the problem clearly; to plan how to solve the problem; and then to apply the appropriate methods to evaluate and solve the problem. We learn to evaluate and draw conclusions based on our knowledge. Mathematicians are needed in many professional contexts, from policymaking to medical research. Study Mathematics and your career could see you play a part in solving some of the world's many complex problems.
+	ALGEBRA - Algebra is the study of mathematical symbols and the rules for manipulating these symbols. It is a unifying thread of almost all mathematics, and it includes everything from elementary equation solving to the study of abstractions such as groups, rings, and fields.
+		ALGEBRA 1 - This course is a study of the properties of sets of real numbers, linear equations, linear functions, and inequalities. Its lessons teach students how to solve problems using algebra, geometry, radical expressions, and equations, as well as graphing, algebraic equations, and systems of equations and inequalities.
+		ALGEBRA 2 - This course is a study of equations and inequalities, linear relations and functions, systems of equations and inequalities, matrices, polynomials, radical expressions, and quadratic equations.
+		TRIGONOMETRY - This course focuses on trigonometric principles as an extension of algebraic and geometrical concepts. Students will study angles, arcs, the unit circle, right triangle trigonometry, the six trig functions, inverse functions, fundamental trig identities, verifying trig identities, solving trig equations, the law of sines, the law of cosines, vectors, complex numbers, and polar coordinates.
+	CALCULUS - Calculus, originally called infinitesimal calculus or "the calculus of infinitesimals", is the mathematical study of continuous change, in the same way that geometry is the study of shape and algebra is the study of generalizations of arithmetic operations.
+		CALCULUS 1 - This course covers limits and continuity, derivatives, analyzing functions, and applications of derivatives.
+		CALCULUS 2 - This course extends what students learned about limits, derivatives, and integrals to topics like series, Taylor polynomials, and parametric functions.
+		CALCULUS 3 - With this course students will learn about differentiation, integration, and integration applications.
+	COMBINATORICS - Combinatorics is a branch of pure mathematics concerning the study of discrete (and usually finite) objects. It is related to many other areas of mathematics, such as algebra, probability theory, ergodic theory and geometry, as well as to applied subjects in computer science and statistical physics.
+		PROBABILITY THEORY - Randomness is all around us. Probability theory is the mathematical framework that allows us to analyze chance events in a logically sound manner. The probability of an event is a number indicating how likely that event will occur. This number is always between 0 and 1, where 0 indicates impossibility and 1 indicates certainty.
+		STATISTICS - Statisticians and mathematicians examine data and apply business models as they study and solve organizational challenges. After determining which data they need to resolve a problem, they use surveys and experiments to gather information. Study statistics today to be able to effectively conduct research, to be able to read and evaluate journal articles, and to further develop critical thinking and analytic skills.
+		DISCRETE MATHEMATICS - Discrete Mathematics is a branch of mathematics that deals with separable and distinct numbers. Combinations, graph theory, and logical statements are included, and numbers can be finite or infinite. It's used in computer science to design the apps and programs we use every day. While there are no hard and fast definitions of discrete mathematics, it's well known for the things it excludes - continuously varying quantities and all things related to that. Discrete mathematics is vital to digital devices. With tech continually on the rise, studying this overlooked area of mathematics could prove valuable for your career and your future.
+CHEMISTRY - Chemistry is the science and study of matter, including its properties, composition as well as reactivity. Chemistry relates to everything that can be sensed from the minute elements to complex structures. The atom and molecules are the basic unit or components of Chemistry.
+	ORGANIC CHEMISTRY - Carbon can form covalent bonds with itself and other elements to create a mind-boggling array of structures. In organic chemistry, we will learn about the reactions chemists use to synthesize crazy carbon based structures, as well as the analytical methods to characterize them. We will also think about how those reactions are occurring on a molecular level with reaction mechanisms. Simply put, organic chemistry is like building with molecular Legos. Let's make some beautiful organic molecules!
+		BIO ORGANIC CHEMISTRY - Bioorganic chemistry applies the principles and techniques of organic chemistry to solve problems of biological relevance, taking inspiration from biology to develop new chemical processes. Bioorganic chemists emphasize chemical and molecular approaches to solving important biological problems.
+		PHARMACEUTICAL CHEMISTRY - Pharmaceutical Chemistry is a branch of chemistry which deals with the study of organic chemistry (molecules and compounds) in combination with structural & chemical biology and pharmacology for producing pharmaceutical drugs and medicines.
+		PHYSICAL CHEMISTRY - Physical chemistry is the study of macroscopic and particulate phenomena in chemical systems in terms of the principles, practices, and concepts of physics such as motion, energy, force, time, thermodynamics, quantum chemistry, statistical mechanics, analytical dynamics and chemical equilibria.
+	INORGANIC CHEMISTRY - Inorganic chemistry is the study of the structure, properties and reactions of all chemical elements and compounds except for organic compounds (hydrocarbons and their derivatives).
+		GEO CHEMISTRY - Become a geochemist today. Geochemists study the composition, structure, processes, and other physical aspects of the Earth. They examine the distribution of chemical elements in rocks and minerals, and the movement of these elements into soil and water systems.
+		FORENSICS CHEMISTRY - Forensic chemistry is the application of chemistry and related sciences to criminal investigation. The program prepares the student to work in crime laboratories or other law enforcement agencies, such as FDA, OSHA, and EPA, or for graduate work in forensic chemistry, forensic science or analytical chemistry.
+		ANALYTICAL CHEMISTRY - Analytical chemistry is the science of obtaining, processing, and communicating information about the composition and structure of matter. In other words, it is the art and science of determining what matter is and how much of it exists.
+	BIO CHEMISTRY - Biochemistry is the application of chemistry to the study of biological processes at the cellular and molecular level. It emerged as a distinct discipline around the beginning of the 20th century when scientists combined chemistry, physiology, and biology to investigate the chemistry of living systems.
+		MICROBIOLOGY - Microbiology is a branch of study that deals with microorganisms that cannot be seen without the aid of the microscope. This study enables us to understand the growth and reproduction rate of microorganisms. It also assists in the detection of pathological diseases.
+		ENZYMOLOGY - In computational enzymology, the comprehension of an enzyme reaction mechanism and evaluation of the corresponding reaction and activation free energy barriers (and reaction rates through TST) require a thorough characterization of the free energy landscape, stable basins, and the concomitant reaction paths.
+		GENETICS - Genetics and genomics both play roles in health and disease. Genetics refers to the study of genes and the way that certain traits or conditions are passed down from one generation to another. Genomics describes the study of all of a person's genes (the genome).
+
+FINANCE - Studying finance can prepare you not only for careers in the financial services sector, but also for tasks in
+your everyday life. Studying finance can prepare you to work in corporate and government financial management, banking,
+and financial planning.
 
 
-MATHEMATICS
-	ALGEBRA
-		ALGEBRA 1
-		ALGEBRA 2
-		TRIGONOMETRY
-	CALCULUS
-		CALCULUS 1
-		CALCULUS 2
-		CALCULUS 3
-	MATH ANALYSIS
-		NUMBER THEORY
-		APPROXIMATION THEORY
-		DISCRETE MATHEMATICS
 
-
-FINANCE
-	MACRO FINANCE
-		ECONOMETRICS
-		FINANCIAL MARKETS
-		FINANCIAL CRISES
-	MICRO FINANCE
-		PAYMENT SYSTEMS
-		SUSTAINABLE FINANCE
-		MICRO INSURANCE
-	INVESTMENT BANKING
-		TRADING
-		FINANCIAL MODELING
-		FINANCIAL ANALYSIS
-
-
-CHEMISTRY
-	ORGANIC CHEMISTRY
-		BIO ORGANIC CHEMISTRY
-		PHARMACEUTICAL CHEMISTRY
-		PHYSICAL CHEMISTRY
-	INORGANIC CHEMISTRY
-		GEO CHEMISTRY
-		FORENSICS CHEMISTRY
-		ANALYTICAL CHEMISTRY
-	BIO CHEMISTRY
-		MICROBIOLOGY
-		ENZYMOLOGY
-		GENETICS
