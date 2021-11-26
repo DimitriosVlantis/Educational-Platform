@@ -1,16 +1,43 @@
-COMPUTER SCIENCE
-	PROGRAMMING
-		OBJECT ORIENTED PROGRAMMING WITH JAVA
-		FUNCTIONAL PROGRAMMING WITH PYTHON
-		REACTIVE (ASYNCHRONOUS) PROGRAMMING WITH C++
-	FRONT END
-		HTML
-		CSS
-		JAVASCRIPT
-	BACK END
-		NODE.JS
-		MONGO DB
-		DEV OPS
+COMPUTER SCIENCE - The most important aspect of computer science is problem-solving, an essential skill for life.
+Students study the design, development and analysis of software and hardware used to solve problems in a variety of
+business, scientific and social contexts. Explore computer science paths and courses today.
+
+	PROGRAMMING - Learn all about how to become an expert computer programmer and write and test code that allows
+	computer applications and software programs to function properly using different programming languages and
+	programming paradigms.
+
+		OBJECT ORIENTED PROGRAMMING WITH JAVA - Discover object-oriented programming through the Java programming
+		language and learn how to properly design applications using polymorphism, encapsulation, inheritance,
+		composition and UML.
+		FUNCTIONAL PROGRAMMING WITH PYTHON - Discover functional programming through the Python programming language and
+		 learn how to design applications using immutability, disciplined state, referential transparency, pure
+		 functions and no side effects, and first class functions and high order functions.
+		REACTIVE (ASYNCHRONOUS) PROGRAMMING WITH C++ - Discover reactive programming through the C++ programming
+		language and learn how to properly design event-driven and asynchronous applications using uncertainty,
+		responsiveness, autonomy, consistency, dynamic handling, and time and space decoupling.
+	FRONT END - Learn all about how to become a front-end developer using cutting edge technology features and best
+	practices and turn professional designs into professional interactive web pages.
+		HTML - Discover how to write semantic HTML and enrich text content with the appropriate tags and attributes to
+		transform it to a professional web document ready for the world-wide web and the popular search engines.
+		CSS - Discover how to use Cascading Style Sheets to transform HTML documents to live and beautiful designs.
+		JAVASCRIPT - Discover how to use the most popular programming language, JavaScript, to solve difficult
+		programming problems, develop applications, transform web pages to web applications and consume information from
+		 APIs.
+	BACK END - Learn all about back-end development and how to develop applications and APIs that communicate with
+	distributed components like databases and different front-ends and use this knowledge to become an expert
+	problem-solver.
+		NODE.JS - Discover how to use node. js to bring event-driven programming to web servers, enabling development
+		of fast web servers in JavaScript. Create scalable servers without using threading, by using a simplified model
+		of event-driven programming that uses callbacks to signal the completion of a task.
+		MONGO DB - Discover how to use mongoDB, which is an open source NoSQL database management program. NoSQL is
+		used as an
+		alternative to
+		traditional relational databases. NoSQL databases are quite useful for working with large sets of distributed data. MongoDB is a tool that can manage document-oriented information, store or retrieve information.
+		DEV OPS - Learn the basic DevOps (a portmanteau of “development” and “operations”) principles to improve
+		collaboration between operations and development teams. Learn the practices and tools enabling automation,
+		defining practices, and implementing CI/CD pipelines to speed up your development and team collaboration.
+
+
 MATHEMATICS
 	ALGEBRA
 		ALGEBRA 1
@@ -24,9 +51,11 @@ MATHEMATICS
 		NUMBER THEORY
 		APPROXIMATION THEORY
 		DISCRETE MATHEMATICS
+
+
 FINANCE
 	MACRO FINANCE
-		ECONOMETRY
+		ECONOMETRICS
 		FINANCIAL MARKETS
 		FINANCIAL CRISES
 	MICRO FINANCE
@@ -37,6 +66,8 @@ FINANCE
 		TRADING
 		FINANCIAL MODELING
 		FINANCIAL ANALYSIS
+
+
 CHEMISTRY
 	ORGANIC CHEMISTRY
 		BIO ORGANIC CHEMISTRY
