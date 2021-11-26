@@ -16,6 +16,7 @@
         <link href="../styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
         <link href="../styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
         <link href="../styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
+        <link href="../styles/contact.css" rel="stylesheet"/> <!-- Include contact css styles-->
         <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
         <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
         <link href="../styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)" rel="stylesheet"/>
@@ -81,32 +82,35 @@
                     team will come in touch with you as soon as possible.
                 </p>
                 <article class="form">
-                    <label for="txt_name">Name</label>
-                    <input type="text" id="txt_name" 
-                        placeholder="e.g. Jack "
-                        required>
-                    <label for="txt_surname">Surname</label>
-                    <input type="text" id="txt_surname"
-                        placeholder="e.g. Sparrow "
-                        required>
-                    <label for="txt_email">Email</label>
-                    <input type="text" id="txt_email"
-                        placeholder="e.g. JackSparrow@gmail.com "
-                        required>
-                    <label for="txt_phone_nub">Phone Number</label>
-                    <input type="text" id="txt_phone_nub"
-                        placeholder="e.g. 210******* "
-                        required>
-                    <label for="select_theme">Theme</label>
-                    <select id="select_theme">
-                        <option>Suggestions</option>
-                        <option>Complications</option>
-                        <option>Servise</option>
-                        <option>Question</option>
-                    </select>
-                    <label for="txt_question">Question</label>
-                    <textarea id="txt_question" rows="4" cols="50">
-                    </textarea>
+                    <form>
+                        <label for="txt_name">Name</label>
+                        <input type="text" id="txt_name" 
+                            placeholder="e.g. Jack "
+                            required>
+                        <label for="txt_surname">Surname</label>
+                        <input type="text" id="txt_surname"
+                            placeholder="e.g. Sparrow "
+                            required>
+                        <label for="txt_email">Email</label>
+                        <input type="text" id="txt_email"
+                            placeholder="e.g. JackSparrow@gmail.com "
+                            required>
+                        <label for="txt_phone_nub">Phone Number</label>
+                        <input type="text" id="txt_phone_nub"
+                            placeholder="e.g. 210******* "
+                            required>
+                        <label for="slt_theme">Theme</label>
+                        <select id="slt_theme">
+                            <option>Suggestions</option>
+                            <option>Complications</option>
+                            <option>Servise</option>
+                            <option>Question</option>
+                        </select>
+                        <label for="txt_question">Question</label>
+                        <textarea id="txt_question" rows="4" cols="50" required>
+                        </textarea>
+                        <button type="submit" id="btn_submit">Submit</button>
+                    </form>
                 </article>
             </section>
         </main>

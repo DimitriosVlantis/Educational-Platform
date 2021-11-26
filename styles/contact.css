@@ -1,0 +1,29 @@
+.form_structure .heading{
+    margin: 5%;
+    padding: auto;
+    position: relative;
+    font-size: calc(var(--heading-font-size) * 0.9);
+}
+
+.form_structure .description{
+    width: 60%;
+    margin: 7.5%;
+    padding: auto;
+}
+
+.form form{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: content;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+    left: 7.5%;
+    border: 0.2em solid var(--complimentary-color);
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    box-shadow: 0.07em 0.07em 0.25em var(--box-shadow-color);
+}
+
