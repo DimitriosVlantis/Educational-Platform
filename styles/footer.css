@@ -46,16 +46,16 @@ article .social-media{
     width: fit-content;
 }
 
-.social-media svg{
+.social-media a{
     border-radius: 50%;
     height: 3.5em;
     width: 3.5em;
     box-shadow: 0.07em 0.07em 0.25em var(--box-shadow-color);
 }
 
-.social-media svg:hover,
-.social-media svg:focus,
-.social-media svg:active{
+.social-media a:hover,
+.social-media a:focus,
+.social-media a:active{
     color: var(--link-color-hover);
     outline: transparent;
     background-color: var(--background-color);
