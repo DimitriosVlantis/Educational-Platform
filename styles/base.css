@@ -220,16 +220,16 @@
     Inspired by this article https://www.madebymike.com.au/writing/precise-control-responsive-typography/
 */
 :root {
-    --brand-color: #FA5FC1ff;
-    --accent-color: #F0B6DBff;
-    --complimentary-color: #c1fa5f; /*#DDEF53ff;*/
-    --text-color: #080808ff;
-    --title-color: #4B2C4Eff;
-    --link-color: #066063ff;
-    --link-color-hover: #990899ff;
+    --brand-color: #25B54D;
+    --accent-color: #2F2E40;
+    --complimentary-color: #B5255A; /*#DDEF53ff;*/
+    --text-color: #FEFFEA;
+    --title-color: #84E7E9;
+    --link-color: var(--brand-color);
+    --link-color-hover: #84E7E9;
     --hover-color: var(--complimentary-color);
-    --focus-color: #5ffad1; /*#74fa5f;*/
-    --background-color: #FEFFEA; /*fafafaff*/
+    --focus-color: #B57725; /*#74fa5f;*/
+    --background-color: #1A0C12; /*fafafaff*/
     --box-shadow-color: #08080866;
 
     --font-family-title: roboto-slab;
@@ -239,7 +239,7 @@
     --heading-font-size: calc(var(--font-size) * 2.5);
     --text-font-weight: 300;
     --link-font-weight: 400;
-    --title-font-weight: 400;
+    --title-font-weight: 500;
     --letter-spacing: 0.045em;
     --border-width: 0.25em;
     --underline-width: 0.1em;
@@ -406,6 +406,17 @@ abbr:active::after, abbr:focus::after {
     opacity: 1;
 }
 
+strong {
+    font-weight: 650;
+    text-decoration: underline;
+    margin: 0 0.25em;
+    letter-spacing: 0.05em;
+}
+
+em {
+    color: var(--brand-color);
+}
+
 /*
     Set text selection styles
 */
@@ -432,5 +443,5 @@ abbr:active::after, abbr:focus::after {
 }
 
 section {
-    padding: 10% 0.4em;
+    padding: 1.2em 0.4em;
 }

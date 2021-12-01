@@ -59,8 +59,8 @@ class Slider {
 
     #calculatePosition(slot) {
         const cardWidth = this.#_cards[0].getBoundingClientRect().width;
-        return (window.innerWidth / this.#_numOfVisibleCards) * (slot - 0.5)
-            - (cardWidth / 2);
+        return (window.outerWidth / this.#_numOfVisibleCards) * (slot - 0.5)
+            - cardWidth / 2;
     }
 
     #createPositions() {

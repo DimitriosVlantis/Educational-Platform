@@ -110,6 +110,15 @@
 
 /* CTA - End */
 
+main > section {
+    margin: 0 0 2.5em;
+}
+
+@media only screen and (max-width: 30em) {
+    .no-mobile {
+        display: none;
+    }
+}
 
 
 

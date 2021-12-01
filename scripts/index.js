@@ -44,7 +44,6 @@ menu_button_toggle.addEventListener('focus', (event) => {
 });
 
 const carouselSections = Array.from(document.getElementsByClassName('educational-content'));
-carouselSections.push(document.getElementById('testimonials'));
 
 const breakpoints = [
     {breakpoint: {min: 0, max: 768}, cards: 1},

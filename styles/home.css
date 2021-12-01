@@ -1,9 +1,19 @@
-.hero-section {
+@import url('https://css.gg/bolt.css');
 
+.hero-section {
+    padding: 0;
 }
 
-.sponsors {
+main > section:nth-of-type(2n) {
     background-color: var(--accent-color);
+}
+
+main > section:nth-of-type(2n) .link-3d-front {
+    background-color: var(--background-color);
+}
+
+main > section:nth-of-type(2n) .link-3d-back {
+    background-color: var(--focus-color);
 }
 
 .sponsors .heading {
@@ -28,8 +38,12 @@
     box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
 
-.educational-content section,
-section.educational-content {
+.educational-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.educational-content section {
     padding: 0;
     margin: 0;
 }
@@ -55,4 +69,114 @@ section.educational-content {
 .promo .heading,
 .promo .description {
     margin-left: 7.5%;
+}
+
+.educational-content .cta-link {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.outcomes {
+    padding: 1.6em 0.4em;
+    background-image: url("../assets/images/graphics/backgrounds/background-pattern.svg");
+}
+
+.outcomes .content-wrapper {
+    padding: 1.8em;
+    background-color: var(--accent-color);
+    opacity: 0.97;
+    border-radius: 20px;
+}
+
+.outcomes .heading {
+    font-size: calc(var(--font-size) * 1.4);
+    margin-top: 0;
+}
+
+.report {
+    white-space: nowrap;
+}
+
+.testimonials ul[role="group"] {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid: auto-flow / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.testimonial {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2em;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    box-shadow: none;
+    border: var(--border-width) solid var(--brand-color);
+    width: 100%;
+    height: auto;
+    max-width: calc(75vw - 2em);
+    margin: auto;
+}
+
+.testimonial .content-wrapper {
+    padding: 0 1em;
+    margin: 1em auto;
+    border: var(--border-width) solid var(--brand-color);
+    border-radius: var(--border-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.testimonial .content-wrapper > * {
+    margin: 2em auto;
+}
+
+.testimonial .heading {
+    font-size: calc(var(--font-size) * 1.25);
+}
+
+.testimonial .info {
+    padding: 0;
+    list-style: none;
+}
+
+.info li {
+    position: relative;
+    padding-left: 1.75em;
+}
+
+.info li::before {
+    content: url('../assets/images/graphics/bolt.svg');
+    position: absolute;
+    left: -0.2em;
+    top: -0.2em;
+}
+
+.testimonial .content-wrapper blockquote.description {
+    margin: 3em 1.75em;
+    position: relative;
+}
+
+blockquote.description::before,
+blockquote.description::after {
+    content: url("../assets/images/graphics/quote.svg");
+    position: absolute;
+}
+
+blockquote.description::before {
+    left: -3em;
+    top: -3em;
+}
+
+blockquote.description::after {
+    right: -2.5em;
+    bottom: -3em;
 }
