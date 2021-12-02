@@ -268,7 +268,7 @@ body {
     box-shadow 0.25s ease-in-out;
     position: absolute;
     top: 0;
-    padding: calc(max(7.5vh, 100px) + 2.5%) 0;
+    padding: calc(max(7.5vh, 100px) + 2.5%) 0 0;
 }
 
 body * {
@@ -351,7 +351,7 @@ a::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -0.5em;
+    bottom: 0;
     left: auto;
     right: 0;
     width: 0;

@@ -1,5 +1,5 @@
 body {
-    padding: calc(max(10vh, 150px) + 2.5%) 0;
+    padding: calc(max(10vh, 150px) + 2.5%) 0 0;
 }
 
 header {

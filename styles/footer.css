@@ -1,87 +1,120 @@
-footer{
-    padding: 0em 1em;
-    border-top: 0.2em solid var(--complimentary-color);
-    display:flex;
+footer {
+    border-top: var(--border-width) solid var(--complimentary-color);
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    position: relative;
-    top: 7em;
+    gap: 1em;
+    padding-top: 1em;
     background-color: var(--accent-color);
 }
 
-.link-wrapper{
+footer article:not(.links) {
+    width: 100%;
+}
+
+.link-wrapper,
+.link-wrapper div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-basis: content;
-    justify-content: space-between;
-    height:10em;
-    width: 90%;
-    margin: auto;
-    padding: auto;
+    flex-direction: column;
 }
 
-
-
-article .social-media{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-basis: content;
-    justify-content: space-between;
-    list-style-type: none;
-    position:relative;
-    left:21%;
-    width:50%;
+.link-wrapper {
+    align-items: center;
 }
 
-.links h2{
-    font-size: calc(var(--heading-font-size) * 0.5);
-    font-weight: 450;
-}
-
-.links{
-    padding: 2em;
-    height: fit-content;
+.link-wrapper div {
     width: fit-content;
 }
 
-.social-media a{
-    border-radius: 50%;
-    height: 3.5em;
-    width: 3.5em;
+.links .heading {
+    font-size: calc(var(--heading-font-size) * 0.45);
+    font-weight: 450;
+}
+
+.useful-links,
+.content {
+    padding-left: 1.5em;
+}
+
+.social-media {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.social-media li {
+    line-height: 0;
+    width: max(5%, 3em);
+}
+
+.social-media a {
     box-shadow: 0.07em 0.07em 0.25em var(--box-shadow-color);
+    border-radius: 50%;
+    transition: border 0.25s ease-in-out,
+    background-color 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+}
+
+.social-media a:hover::after {
+    width: 0;
 }
 
 .social-media a:hover,
 .social-media a:focus,
-.social-media a:active{
-    color: var(--link-color-hover);
-    outline: transparent;
+.social-media a:active {
     background-color: var(--background-color);
-    box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--background-color),
-    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
-    border-radius: 50%;
-    transition: border 0.25s ease-in-out,
-    box-shadow 0.25s ease-in-out;
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--link-color-hover);
 }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
+.social-media a svg path {
+    transition: fill 0.25s ease-in-out;
+}
 
-.svg-icon {
-    width: 1em;
-    height: 1em;
-  }
-  
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
-    fill: #4691f6;
-  }
-  
-  .svg-icon circle {
-    stroke: #4691f6;
-    stroke-width: 1;
-  }
+.social-media a:hover svg path,
+.social-media a:focus svg path,
+.social-media a:active svg path {
+    fill: var(--link-color-hover);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    padding: 0.75em 0;
+}
+
+.copyright h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+.copyright #icon-container svg {
+    width: 2.5em !important;
+    height: 2.5em;
+}
+
+.copyright #icon-container svg path {
+    fill: var(--complimentary-color);
+}
+
+.copyright svg:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 30em) {
+    .link-wrapper div {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .link-wrapper div {
+        width: 100%;
+    }
+
+    .links {
+        width: fit-content;
+    }
+}

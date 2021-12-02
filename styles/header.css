@@ -119,8 +119,9 @@ header {
     0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--complimentary-color);
 }
 
-.primary-navigation ul li a:after {
+.primary-navigation ul li a::after {
     background-color: var(--complimentary-color);
+    bottom: -0.5em;
 }
 
 .primary-navigation ul li a:hover {
