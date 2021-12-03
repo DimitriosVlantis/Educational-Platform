@@ -206,6 +206,7 @@
 
     .card img {
         width: 25vw;
+        margin-bottom: 1.5em;
     }
 
     .card .heading {
@@ -237,6 +238,7 @@
 
     .card img {
         width: 20vw;
+        margin-bottom: 2em;
     }
 
     .card .heading {
