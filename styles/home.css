@@ -1,7 +1,5 @@
-@import url('https://css.gg/bolt.css');
-
 .hero-section {
-    padding: 0;
+    padding: 0 0 3em;
 }
 
 main > section:nth-of-type(2n) {
@@ -14,6 +12,55 @@ main > section:nth-of-type(2n) .link-3d-front {
 
 main > section:nth-of-type(2n) .link-3d-back {
     background-color: var(--focus-color);
+}
+
+main > section:nth-of-type(2n) a:focus,
+main > section:nth-of-type(2n) a:active {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
+}
+
+main > section:nth-of-type(2n) .secondary-button {
+    background: linear-gradient(66deg, var(--accent-color) 30%, var(--complimentary-color) 60%, var(--brand-color) 80%)
+    repeat 0 -180px;
+    background-size: 100% 480px;
+    transition: background-position 0.25s ease-in-out;
+}
+
+main > section:nth-of-type(2n) .secondary-button:hover {
+    background-position: 0 0;
+}
+
+main > section:nth-of-type(2n) .secondary-button:focus,
+main > section:nth-of-type(2n) .secondary-button:active {
+    background-color: var(--complimentary-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
+}
+
+main > section:nth-of-type(2n) .card a:first-child:focus img,
+main > section:nth-of-type(2n) .card a:first-child:active img {
+    border-radius: 1.3em;
+    box-shadow: 0 0 0 var(--border-width) var(--link-color),
+    0 0 0 0.65em var(--accent-color),
+    0 0 0 0.95em var(--hover-color);
+}
+
+main > section:nth-of-type(2n) .cta-link {
+    border-radius: 0;
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--accent-color);
+}
+
+main > section:nth-of-type(2n) .cta-link:active,
+main > section:nth-of-type(2n) .cta-link:focus {
+    box-shadow: 0 var(--border-width) 0 calc(var(--border-width) * 1.25) var(--accent-color),
+    0 var(--border-width) 0 calc(var(--border-width) * 1.75) var(--focus-color);
+}
+
+main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
+    background-color: var(--background-color);
 }
 
 .sponsors .heading {
@@ -97,7 +144,19 @@ main > section:nth-of-type(2n) .link-3d-back {
     white-space: nowrap;
 }
 
-.testimonials ul[role="group"] {
+.report cite a {
+    color: var(--complimentary-color);
+}
+
+.report cite a:hover {
+    color: var(--link-color-hover);
+}
+
+.testimonials > .heading {
+    margin: 0 auto 1.5em;
+}
+
+.testimonials article[role="region"] > ul {
     display: grid;
     list-style: none;
     padding: 0;

@@ -7,13 +7,17 @@
     Text decoration to remove underline.
     Perspective to give an angle (perspective) while the link rotates to make the 3D effect slightly more realistic.
 */
-.cta-link {
+.btn.cta-link {
     position: relative;
     display: inline-flex;
     text-decoration: none;
     perspective: 50vmax;
     font-size: 1.5em;
     margin-top: 1em;
+    border-radius: 0;
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--background-color);
+    transition: box-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /*
@@ -41,8 +45,17 @@
 /*
     On link hover, rotate the button 90 degrees to show its bottom side.
 */
-.cta-link:hover .link-3d-wrapper {
+.cta-link:hover .link-3d-wrapper,
+.cta-link:active .link-3d-wrapper,
+.cta-link:focus .link-3d-wrapper {
     transform: rotateX(90deg);
+}
+
+.cta-link:active,
+.cta-link:focus {
+    border-radius: 0;
+    box-shadow: 0 var(--border-width) 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 var(--border-width) 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
 }
 
 /*
@@ -60,6 +73,7 @@
     width: 100%;
     padding: 0.6em 1.5em;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     font-family: var(--font-family-title);
 }
 
@@ -98,6 +112,34 @@
     margin-top: 0;
 }
 
+.secondary-button-wrapper {
+    padding: 1.6em 1em;
+}
+
+.btn.secondary-button {
+    border-radius: 50px;
+    display: block;
+    font-size: calc(var(--font-size) * 1.25);
+    padding: 0.75em 1.5em;
+    color: var(--text-color);
+    background: var(--brand-color);
+    background: linear-gradient(66deg, var(--background-color) 30%, var(--complimentary-color) 60%, var(--brand-color) 80%)
+    repeat 0 -180px;
+    background-size: 100% 480px;
+    transition: background-position 0.25s ease-in-out;
+}
+
+.btn.secondary-button:hover {
+    background-position: 0 0;
+}
+
+.secondary-button:focus,
+.secondary-button:active {
+    background-color: var(--complimentary-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
+}
+
 /* CTA - Begin */
 
 .cta {
@@ -105,14 +147,10 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* CTA - End */
-
-main > section {
-    margin: 0 0 2.5em;
-}
 
 @media only screen and (max-width: 30em) {
     .no-mobile {

@@ -21,7 +21,12 @@ class Slider {
         this.#_rightArrow = this.#_containerSection.querySelector(".right.arrow");
         this.#_cards = this.#_containerSection.querySelectorAll(".card");
         this.#_breakpoints = breakpoints;
+        this.#initialize();
+    }
+
+    #initialize() {
         this.#setCards();
+        this.#setVisibility();
         this.#setAriaSlideNumbers();
         this.#setAriaAttributes();
         this.#addEventListeners();
@@ -33,25 +38,32 @@ class Slider {
         this.#createPositions();
         const buttonControl = this.#_containerSection.querySelector('.slider-controls');
         if (this.#_numOfVisibleCards === this.#_cards.length) {
-            buttonControl.style.visibility = 'hidden';
+            if (buttonControl.classList.contains('visible')) {
+                buttonControl.classList.remove('visible');
+            }
+            buttonControl.classList.add('hidden');
             for (const [index, card] of this.#_cards.entries()) {
                 card.style.left = `${this.#calculatePosition(index + 1)}px`;
             }
         } else {
-            if (buttonControl.style.visibility === 'hidden') {
-                buttonControl.style.visibility = 'visible';
+            if (buttonControl.classList.contains('hidden')) {
+                buttonControl.classList.remove('hidden');
+                buttonControl.classList.add('visible');
             }
             for (const [index, card] of this.#_slots.entries()) {
                 card.style.left = `${this.#_positions[index]}px`;
             }
         }
+        this.#setVisibility(0);
     }
 
     #createSlots() {
         for (const el of this.#_breakpoints) {
             if (window.innerWidth >= el.breakpoint.min && window.innerWidth < el.breakpoint.max) {
                 this.#_numOfVisibleCards = Math.min(el.cards, this.#_cards.length);
-                this.#_slots = new Array(this.#_cards.length);
+                let arrayLength = this.#_cards.length;
+                arrayLength +=  this.#_cards.length === this.#_numOfVisibleCards ? 1 : 0;
+                this.#_slots = new Array(arrayLength);
                 break;
             }
         }
@@ -59,7 +71,7 @@ class Slider {
 
     #calculatePosition(slot) {
         const cardWidth = this.#_cards[0].getBoundingClientRect().width;
-        return (window.outerWidth / this.#_numOfVisibleCards) * (slot - 0.5)
+        return (Math.min(window.outerWidth, window.innerWidth) / this.#_numOfVisibleCards) * (slot - 0.5)
             - cardWidth / 2;
     }
 
@@ -153,6 +165,29 @@ class Slider {
                 card.classList.remove(`${this.#_direction.left}`);
             }, 1000);
         }
+        this.#setVisibility();
+    }
+
+    #setVisibility(timeout = 1000) {
+        for (const [index, card] of this.#_slots.entries()) {
+            setTimeout(() => {
+                if (index > 0 && index <= this.#_numOfVisibleCards) {
+                    if (!card.classList.contains('visible')) {
+                        card.classList.add('visible');
+                    }
+                    if (card.classList.contains('hidden')) {
+                        card.classList.remove('hidden');
+                    }
+                } else {
+                    if (!card.classList.contains('hidden')) {
+                        card.classList.add('hidden');
+                    }
+                    if (card.classList.contains('visible')) {
+                        card.classList.remove('visible');
+                    }
+                }
+            }, timeout);
+        }
     }
 
     #moveCards(direction) {
@@ -197,17 +232,19 @@ class Slider {
     }
 
     #stretchSliderHeight(height) {
-        this.#_containerSection.querySelector('.slider').style.height = `${height}px`;
+        this.#_containerSection.querySelector('.slider').style.height = `calc(${height}px + 1em)`;
     }
 
     #setAriaAttributes() {
         const listItems = this.#_containerSection.querySelectorAll('li[aria-roledescription="slide"]');
         listItems.forEach(item => {
-            if (item.querySelector('.card').classList.contains('visible')) {
-                item.setAttribute('aria-hidden', 'false');
-            } else {
-                item.setAttribute('aria-hidden', 'true');
-            }
+            setTimeout(() => {
+                if (item.querySelector('.card').classList.contains('visible')) {
+                    item.setAttribute('aria-hidden', 'false');
+                } else {
+                    item.setAttribute('aria-hidden', 'true');
+                }
+            }, 1000);
         });
     }
 

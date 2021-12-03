@@ -1,0 +1,55 @@
+.branding h1 {
+    font-size: 2rem;
+}
+
+.button-wrapper {
+    width: min(5.3em, 8vmin);
+    height: min(5.3em, 8vmin);
+    padding: min(0.625em, 1vmin) min(0.75em, 0.85vmin);
+}
+
+.logo {
+    max-width: calc(min(150px, 10vh) - 1%);
+}
+
+.primary-navigation ul {
+    font-size: 2.5em;
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-205%);
+    }
+}
+
+.btn.cta-link {
+    margin-top: 3em;
+}
+
+.educational-content .heading,
+.educational-content .description {
+    margin: 2.5%;
+}
+
+.sponsors img {
+    max-width: calc(20vw - 1.75em);
+}
+
+.outcomes .heading {
+    font-size: calc(var(--font-size) * 1.85);
+}
+
+.testimonials article[role="region"] > ul {
+    grid: auto-flow / repeat(auto-fit, minmax(333px, 1fr));
+    justify-content: center;
+}
+
+li[aria-roledescription="testimonial"]:last-child  {
+    transform: translateX(50%);
+}

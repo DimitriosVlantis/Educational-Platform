@@ -269,6 +269,7 @@ body {
     position: absolute;
     top: 0;
     padding: calc(max(7.5vh, 100px) + 2.5%) 0 0;
+    max-width: 100vw;
 }
 
 body * {
@@ -360,7 +361,7 @@ a::after {
     transition: width 0.25s ease-in-out;
 }
 
-a:hover::after {
+a:not(.btn):hover::after {
     right: auto;
     left: 0;
     width: 100%;
@@ -443,5 +444,5 @@ em {
 }
 
 section {
-    padding: 1.2em 0.4em;
+     padding: 3em 0.4em;
 }

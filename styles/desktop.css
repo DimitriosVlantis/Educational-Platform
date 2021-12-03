@@ -3,22 +3,22 @@ body {
 }
 
 header {
-    height: max(10vh, 150px);
     border-bottom-width: 5px;
+    padding: 1% 5%;
 }
 
 .branding h1 {
-    font-size: 2rem;
-}
-
-.logo {
-    width: max(7.5vh, 112px);
+    font-size: 3rem;
 }
 
 .button-wrapper {
-    width: min(4.65em, 7vmin);
-    height: min(4.65em, 7vmin);
-    padding: min(0.5625em, 0.85vmin) min(0.5em, 0.75vmin);
+    width: min(6em, 10vmin);
+    height: min(6em, 10vmin);
+    padding: min(0.75em, 1vmin) min(0.75em, 1vmin);
+}
+
+.logo {
+    max-width: min(175px, 15vh);
 }
 
 .primary-navigation ul {
@@ -33,6 +33,46 @@ header {
         transform: translateY(-200%);
     }
     85%, 100% {
-        transform: translateY(-170%);
+        transform: translateY(-250%);
     }
+}
+
+.btn.cta-link {
+    margin-top: 4em;
+}
+
+.hero-section .btn.cta-link,
+.outcomes .btn.cta-link {
+    margin-top: 2em;
+}
+
+.educational-content .heading,
+.educational-content .description {
+    margin: 2%;
+}
+
+
+.cta {
+    width: calc(30em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+}
+
+.cta .heading {
+    font-size: calc(1.3 * var(--heading-font-size));
+}
+
+.sponsors img {
+    max-width: 25vw;
+}
+
+.sponsors .heading {
+    font-size: var(--heading-font-size);
+}
+
+.outcomes .heading,
+.testimonials > .heading {
+    font-size: calc(var(--font-size) * 2);
+}
+
+.social-media li {
+    width: max(7.5%, 3em);
 }

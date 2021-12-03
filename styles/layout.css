@@ -1,0 +1,23 @@
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
+}
+
+body {
+    grid:
+        "header" minmax(150px, 7.5vh)
+        "main" auto
+        "footer" auto
+    / 100vw;
+}

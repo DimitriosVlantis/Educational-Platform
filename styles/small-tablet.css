@@ -1,0 +1,39 @@
+.branding h1 {
+    font-size: 1.5rem;
+}
+
+.button-wrapper {
+    width: min(5.3em, 8.5vmin);
+    height: min(5.3em, 8.5vmin);
+    padding: min(0.625em, 1vmin) min(0.75em, 0.85vmin);
+}
+
+.primary-navigation ul {
+    font-size: 2.25em;
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-205%);
+    }
+}
+
+.sponsors img {
+    max-width: calc(33vw - 2.4em);
+}
+
+.outcomes .heading {
+    font-size: calc(var(--font-size) * 1.8);
+}
+
+.testimonials article[role="region"] > ul {
+    grid: auto-flow / repeat(auto-fit, 375px);
+    justify-content: center;
+}
+

@@ -1,0 +1,64 @@
+.branding h1 {
+    font-size: 2rem;
+}
+
+.button-wrapper {
+    width: min(5.3em, 8vmin);
+    height: min(5.3em, 8vmin);
+    padding: min(0.625em, 1vmin) min(0.75em, 0.85vmin);
+}
+
+.logo {
+    max-width: min(150px, 10vh);
+}
+
+.primary-navigation ul {
+    font-size: 3em;
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-205%);
+    }
+}
+
+.btn.cta-link {
+    margin-top: 3em;
+}
+
+.educational-content .heading,
+.educational-content .description {
+    margin: 2.5%;
+}
+
+
+.cta {
+    width: calc(24em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+}
+
+.cta .heading {
+    font-size: calc(1.1 * var(--heading-font-size));
+}
+
+.sponsors img {
+    max-width: 25vw;
+}
+
+.sponsors .heading {
+    font-size: calc(var(--heading-font-size) * 0.85);
+}
+
+.outcomes .heading,
+.testimonials > .heading {
+    font-size: calc(var(--font-size) * 1.9);
+}
+
+.social-media li {
+    width: max(7.5%, 3em);
+}
