@@ -1,5 +1,5 @@
 header {
-    grid-area: header;
+    grid-area: head;
 }
 
 main {
@@ -7,7 +7,7 @@ main {
 }
 
 footer {
-    grid-area: footer;
+    grid-area: foot;
 }
 
 aside {
@@ -15,9 +15,73 @@ aside {
 }
 
 body {
-    grid:
-        "header" minmax(150px, 7.5vh)
-        "main" auto
-        "footer" auto
-    / 100vw;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+}
+
+body.has-aside {
+    grid-template-areas:
+        "head"
+        "main"
+        "aside"
+        "foot";
+}
+
+@media only screen and (min-width: 38em) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot";
+    }
+
+    body.has-aside {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head head"
+        "main aside"
+        "foot foot";
+    }
+}
+
+@media only screen and (min-width: 67.5em) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "head head head"
+        "main main main"
+        "foot foot foot";
+    }
+
+    body.has-aside {
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-areas:
+        "head head head"
+        "main main aside"
+        "foot foot foot";
+    }
+}
+
+@media only screen and (min-width: 90em) {
+    body {
+        grid-template-columns: 1fr 32% 32% 32% 1fr;
+        grid-template-areas:
+            ". head head head ."
+            "main main main main main"
+            "foot foot foot foot foot";
+    }
+
+    body.has-aside {
+        grid-template-columns: 1fr 40% 40% 3fr 1fr;
+        grid-template-areas:
+            ". head head head ."
+            ". main main aside ."
+            "foot foot foot foot foot";
+    }
 }

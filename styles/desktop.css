@@ -51,7 +51,6 @@ header {
     margin: 2%;
 }
 
-
 .cta {
     width: calc(30em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
 }
