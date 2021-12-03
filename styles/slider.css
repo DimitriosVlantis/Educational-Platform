@@ -236,16 +236,16 @@
 
 @media screen and (min-width: 90em) {
     .card {
-        width: calc(20vw + var(--border-width) * 2);
+        width: calc(17.5vw + var(--border-width) * 2);
     }
 
     .card img {
-        width: 20vw;
+        width: 17.5vw;
         margin-bottom: 2em;
     }
 
     .card .heading {
-        font-size: calc(var(--heading-font-size) * 0.4);
+        font-size: calc(var(--heading-font-size) * 0.35);
         max-height: calc(20vw - 5em);
     }
 
