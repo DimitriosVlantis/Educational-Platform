@@ -218,8 +218,9 @@ header {
 
 .button-toggle:focus {
     background-color: var(--brand-color);
-    box-shadow: 0 0 0 var(--border-width) var(--background-color)
-    0 0 0 calc(var(--border-width) * 2) var(--brand-color);
+    box-shadow: 0 0 0 calc(var(--border-width) + var(--underline-width)) var(--brand-color),
+            0 0 0 calc(var(--border-width) * 2 + var(--underline-width)) var(--background-color),
+    0 0 0 calc(var(--border-width) * 2.75 + var(--underline-width)) var(--brand-color);
     transition: box-shadow 0.125s ease-out;
 }
 
@@ -244,8 +245,7 @@ header {
 }
 
 .line:active,
-.line:focus,
-.button-toggle:active {
+.line:focus {
     background: 0;
     border: 0;
     box-shadow: none;
