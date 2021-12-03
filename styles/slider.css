@@ -94,6 +94,9 @@
 .card .heading a:active {
     color: var(--link-color-hover);
     text-decoration: none;
+    background-color: var(--background-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
 }
 
 .card .description {

@@ -14,14 +14,14 @@ main > section:nth-of-type(2n) .link-3d-back {
     background-color: var(--focus-color);
 }
 
-main > section:nth-of-type(2n) a:focus,
-main > section:nth-of-type(2n) a:active {
+body main > section:nth-of-type(2n) .heading a:focus,
+body main > section:nth-of-type(2n) .heading a:active {
     background-color: var(--accent-color);
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
     0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
 }
 
-main > section:nth-of-type(2n) .secondary-button {
+body main > section:nth-of-type(2n) a.btn.secondary-button {
     background: linear-gradient(66deg, var(--accent-color) 30%, var(--complimentary-color) 60%, var(--brand-color) 80%)
     repeat 0 -180px;
     background-size: 100% 480px;
@@ -32,8 +32,8 @@ main > section:nth-of-type(2n) .secondary-button:hover {
     background-position: 0 0;
 }
 
-main > section:nth-of-type(2n) .secondary-button:focus,
-main > section:nth-of-type(2n) .secondary-button:active {
+body main > section:nth-of-type(2n) a.btn.secondary-button:focus,
+body main > section:nth-of-type(2n) a.btn.secondary-button:active {
     background-color: var(--complimentary-color);
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
     0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
@@ -42,9 +42,15 @@ main > section:nth-of-type(2n) .secondary-button:active {
 main > section:nth-of-type(2n) .card a:first-child:focus img,
 main > section:nth-of-type(2n) .card a:first-child:active img {
     border-radius: 1.3em;
+    background-color: var(--accent-color);
     box-shadow: 0 0 0 var(--border-width) var(--link-color),
     0 0 0 0.65em var(--accent-color),
     0 0 0 0.95em var(--hover-color);
+}
+
+main > section:nth-of-type(2n) .card a:first-child:focus,
+main > section:nth-of-type(2n) .card a:first-child:active {
+    background-color: var(--accent-color);
 }
 
 main > section:nth-of-type(2n) .cta-link {
@@ -53,8 +59,9 @@ main > section:nth-of-type(2n) .cta-link {
     0 0 0 calc(var(--border-width) * 1.75) var(--accent-color);
 }
 
-main > section:nth-of-type(2n) .cta-link:active,
-main > section:nth-of-type(2n) .cta-link:focus {
+body main > section:nth-of-type(2n) a.btn.cta-link:active,
+body main > section:nth-of-type(2n) a.btn.cta-link:focus {
+    background-color: var(--accent-color);
     box-shadow: 0 var(--border-width) 0 calc(var(--border-width) * 1.25) var(--accent-color),
     0 var(--border-width) 0 calc(var(--border-width) * 1.75) var(--focus-color);
 }
@@ -150,6 +157,13 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
 
 .report cite a:hover {
     color: var(--link-color-hover);
+}
+
+.outcomes .report cite a:active,
+.outcomes .report cite a:focus {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--link-color-hover);
 }
 
 .testimonials > .heading {
