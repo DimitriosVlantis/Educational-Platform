@@ -1,5 +1,8 @@
 .hero-section {
     padding: 0 0 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 main > section:nth-of-type(2n) {
@@ -28,7 +31,7 @@ body main > section:nth-of-type(2n) a.btn.secondary-button {
     transition: background-position 0.25s ease-in-out;
 }
 
-main > section:nth-of-type(2n) .secondary-button:hover {
+body main > section:nth-of-type(2n) a.btn.secondary-button:hover {
     background-position: 0 0;
 }
 
@@ -131,15 +134,22 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
 }
 
 .outcomes {
-    padding: 1.6em 0.4em;
+    padding: 1.6em 0.8em;
     background-image: url("../assets/images/graphics/backgrounds/background-pattern.svg");
 }
 
-.outcomes .content-wrapper {
+.outcomes .background-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 1.8em;
     background-color: var(--accent-color);
     opacity: 0.97;
     border-radius: 20px;
+}
+
+.outcomes .no-mobile {
+    max-width: 45vw;
 }
 
 .outcomes .heading {

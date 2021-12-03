@@ -170,6 +170,7 @@ class Slider {
 
     #setVisibility(timeout = 1000) {
         for (const [index, card] of this.#_slots.entries()) {
+            if (card === undefined || card === null) continue;
             setTimeout(() => {
                 if (index > 0 && index <= this.#_numOfVisibleCards) {
                     if (!card.classList.contains('visible')) {

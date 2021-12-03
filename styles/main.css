@@ -145,7 +145,7 @@ body main a.btn.secondary-button:active {
 
 .cta {
     width: calc(16em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -153,7 +153,7 @@ body main a.btn.secondary-button:active {
 
 /* CTA - End */
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 67.5em) {
     .no-mobile {
         display: none;
     }
