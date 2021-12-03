@@ -421,7 +421,7 @@ em {
 /*
     Set text selection styles
 */
-::selection, ::-moz-selection {
+::selection {
     background: var(--text-color);
     color: var(--background-color);
     text-shadow: none;
