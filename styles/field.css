@@ -156,6 +156,7 @@ section {
 .breadcrumbs .breadcrumb li svg {
     width: 12px;
     height: 12px;
+    vertical-align: text-top;
 }
 
 .breadcrumbs .breadcrumb li:first-child::before,
@@ -308,14 +309,26 @@ section {
     padding: 0 1em;
 }
 
+.module-info .table-wrapper {
+    background-image: url(../assets/images/graphics/backgrounds/grid-pattern.svg);
+    background-size: cover;
+    margin: 10% 0 0;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-top: 5px solid;
+    border-right: 5px solid;
+    border-color: var(--focus-color);
+}
+
 .module-info table {
     position: sticky;
     top: calc(max(10vh, 150px) + 10%);
-    margin: 10% 0;
+    margin: 0 0 25%;
 }
 
-.module-info table,
-.module-info table caption {
+.module-info tr {
     background-color: var(--accent-color);
 }
 
@@ -349,5 +362,6 @@ section {
     font-weight: var(--title-font-weight);
     color: var(--background-color);
     background-color: var(--focus-color);
+    border-top-right-radius: 45px;
 }
 

@@ -48,14 +48,14 @@ body.has-aside {
         display: grid;
         grid-template:
             "hero hero" 100vh
-            "module ." max-content
-                / 65% 10fr;
+            "module ." minmax(100vh, max-content)
+            / 65% 10fr;
         row-gap: 2em;
     }
 
     body.has-aside {
         grid-template-columns: 65% 10fr;
-        grid-template-rows: 100vh max-content 0;
+        grid-template-rows: 100vh minmax(100vh, max-content) 0;
         grid-template-areas:
         "main main"
         "main main"
@@ -79,13 +79,13 @@ body.has-aside {
     body.has-aside main {
         grid-template:
                 "hero hero hero" 100vh
-                "module module ." max-content
+                "module module ." minmax(100vh, max-content)
                 / 35% 25% 30fr;
     }
 
     body.has-aside {
         grid-template-columns: 35% 25% 30fr;
-        grid-template-rows: 100vh max-content 0;
+        grid-template-rows: 100vh minmax(100vh, max-content) 0;
         grid-template-areas:
         "main main main"
         "main main main"
@@ -105,7 +105,7 @@ body.has-aside {
     body.has-aside main {
         grid-template:
                 ". hero hero hero hero" 100vh
-                ". module module . ." max-content
+                ". module module . ." minmax(100vh, max-content)
                 / 1fr 30% 15% 20fr 1fr;
     }
 
