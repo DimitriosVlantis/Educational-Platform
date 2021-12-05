@@ -1,7 +1,3 @@
-body {
-    padding: calc(max(10vh, 150px) + 2.5%) 0 0;
-}
-
 header {
     border-bottom-width: 5px;
     padding: 1% 5%;
@@ -33,7 +29,7 @@ header {
         transform: translateY(-200%);
     }
     85%, 100% {
-        transform: translateY(-250%);
+        transform: translateY(-275%);
     }
 }
 
@@ -41,7 +37,7 @@ header {
     margin-top: 4em;
 }
 
-.hero-section .btn.cta-link,
+body:not(.has-aside) .hero-section .btn.cta-link,
 .outcomes .btn.cta-link {
     margin-top: 2em;
 }
@@ -52,15 +48,25 @@ header {
 }
 
 .cta {
-    width: calc(30em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+    width: calc(24em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
 }
 
 .cta .heading {
-    font-size: calc(1.3 * var(--heading-font-size));
+    font-size: calc(var(--heading-font-size) * 0.85);
+}
+
+.has-aside .cta .heading {
+    font-size: calc(var(--heading-font-size) * 0.85);
+}
+
+.sponsors .images-wrapper {
+    max-width: 60vw;
+    margin: auto;
+    column-gap: 5.1em;
 }
 
 .sponsors img {
-    max-width: 25vw;
+    max-width: 15vw;
 }
 
 .sponsors .heading {
@@ -74,4 +80,57 @@ header {
 
 .social-media li {
     width: max(7.5%, 3em);
+}
+
+.has-aside .hero-section {
+    grid-template-columns: 50% 50%;
+    background: linear-gradient(66deg, var(--background-color) 30%,
+    var(--complimentary-color) 60%,
+    var(--brand-color) 80%,
+    var(--background-color) 97.5%);
+}
+
+.has-aside .hero-section .heading {
+    margin-top: 0.4em;
+    font-size: calc(var(--heading-font-size) * 0.95);
+}
+
+.has-aside .breadcrumbs .breadcrumb a {
+    font-size: calc(var(--font-size) * 0.75);
+    padding: 0 20px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li:first-child {
+    border-left: 4px solid var(--accent-color);
+}
+
+.has-aside .breadcrumbs .breadcrumb li svg {
+    width: 24px;
+    height: 24px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li:first-child::before,
+.has-aside .breadcrumbs .breadcrumb li:first-child::after {
+    left: 5px;
+}
+
+.has-aside .module .heading {
+    font-size: calc(0.6875 * var(--heading-font-size));
+}
+
+.has-aside .module details dt {
+    font-size: calc(0.9 * var(--font-size));
+}
+
+.has-aside .module details dd {
+    font-size: calc(0.7 * var(--font-size));
+}
+
+.has-aside .module details[open] > :not(summary, .heading) {
+    padding: 0 2em;
+}
+
+.has-aside .module details .heading {
+    padding-left: 1em;
+    font-size: calc(0.75 * var(--heading-font-size));
 }

@@ -20,7 +20,7 @@ header {
     left: 0;
     top: 0;
     padding: 2.5% 7.5%;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(90deg,
     #ffffff00 0%,
     var(--background-color) 5%,
@@ -109,25 +109,25 @@ header {
 */
 .primary-navigation ul li a,
 .primary-navigation ul li a:link {
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 .primary-navigation ul li a:focus,
 .primary-navigation ul li a:active {
-    color: var(--complimentary-color);
+    color: var(--text-color);
     outline: transparent;
     background-color: var(--brand-color);
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--brand-color),
-    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--complimentary-color);
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--text-color);
 }
 
 .primary-navigation ul li a::after {
-    background-color: var(--complimentary-color);
+    background-color: var(--text-color);
     bottom: -0.5em;
 }
 
 .primary-navigation ul li a:hover {
-    color: var(--complimentary-color);
+    color: var(--text-color);
 }
 
 /*

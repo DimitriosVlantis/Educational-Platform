@@ -1,5 +1,5 @@
 .hero-section {
-    padding: 0 0 3em;
+    /* padding: 0; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,6 +11,7 @@ main > section:nth-of-type(2n) {
 
 main > section:nth-of-type(2n) .link-3d-front {
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 main > section:nth-of-type(2n) .link-3d-back {
@@ -149,7 +150,7 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
 }
 
 .outcomes .no-mobile {
-    max-width: 45vw;
+    max-width: min(45vw, 550px);
 }
 
 .outcomes .heading {

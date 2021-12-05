@@ -1,7 +1,3 @@
-header {
-    grid-area: head;
-}
-
 main {
     grid-area: main;
 }
@@ -19,34 +15,56 @@ body {
     grid-auto-rows: auto;
     grid-template-columns: 100vw;
     grid-template-areas:
-        "head"
         "main"
         "foot";
 }
 
 body.has-aside {
     grid-template-areas:
-        "head"
         "main"
         "aside"
         "foot";
+    align-items: center;
+    padding-top: 0;
 }
 
-@media only screen and (min-width: 38em) {
+@media only screen and (min-width: 48em) {
     body {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "head head"
         "main main"
         "foot foot";
     }
 
+    body.has-aside main .hero-section {
+        grid-area: hero;
+    }
+
+    body.has-aside main .module {
+        grid-area: module;
+    }
+
+    body.has-aside main {
+        display: grid;
+        grid-template:
+            "hero hero" 100vh
+            "module ." max-content
+                / 65% 10fr;
+        row-gap: 2em;
+    }
+
     body.has-aside {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 65% 10fr;
+        grid-template-rows: 100vh max-content 0;
         grid-template-areas:
-        "head head"
-        "main aside"
+        "main main"
+        "main main"
+        ". aside"
         "foot foot";
+    }
+
+    aside {
+        grid-row: 2 / 4;
     }
 }
 
@@ -54,16 +72,24 @@ body.has-aside {
     body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "head head head"
         "main main main"
         "foot foot foot";
     }
 
+    body.has-aside main {
+        grid-template:
+                "hero hero hero" 100vh
+                "module module ." max-content
+                / 35% 25% 30fr;
+    }
+
     body.has-aside {
-        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-columns: 35% 25% 30fr;
+        grid-template-rows: 100vh max-content 0;
         grid-template-areas:
-        "head head head"
-        "main main aside"
+        "main main main"
+        "main main main"
+        ". . aside"
         "foot foot foot";
     }
 }
@@ -72,16 +98,23 @@ body.has-aside {
     body {
         grid-template-columns: 1fr 32% 32% 32% 1fr;
         grid-template-areas:
-            ". head head head ."
             "main main main main main"
             "foot foot foot foot foot";
     }
 
+    body.has-aside main {
+        grid-template:
+                ". hero hero hero hero" 100vh
+                ". module module . ." max-content
+                / 1fr 30% 15% 20fr 1fr;
+    }
+
     body.has-aside {
-        grid-template-columns: 1fr 40% 40% 3fr 1fr;
+        grid-template-columns: 1fr 30% 30% 20fr 1fr;
         grid-template-areas:
-            ". head head head ."
-            ". main main aside ."
+            ". main main main main"
+            ". main main main main"
+            ". . . aside ."
             "foot foot foot foot foot";
     }
 }

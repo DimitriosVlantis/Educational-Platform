@@ -78,7 +78,7 @@
 }
 
 .link-3d-front {
-    color: var(--text-color);
+    color: var(--background-color);
     background-color: var(--brand-color);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .secondary-button-wrapper {
-    padding: 1.6em 1em;
+    padding: 1.6em 0.6em;
 }
 
 .btn.secondary-button {
@@ -145,7 +145,6 @@ body main a.btn.secondary-button:active {
 
 .cta {
     width: calc(16em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
-    /* margin: auto; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;

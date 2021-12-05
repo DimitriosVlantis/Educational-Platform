@@ -24,6 +24,40 @@
     }
 }
 
+.cta {
+    width: calc(20em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+}
+
+.has-aside .hero-section {
+    background: linear-gradient(45deg, var(--background-color) 35%,
+    var(--complimentary-color) 60%,
+    var(--brand-color) 80%,
+    var(--background-color) 97.5%);
+}
+
+.has-aside .breadcrumbs .breadcrumb a {
+    font-size: calc(var(--font-size) * 0.85);
+    padding: 0 15px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li svg {
+    width: 18px;
+    height: 18px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li:first-child::before,
+.has-aside .breadcrumbs .breadcrumb li:first-child::after {
+    left: 6px;
+}
+
+.has-aside .module {
+    padding: 0 4em;
+}
+
+.has-aside .module .heading {
+    font-size: calc(0.6875 * var(--heading-font-size));
+}
+
 .sponsors img {
     max-width: calc(33vw - 2.4em);
 }
