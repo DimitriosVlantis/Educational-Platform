@@ -341,6 +341,11 @@ section {
     font-size: 90%;
 }
 
+.module-info table tr:last-child td,
+.module-info table tr:last-child th {
+    border-bottom: 5px solid var(--text-color);
+}
+
 .module-info table thead th {
     font-size: var(--font-size);
     border-color: var(--text-color);
@@ -357,11 +362,25 @@ section {
 .module-info table caption {
     border: 5px solid var(--text-color);
     border-bottom: 0;
+}
+
+.module-info table caption,
+.module-info table tfoot {
     padding: 0.8em 0.4em;
     font-size: var(--font-size);
     font-weight: var(--title-font-weight);
+    border-top-right-radius: 45px;
+}
+
+.module-info table caption,
+.module-info table tfoot th,
+.module-info table tfoot td {
     color: var(--background-color);
     background-color: var(--focus-color);
-    border-top-right-radius: 45px;
+}
+
+.module-info table tfoot th,
+.module-info table tfoot td {
+    border: 5px solid var(--text-color);
 }
 

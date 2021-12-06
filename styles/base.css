@@ -394,6 +394,7 @@ abbr::after {
     white-space: nowrap;
     background: var(--text-color);
     color: var(--background-color);
+    border: var(--border-width) dashed var(--background-color);
     transition: opacity 0.25s ease-out,
     background 0.25s ease-out,
     color 0.25s ease-out,
@@ -401,7 +402,9 @@ abbr::after {
     width 0.25s ease-out;
 }
 
-abbr:active::after, abbr:focus::after {
+abbr:active::after,
+abbr:focus::after,
+abbr:hover::after {
     width: max-content;
     padding: 1em;
     opacity: 1;
@@ -416,6 +419,20 @@ strong {
 
 em {
     color: var(--brand-color);
+}
+
+b.attention {
+    text-decoration: underline double 2px;
+}
+
+del {
+    text-decoration: line-through 3px var(--complimentary-color);
+    font-size: calc(var(--font-size) * 0.65);
+}
+
+ins {
+    text-decoration: underline 3px var(--complimentary-color);
+    font-size: calc(var(--font-size) * 0.8);
 }
 
 /*
