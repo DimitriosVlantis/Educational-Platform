@@ -1,0 +1,101 @@
+
+section .hero-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: content;
+    align-items: center;
+    background-image: url("");
+    width: 100%;
+    height: 30em;
+    margin-top: 9.8%;
+}
+
+.hero-section h2{
+    font-size: var(--heading-font-size)*0.8;
+    color: var(--text-color);
+    text-decoration: none;
+    width: 80%;
+    padding-top: 5em;
+}
+
+.hero-section h3{
+    font-size: var(--heading-font-size)*0.8;
+    color: var(--text-color);
+    text-decoration: none;
+    padding-top: 10em;
+}
+
+.student1{
+    width: 80%;
+    height: auto;
+    border-right: 0.15em solid var(--brand-color); 
+    border-bottom: 0.15em solid var(--brand-color);
+    border-radius: 15px;
+    margin-top: 5em;
+    background-image: url("../assets/images/graphics/backgrounds/bio-pattern.svg");
+    padding: 2.5em;
+}
+
+
+.student1 h3{
+    position: relative;
+    right: 4%;
+}
+
+
+.student2{
+    position: relative;
+    left: 20%;
+    width: 80%;
+    height: auto;
+    border-left: 0.15em solid var(--brand-color); 
+    border-bottom: 0.15em solid var(--brand-color);
+    border-radius: 15px;
+    padding: 2.5em;
+    margin-top: 5em;
+    background-image: url("../assets/images/graphics/backgrounds/bio-pattern.svg");
+}
+
+.student2 h3{
+    position: relative;
+    left: 11%
+}
+
+.student1 div,
+.student2 div{
+    position: relative;
+    bottom: 1em;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    opacity: 0.97;
+}
+
+.student1 h3,
+.student2 h3{
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+
+.student1 p,
+.student2 p{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.hero-section svg {
+    width: 1.5em;
+    height: 1.5em;
+    transform: rotate(90deg);
+  }
+  
+.hero-section .svg-icon path {
+    fill: var(--text-color);
+  }
+  
