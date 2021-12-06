@@ -252,7 +252,7 @@ section {
 }
 
 .module details > summary::before {
-    content:  url(../assets/images/graphics/math-plus.svg);
+    content: url(../assets/images/graphics/math-plus.svg);
     display: inline-flex;
     line-height: 0;
     width: 1em;
@@ -272,11 +272,11 @@ section {
 }
 
 .module details > summary:hover::before {
-    content:  url(../assets/images/graphics/math-plus-2.svg);
+    content: url(../assets/images/graphics/math-plus-2.svg);
 }
 
 .module details[open] > summary:hover::before {
-    content:  url(../assets/images/graphics/math-minus-2.svg);
+    content: url(../assets/images/graphics/math-minus-2.svg);
 }
 
 .module details .heading {

@@ -53,7 +53,6 @@ footer article:not(.links) {
 
 .social-media li {
     line-height: 0;
-    width: max(5%, 3em);
 }
 
 .social-media a {
@@ -62,6 +61,8 @@ footer article:not(.links) {
     transition: border 0.25s ease-in-out,
     background-color 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out;
+    width: max(5%, 3em);
+    height: 100%;
 }
 
 .social-media a:hover,
@@ -71,8 +72,8 @@ footer article:not(.links) {
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
     0 0 0 calc(var(--border-width) * 1.75) var(--link-color-hover);
 }
-
 .social-media a svg path {
+    fill: var(--link-color);
     transition: fill 0.25s ease-in-out;
 }
 

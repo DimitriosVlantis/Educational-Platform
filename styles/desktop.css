@@ -78,6 +78,11 @@ body:not(.has-aside) .hero-section .btn.cta-link,
     font-size: calc(var(--font-size) * 2);
 }
 
+.testimonials{
+    max-width: 87.5%;
+    margin: auto;
+}
+
 .social-media li {
     width: max(7.5%, 3em);
 }

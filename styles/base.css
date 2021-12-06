@@ -279,7 +279,7 @@ body * {
 /*
     Font family for headers
 */
-h1, h2, h3, h4, h5, h6, label{
+h1, h2, h3, h4, h5, h6, label {
     font-family: var(--font-family-title);
     font-weight: var(--title-font-weight);
     color: var(--title-color);
@@ -408,6 +408,7 @@ abbr:hover::after {
     width: max-content;
     padding: 1em;
     opacity: 1;
+    box-shadow: var(--border-width) var(--border-width) var(--border-width) var(--border-width) var(--box-shadow-color);
 }
 
 strong {
@@ -461,7 +462,7 @@ ins {
 }
 
 section {
-     padding: 3em 0.4em;
+    padding: 3em 0.4em;
 }
 
 .clearfix {
