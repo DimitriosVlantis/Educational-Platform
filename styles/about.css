@@ -8,7 +8,6 @@ section .hero-section{
     background-image: url("");
     width: 100%;
     height: 30em;
-    margin-top: 9.8%;
 }
 
 .hero-section h2{
