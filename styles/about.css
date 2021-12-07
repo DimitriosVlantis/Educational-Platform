@@ -1,28 +1,36 @@
 
-section .hero-section{
+.hero-section{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     flex-basis: content;
     align-items: center;
-    background-image: url("");
     width: 100%;
-    height: 30em;
+    height: 100vh;
+    padding-left: 0%;
+    margin-left: 0%;
+    background-image: url("../assets/images/rasters/about/bio-wallpaper-480x720.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .hero-section h2{
     font-size: var(--heading-font-size)*0.8;
     color: var(--text-color);
     text-decoration: none;
-    width: 80%;
-    padding-top: 5em;
+    width: 70%;
+    margin-top: 30vh;
+    position: relative;
+    right: 10%
 }
 
 .hero-section h3{
     font-size: var(--heading-font-size)*0.8;
     color: var(--text-color);
     text-decoration: none;
-    padding-top: 10em;
+    margin-top: 30vh;
 }
 
 .student1{
@@ -98,3 +106,53 @@ SVG Icons - svgicons.sparkk.fr
     fill: var(--text-color);
   }
   
+@media screen and (min-width: 478px) {
+    .hero-section {
+        background-image: url("../assets/images/rasters/about/bio-wallpaper-768x1310.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+@media screen and (min-width: 766px) {
+    .hero-section {
+        background-image: url("../assets/images/rasters/about/bio-wallpaper-1080x1795.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1078px) {
+    .hero-section {
+        background-image: url("../assets/images/rasters/about/bio-wallpaper-1440x1925.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1438px) {
+    .hero-section {
+        background-image: url("../assets/images/rasters/about/bio-wallpaper-1921x2198.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1918px) {
+    .hero-section {
+        background-image: url("../assets/images/rasters/about/bio-wallpaper-2250x2376.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
