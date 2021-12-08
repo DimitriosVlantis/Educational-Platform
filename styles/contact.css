@@ -11,6 +11,10 @@
     padding: auto;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .form form{
     padding: 2em;
     display: flex;

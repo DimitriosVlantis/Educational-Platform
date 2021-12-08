@@ -1,25 +1,42 @@
+/* -----
+Main Styles - Mobile First
+----- */
 
+
+/* This css style is for the hero section that is pasiotioned on top of every page 
+    directly under the header.*/
 .hero-section{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-basis: content;
-    align-items: center;
+    display: flex; /*We make it a flex for organization porpuses of course.*/
+    flex-direction: column; /* The content needs to be alinged one under the other.*/
+    flex-wrap: nowrap; /* We don't need wrap here, all the device scalability is given by media queries*/
+    flex-basis: content; /* The size of the flex is described by it's content.*/
+    align-items: center; /* Items alligned to the center of the horizontal axis.*/
     width: 100%;
     height: 100vh;
-    padding-left: 0%;
+    padding-left: 0%; 
     margin-left: 0%;
+    /* This is the image used as a background.
+        Our pages are made mobile first so it is relatively small.
+        For bigger screens we change the background with the media queries given 
+        at the end of the file.*/
     background-image: url("../assets/images/rasters/about/bio-wallpaper-480x720.jpg");
+    /* We use this style to make an image get the full
+        slot given and not repeat itself.*/
     background-size: cover;
+    /* These ones are just helpers for each web browser.
+        Sometimes certain browsers on certain devices don't apply some styles
+        unless they explicitly said to.*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
 
 .hero-section h2{
+    /* These stiles are used to customise our fonts on occasion*/
     font-size: var(--heading-font-size)*0.8;
     color: var(--text-color);
     text-decoration: none;
+    /* And these are for posiotioning*/
     width: 70%;
     margin-top: 30vh;
     position: relative;
@@ -27,6 +44,7 @@
 }
 
 .hero-section h3{
+    /* Same with these.*/
     font-size: var(--heading-font-size)*0.8;
     color: var(--text-color);
     text-decoration: none;
@@ -36,16 +54,23 @@
 .student1{
     width: 80%;
     height: auto;
+    /* We use these ones to customize the borders,
+        take note that not all sides have borders.
+        The border is solid with means that it is a consecutive with color,
+        our brand color.
+        Border radius makes endges smoother in a way.*/
     border-right: 0.15em solid var(--brand-color); 
     border-bottom: 0.15em solid var(--brand-color);
     border-radius: 15px;
     margin-top: 5em;
+    /* The background image here is an svg, we customize svg's 
+        further down.*/
     background-image: url("../assets/images/graphics/backgrounds/bio-pattern.svg");
-    padding: 2.5em;
+    padding: 2.5em; /* Padding is need so the card don't falls on the edge of the screen in an ugly way.*/
 }
 
 .student1 img{
-    float: right;
+    float: right; /* We make the image float so the text, wraps in a way the img.*/
     border: 0.2em solid var(--complimentary-color);
     border-radius: 50%;
     margin: 0.8em;
@@ -55,7 +80,7 @@
     float: left;
     border: 0.2em solid var(--complimentary-color);
     border-radius: 50%;
-    margin: 0.8em;
+    margin: 0.8em; /* Needed so the text want be to close to the img.*/
 }
 
 .student1 h3{
@@ -63,7 +88,7 @@
     right: 4%;
 }
 
-
+/* The second student needs positioning so we can achieve the out put */
 .student2{
     position: relative;
     left: 20%;
@@ -72,16 +97,18 @@
     border-left: 0.15em solid var(--brand-color); 
     border-bottom: 0.15em solid var(--brand-color);
     border-radius: 15px;
-    padding: 2.5em;
-    margin-top: 5em;
+    padding: 2.5em; /* Same here as previously with the edge.*/
+    margin-top: 5em; /* Apply some distance between the cards.*/
     background-image: url("../assets/images/graphics/backgrounds/bio-pattern.svg");
 }
 
 .student2 h3{
+    /* A bit of positioning for the header as it is on the other side of the screen.*/
     position: relative;
     left: 11%
 }
 
+/* Student1 and student2 classes have the same appearance.*/
 .student1 div,
 .student2 div{
     position: relative;
@@ -91,12 +118,14 @@
     opacity: 0.97;
 }
 
+/* Same for the headings*/
 .student1 h3,
 .student2 h3{
     padding-left: 1.3em;
     padding-right: 1.3em;
 }
 
+/* Same for the paragraphs.*/
 .student1 p,
 .student2 p{
     padding-left: 1em;
@@ -118,7 +147,13 @@ SVG Icons - svgicons.sparkk.fr
 .hero-section .svg-icon path {
     fill: var(--text-color);
   }
-  
+
+
+/* -----
+Media Queries
+----- */
+
+/* We apply new covers for small tablets*/
 @media screen and (min-width: 478px) {
     .hero-section {
         background-image: url("../assets/images/rasters/about/bio-wallpaper-768x1310.jpg");
@@ -129,6 +164,7 @@ SVG Icons - svgicons.sparkk.fr
     }
 }
 
+/* We apply new covers for tablets*/
 @media screen and (min-width: 766px) {
     .hero-section {
         background-image: url("../assets/images/rasters/about/bio-wallpaper-1080x1795.jpg");
@@ -137,8 +173,15 @@ SVG Icons - svgicons.sparkk.fr
         -moz-background-size: cover;
         -o-background-size: cover;
     }
+    
+    /*We also change the size of the student photo.*/
+    .student1 img,
+    .student2 img{
+        content: url("../assets/images/rasters/about/DimitriosVlantis-200x200.jpg");
+    }
 }
 
+/* We apply new covers for small desktops*/
 @media screen and (min-width: 1078px) {
     .hero-section {
         background-image: url("../assets/images/rasters/about/bio-wallpaper-1440x1925.jpg");
@@ -148,6 +191,8 @@ SVG Icons - svgicons.sparkk.fr
         -o-background-size: cover;
     }
 
+    /* We make the car look more narrow so it doesn't stretch
+        from one side of the screen to the other.*/
     .student1{
         width:50%;
         height: auto;
@@ -160,6 +205,10 @@ SVG Icons - svgicons.sparkk.fr
         height: auto;
     }
 
+    /* We change the style of the page, make it more fluid.
+        We make the image get out the normal flow of content by 
+        using absolute and we position it beside the the card in
+        the free space.*/
     .student1 img{
         float: none;
         position: absolute;
@@ -178,6 +227,7 @@ SVG Icons - svgicons.sparkk.fr
     }
 }
 
+/* We apply new covers for desktops*/
 @media screen and (min-width: 1438px) {
     .hero-section {
         background-image: url("../assets/images/rasters/about/bio-wallpaper-1921x2198.jpg");
@@ -186,10 +236,13 @@ SVG Icons - svgicons.sparkk.fr
         -moz-background-size: cover;
         -o-background-size: cover;
     }
+
+    /* Some small regulations caused by the bigger width.*/
     .hero-section h3{
         margin-top: 25vh;
     }
 
+    /* Same as before but slightly different posioning for a better outcome*/
     .student1 img{
         float: none;
         position: absolute;
@@ -208,6 +261,7 @@ SVG Icons - svgicons.sparkk.fr
     }
 }
 
+/* We apply new covers for big desktops*/
 @media screen and (min-width: 1918px) {
     .hero-section {
         background-image: url("../assets/images/rasters/about/bio-wallpaper-2250x2376.jpg");

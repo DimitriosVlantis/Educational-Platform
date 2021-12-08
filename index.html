@@ -19,24 +19,27 @@
     <link href="./styles/layout.css" rel="stylesheet"/>
     <link href="./styles/home.css" rel="stylesheet"/> <!-- Include home CSS styles -->
     <link href="./styles/slider.css" rel="stylesheet"/> <!-- Include slider CSS styles -->
-    <link href="./styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
-    <link href="./styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+    <link href="./styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/> <!-- Custom styles specificaly for small tablets.-->
+    <link href="./styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/> <!-- Custom styles specificaly for tablets-->
     <link href="./styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)"
-          rel="stylesheet"/>
-    <link href="./styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+          rel="stylesheet"/> <!-- Custom styles specificaly for small desktops.-->
+    <link href="./styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/> <!-- Custom styles specificaly for desktops.-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <!-- The icon next to the title.-->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
 <header>
     <div class="branding">
-        <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/>
-        <h1>Lecture Book</h1>
+        <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/> <!-- Our custom logo.-->
+        <h1>Lecture Book</h1> <!-- Our name.-->
     </div>
-    <div class="menu">
-        <div class="button-wrapper">
-            <span class="button-secondary-background"></span>
+    <div class="menu"> <!-- This is the pop up menu. It appears once you have pressed the link top right.-->
+        <div class="button-wrapper"> <!-- The a wrapper, usefull for css and js functions.-->
+            <!-- When the menu opens, in the position where the wrapper was, the button changes to our complimentary color. 
+                Well it doesn't, there is just a secondary wrapper above it.-->
+            <span class="button-secondary-background"></span> 
+            <!-- Thats the menu button.-->
             <button
                     aria-controls="primary-menu"
                     aria-expanded="false"
@@ -45,12 +48,15 @@
                     class="button-toggle close"
                     id="menu-toggle"
             >
+                <!-- It consists of three spans, this is how we make the lines.-->
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
             </button>
         </div>
+        <!-- This nav is basicaly the pop up menu.-->
         <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+            <!-- A list is the best way to implement it.-->
             <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
                 <li role="none">
                     <a href="#" role="menuitem" tabindex="-1">Home</a>
@@ -76,24 +82,32 @@
             </ul>
         </nav>
     </div>
+    <!-- This is practicaly the bottom green border of the header. Usefull for the gradient.-->
     <span aria-hidden="true" class="header-border"></span>
 </header>
 <main>
+    <!-- This is the hero section. It stands above all. Inside is a slogan and a promo.-->
     <section class="hero-section">
         <article class="cta">
+            <!-- From now on when there is a heading, it belongs to the "heading class"
+                custom sizes are given in the css for each one.-->
             <h2 class="heading">Develop your Career</h2>
             <p class="description">
                 You are presented with the unique opportunity to launch your dream career
                 utilizing the best resources online.
                 Will you take action?
             </p>
+            <!-- This is the 3d button. For starters is has facades so to inline elements like em will do.-->
             <a aria-label="Join for free" class="btn cta-link" href="#">
+                <!-- They are wrapped with a span because there is no meaning on it
+                    and we want it to be inline-->
                 <span class="link-3d-wrapper">
                     <em class="link-text link-3d-front">Join for free →</em>
                     <em class="link-text link-3d-back">Join for free →</em>
                 </span>
             </a>
         </article>
+        <!-- This image apears only in desktops.-->
         <img
                 alt="Career elevation illustration"
                 class="no-mobile"
@@ -102,9 +116,15 @@
                 width="500"
         />
     </section>
+    <!-- These are all our sponsors.-->
     <section class="sponsors">
         <h2 class="heading">Backed up by the best organizations.</h2>
+        <!-- That's a semantic organization of all the sponsor images.-->
         <div class="images-wrapper">
+            <!-- Our site is developed mobile first, so the original size of the image (src)
+                is only 400x400px. Further into the atributes we a establish a source set (srcset)
+                and the oppropriate sizes that the picture can take. Think of it as slots 
+                specialized for each devise (min-width).-->
             <img
                     alt="Athens University of Economics and Business logo"
                     height="400"
@@ -203,8 +223,10 @@
             />
         </div>
     </section>
+    <!-- From now on begins the educational content. This one is in general all the fields.-->
     <section class="educational-content" id="fields">
         <h2 class="heading">Fields</h2>
+        <!-- More slogans and promos.-->
         <section class="promo">
             <h3 class="heading">
                 Join for exclusive curriculums curated by the top educational organizations around the world.
@@ -215,6 +237,11 @@
                 No prior experience necessary to get started.
             </p>
         </section>
+        <!-- This part of the fields is the slider.
+            The slider is a fancy way to represent all of our fields at once.
+            If the viewport is long enough all the allign one next to another,
+            but when the viewport is to shot (smartphone devices) only one (or more depends on the vw)
+            is being shown and the others are accesed through the arrows.-->
         <article
                 aria-label="Slider of provided fields of study"
                 aria-live="polite"
@@ -223,8 +250,12 @@
                 id="fields-slider"
                 role="region"
         >
+            <!-- This fieldset is used for organization of the two buttons (arrows)-->
             <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                <!-- Every arrow is nothing but a button which contains a svg.-->
                 <button aria-label="Previous slider card" class="arrow left">
+                    <!-- We use svg's all the time because the are scallable (as their name sais).
+                        Apart from that they are amazing we much support on web and easy to use and customize with css-->
                     <svg class="svg-icon" viewBox="0 0 20 20">
                         <path
                                 d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
@@ -257,10 +288,16 @@
                     </svg>
                 </button>
             </fieldset>
+            <!-- All the field cards are organized into an list for convinience.
+                Each list element is a card by it's self.-->
             <ul>
+                <!-- That's a card.-->
                 <li aria-roledescription="slide">
                     <article class="card" id="computer-science">
+                        <!-- A link to the appriate .html file of field.-->
                         <a href="#">
+                            <!-- Just as before more options are given into the srcset 
+                                for device scalability.-->
                             <img
                                     alt="Computer science illustration"
                                     height="1024"
@@ -293,6 +330,7 @@
                             hardware used to solve problems in a variety of business, scientific and social
                             contexts. Explore computer science paths and courses today.
                         </p>
+                        <!-- This is just a wrapper for stylling purposes.-->
                         <div class="secondary-button-wrapper">
                             <a class="btn secondary-button" href="#">
                                 Check it out
@@ -437,6 +475,7 @@
             </span>
         </a>
     </section>
+    <!-- We propose some very popular paths. the structure is the same as fields.-->
     <section class="educational-content" id="popular-paths">
         <h2 class="heading">Popular Paths</h2>
         <section class="promo">
@@ -709,6 +748,7 @@
             </span>
         </a>
     </section>
+    <!-- Same as the fields and paths.-->
     <section class="educational-content" id="free-courses">
         <h2 class="heading">Free Courses</h2>
         <section class="promo">
@@ -900,19 +940,25 @@
             </span>
         </a>
     </section>
+    <!-- This section is a promo for all the good outcomes e-learning offers.
+        Apart from that this section uses many of the tags know by the lectures, so 
+        we found out this was a good place to use some.-->
     <section class="outcomes">
         <div class="background-wrapper">
             <img alt="Career outcomes illustration" class="no-mobile" src="./assets/images/rasters/outcomes.png">
             <div class="content-wrapper">
                 <h2 class="heading">The outcomes of our students speak for themselves</h2>
                 <p class="description">
+                    <!-- We don't use strong for the austhetics here, we use it to give emphasis to it's child.-->
                     <strong>93% of people</strong> learning for professional development report career benefits
                     like getting a promotion, a raise, or starting a new career.
                 </p>
                 <p class="report description">
                     <em>- Lecture book</em>
+                    <!-- Cite is used to refer on the words of someone else!-->
                     <cite>
                         <a href="#"> report (
+                            <!-- We use the tag time too so we can descriminate the time from a plane text.-->
                             <time datetime="03-2021">March 2021</time>
                             )
                         </a>
@@ -927,13 +973,16 @@
             </div>
         </div>
     </section>
+    <!-- Here we give some of the people's excellent experiences. -->
     <section class="testimonials" id="testimonials">
         <h2 class="heading">What people say about us</h2>
+        <!-- All of them are wrapped from an article for semantic consistency and css styling.-->
         <article
                 aria-label="Grid of testimonials"
                 aria-roledescription="Grid"
                 role="region"
         >
+            <!-- All of them are just list items.-->
             <ul>
                 <li aria-roledescription="testimonial">
                     <article class="testimonial" id="testimonial-1">
@@ -958,6 +1007,8 @@
                         />
                         <div class="content-wrapper">
                             <h3 class="heading">
+                                <!-- We use the tag q too so we can mark a small quotation.-->
+                                <!-- We also use i for emphasis on some kind of text.-->
                                 <q>Without <strong>Lecture Book</strong> I wouldn't have landed my dream job at <i>Google</i></q>
                             </h3>
                             <ul class="info">
@@ -965,6 +1016,7 @@
                                 <li class="job">Node.js developer</li>
                                 <li class="country">USA</li>
                             </ul>
+                            <!-- Blockquote used too, for marking the opinion of someone else.-->
                             <blockquote class="description">
                                 I went from a self-taught, no degree developer to a software engineer at <i>Google</i>
                                 with only 115 hours of studying the computer science track of <em>Lecture Book</em>.
@@ -1066,6 +1118,7 @@
         <div>
             <article class="links">
                 <h2 class="heading">Useful links</h2>
+                <!-- Just a list with further options.-->
                 <ul class="useful-links">
                     <li><a href="#">Join for free</a></li>
                     <li><a href="#">Contact us</a></li>
@@ -1085,6 +1138,7 @@
         </div>
     </div>
     <article>
+        <!-- This list is used for organization of the media svg's.-->
         <ul class="social-media">
             <li>
                 <a class="btn" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
@@ -1137,15 +1191,23 @@
             </li>
         </ul>
     </article>
+    <!-- A copyright section for our content.-->
     <article class="copyright">
         <h3>Made with </h3><span aria-label="love" id="icon-container" title="love"></span>
         <div class="license-container">
+            <!-- Here we use small and abbr. Small for something of little essence and abbr for
+                an abbreviation such as MIT.-->
             <small>, licensed under the <abbr title="Michigan Institute of Technology">MIT</abbr> license</small>
         </div>
     </article>
 </footer>
-<script src="./scripts/index.js" type="module"></script>
-<script src="./scripts/header-offset.js"></script>
+<!-- These are all the scripts we use for the page.-->
+<script src="./scripts/index.js" type="module"></script><!-- This one is for the pop up menu.-->
+<script src="./scripts/header-offset.js"></script> <!-- This one helps calculate the padding need for the hero section.-->
+<!-- The last one is for the effect of the heart.
+    The heart is a lottie, we saw what it was and made one here. 
+    An svg was the easy go-to option but lotties have animations based on a given .json file.
+    The json file has basicaly mathematic equations and data.-->
 <script type="module">
     import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
 
@@ -1177,3 +1239,13 @@
 </script>
 </body>
 </html>
+<!-- 
+    EXTRA features, languages and effort to be noted : 
+    We used git to circulate the code amongst the members of our team. 
+    We also used a .json file to organize all of our context.
+    Svg's and images were made or taken by external tools.
+    The images are copyright free and were taken by a
+    subscription based site that one of our members owns.
+    And many, many more can be found in every each of our pages.
+    Thank you for checking out our extra effort!!!
+-->

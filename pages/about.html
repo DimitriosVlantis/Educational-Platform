@@ -18,18 +18,19 @@
         <link href="../styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
         <link href="../styles/footer.css" rel="stylesheet"/> <!-- Include footer CSS styles -->
         <link href="../styles/layout.css" rel="stylesheet"/>
-        <link href="../styles/about.css" rel="stylesheet"/>
-        <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
-        <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+        <link href="../styles/about.css" rel="stylesheet"/> <!-- Include about styles -->
+        <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/> <!-- Custom styles specificaly for small tablets.-->
+        <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/> <!-- Custom styles specificaly for tablets-->
         <link href="../styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)"
-                rel="stylesheet"/>
-        <link href="../styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+            rel="stylesheet"/> <!-- Custom styles specificaly for small desktops.-->
+        <link href="../styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/> <!-- Custom styles specificaly for desktops.-->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <!-- The icon next to the title.-->
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     </head>
     <body>
+        <!-- More info about the header can bge found in the index.html file.-->
         <header>
             <div class="branding">
                 <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
@@ -80,9 +81,12 @@
             <span aria-hidden="true" class="header-border"></span>
         </header>
         <main>
+            <!-- This is our hero section, gives the appropriate padding to our page and 
+                has the contains the main promo-->
             <article class="hero-section">
                 <h2 class="heading">Hi, i'm Ilias. Yo, Jim here, and this is our biographies</h2>
                 <h3>Learn more about us!</h3>
+                <!-- This svg is for the down-pointing arrow.-->
                 <svg class="svg-icon" viewBox="0 0 20 20">
                     <path d="M11.611,10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
                                 0.012-1.105c0.309-0.304,0.803-0.293,1.105,0.012l5.306,5.433c0.304,0.31,
@@ -91,9 +95,16 @@
                     </path>
                 </svg>
             </article>
+            <!-- This section is used for semantic consistency only.
+                It wrappes the tow card of the members.-->
             <section>
+                <!-- These cards are quite straight forward, they contain only the name, a small bio and 
+                    an profil image.-->
                 <article class="student1">
                     <div>
+                        <!-- Here all the device scalability is into the css file.
+                            We do that so we can cover meny possible options of coding 
+                            and for practice.-->
                         <img 
                             alt="Just a passing student!"
                             src="../assets/images/rasters/about/DimitriosVlantis-100x100.jpg"
@@ -140,6 +151,7 @@
                 </article>
             </section>
         </main>
+        <!-- More info about the footer is given in the index.html file.-->
         <footer>
             <div class="link-wrapper">
                 <div>
