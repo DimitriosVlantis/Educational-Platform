@@ -1,0 +1,346 @@
+:root {
+    --main-min-height: 0;
+    --top: 5em;
+    --padding-bottom: 0;
+}
+/* Progress bar */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5em;
+    column-gap: 2em;
+    row-gap: 1em;
+    flex-flow: row wrap;
+}
+.progress-container h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+#progress-bar {
+    flex: 1 0 auto;
+}
+.progress-percentage {
+    flex-basis: 15%;
+}
+/* Forms */
+.form {
+    width: max(240px, 100%);
+    margin: 0 auto;
+}
+/* Buttons */
+button[type="submit"], .account {
+    background: 0;
+    border: 0;
+    border-radius: 0;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: var(--text-font-weight);
+}
+button[type="submit"]:not(.btn):hover, .account:hover,
+button[type="submit"]:not(.btn):focus, .account:focus,
+button[type="submit"]:not(.btn):active, .account:active {
+    text-decoration: underline solid var(--link-color-hover) var(--underline-width);
+    color: var(--link-color-hover);
+}
+button[type="submit"]:not(.btn):focus, .account:focus,
+button[type="submit"]:not(.btn):active, .account:active {
+    background-color: var(--background-color);
+}
+.sign-up .account {
+    padding: 0 0.5em 0.6em;
+    border-bottom: calc(var(--border-width) / 1.2) solid var(--link-color);
+}
+.sign-up h2 {
+    text-align: center;
+}
+/* Required */
+.personal-info h2 {
+    margin-top: 0;
+}
+.required {
+    margin-bottom: 0;
+    font-size: 0.75em;
+}
+/* Sections */
+.sign-up {
+    position: relative;
+}
+.sign-up.form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+/* Fieldset */
+fieldset {
+    margin: 2em 0;
+    padding: 0.8em;
+    background-color: var(--accent-color);
+    border: var(--border-width) solid var(--link-color);
+}
+legend {
+    background-color: var(--accent-color);
+    padding: 0.5em;
+    border: calc(var(--border-width) / 1.1) solid var(--link-color);
+    font-weight: var(--title-font-weight);
+    line-height: 1.3em;
+}
+/* Lists */
+.form-container .list {
+    margin: 0;
+    padding: 0;
+}
+.personal-info .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    column-gap: 2em;
+    row-gap: 0.8em;
+}
+.form-container .list-item {
+    list-style-type: none;
+}
+.personal-info .list-item {
+    flex: 0 1 auto;
+}
+/* Inputs & Labels */
+input:not([type="checkbox"], [type="radio"]),
+input:not([type="checkbox"], [type="radio"]) textarea,
+label {
+    display: block;
+}
+section:not(.progress-container) label {
+    font-size: 0.9em;
+    cursor: pointer;
+}
+label input {
+    font-size: 1.1em;
+}
+input:not([type="checkbox"], [type="radio"]), textarea {
+    background-color: var(--background-color);
+    border: 0;
+    border-bottom: calc(var(--border-width) / 1.4) solid var(--link-color);
+    padding: 0.6em;
+    margin: 0.75em 0 0;
+    width: 100%;
+    color: var(--title-color);
+}
+input {
+    transition: color 0.125s ease-in-out,
+    background-color 0.125s ease-in-out,
+    box-shadow 0.125s ease-in-out,
+    border-color 0.125s ease-in-out;
+}
+input:placeholder-shown {
+    font-style: italic;
+}
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    border-radius: 0;
+    box-shadow: 0 0 0 var(--border-width) var(--accent-color),
+    0 0 0 calc(var(--border-width) + var(--underline-width) + 0.03em) var(--link-color-hover);
+    border-color: var(--link-color-hover);
+    background-color: var(--focus-color);
+}
+input[type="checkbox"], input[type="radio"] {
+    position: relative;
+    height: 0.75em;
+    width: 0.75em;
+    margin-right: 1em;
+}
+input[type="checkbox"]::after, input[type="radio"]::after {
+    content: '';
+    position: absolute;
+    top: -0.03em;
+    left: -0.03em;
+    right: auto;
+    cursor: pointer;
+    width: calc(100% - var(--border-width) / 2.7);
+    height: calc(100% - var(--border-width) / 2.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--title-color);
+    border: calc(var(--border-width) / 2.7) solid var(--text-color);
+    font-size: 0.8em;
+}
+label:hover input[type="checkbox"]::after, label:hover input[type="radio"]::after {
+    border-color: var(--link-color-hover);
+}
+input[type="radio"]::after {
+    border-radius: 50%;
+}
+input[type="checkbox"]:checked::after, input[type="radio"]:checked::after {
+    content: '✔';
+}
+section:not(.personal-info, .progress-container) label {
+    font-size: 0.85em;
+}
+section:not(.personal-info, .progress-container) label:not([for="other"], [for="other-engineer"]):hover,
+section:not(.personal-info, .progress-container) label:not([for="other"], [for="other-engineer"]):focus-within {
+    text-decoration: underline solid var(--link-color-hover) var(--underline-width);
+    color: var(--link-color-hover);
+}
+label[for="other"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 2em;
+    flex-flow: row wrap;
+}
+label[for="other"] input {
+    flex: 1 0 auto;
+}
+label[for="open-source"] {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sign-up section > label {
+    margin-left: 2.5%;
+}
+
+/* Credentials Fieldset */
+.credentials {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 2em;
+    row-gap: 1em;
+}
+.credentials label[for="username"], .button-container {
+    flex: 1 0 100%;
+}
+
+/* Log in */
+.form.login {
+    background-color: var(--accent-color);
+    padding: 2em 0;
+    border: var(--border-width) solid var(--link-color);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    row-gap: 1.5em;
+}
+.login label:not([for="signed-in"]) {
+    flex: 0 1 auto;
+    margin: 0 1.5em;
+}
+.login label[for="signed-in"] {
+    justify-self: center;
+    cursor: pointer;
+}
+label[for="signed-in"]:hover,
+label[for="signed-in"]:focus-within {
+    text-decoration: underline solid var(--link-color-hover) var(--underline-width);
+    color: var(--link-color-hover);
+}
+
+/* Validation Message */
+.validation-error {
+    font-size: 0.8em;
+    line-height: 1.15em;
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+}
+
+input:not([type="checkbox"], [type="radio"]).error,
+textarea.error,
+.error {
+    border-color: var(--error-color);
+    position: relative;
+}
+legend.error {
+    color: var(--error-color);
+}
+label.error {
+    color: var(--error-color);
+    padding-bottom: var(--padding-bottom);
+}
+.validation-wrapper {
+    /* padding-bottom: calc(var(--padding-bottom) - 1.2em); */
+    height: min-content;
+}
+
+@media only screen and (min-width: 30em) {
+    .personal-info .list-item {
+        flex: 1 0 auto;
+    }
+    .credentials label {
+        flex: 1 0 auto;
+    }
+    .login label:not([for="signed-in"]) {
+        flex: 0 1 100%;
+    }
+}
+
+@media only screen and (min-width: 67.5em) {
+    fieldset {
+        padding: 1.8em;
+    }
+    section:not(.personal-info, .progress-container) label {
+        font-size: 1.05em;
+    }
+    legend {
+        font-size: 1.1em;
+    }
+    .sign-up.form {
+        display: block;
+    }
+    label[for="other"] input {
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 90em) {
+    .form {
+        width: max(240px, 60%);
+    }
+}
+/* Progress bar */
+progress:not([value]) {
+    visibility: hidden;
+}
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: var(--background-color);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    height: max(8px, 1.25em);
+}
+progress[value]::-webkit-progress-bar {
+    background-color: var(--background-color);
+}
+progress[value]::-webkit-progress-value {
+    background-image: var(--brand-color);
+}
+progress[value]::-moz-progress-bar {
+    background-image: var(--brand-color);
+}
+progress[value].visible {
+    opacity: 1;
+}
+progress[value].invisible {
+    opacity: 0;
+}
+.progress-percentage {
+    background-color: var(--background-color);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    height: max(8px, 1.25em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-percentage.visible {
+    opacity: 1;
+}
+.progress-percentage.invisible {
+    opacity: 0;
+}
