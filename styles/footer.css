@@ -115,6 +115,7 @@ footer article:not(.links) {
     background-color: var(--text-color);
     opacity: 0.9;
     padding: 0.75em 0;
+    flex-wrap: wrap;
 }
 
 /* We need the h3 keep the inline elements and not changing the line 
