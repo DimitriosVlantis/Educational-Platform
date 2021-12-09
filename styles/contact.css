@@ -27,7 +27,7 @@ ul{
     left: 7.5%;
     border: 0.2em solid var(--complimentary-color);
     /*background-color: var(--accent-color);*/
-    background-image: url("../assets/images/rasters/form/form_backgorund1.jpg");
+    background-image: url("../assets/images/graphics/backgrounds/contact-pattern.svg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,7 +38,7 @@ ul{
 
 .form form label{
     font-size: calc(var(--heading-font-size) * 0.5);
-    color: var(--brand-color);
+    color: var(--title-color);
     margin-top: 2.5em;
     margin-bottom: 7px;
 }
