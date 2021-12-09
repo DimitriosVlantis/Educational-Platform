@@ -26,6 +26,7 @@
         <script src="../scripts/contact_validation.js" type="module"></script>
     </head>
     <body>
+        <!-- More info about the header can be found in the index.html file.-->
         <header>
             <div class="branding">
                 <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
@@ -74,6 +75,8 @@
             <span aria-hidden="true" class="header-border" tabindex="-1"></span>
         </header>
         <main>
+            <!-- This section is used as a wrapper of the form which applies several 
+                styles.-->
             <section class="form_structure">
                 <h2 class="heading">Contact us!</h2>
                 <p class="description">
@@ -81,7 +84,10 @@
                     just fill the contact form bellow and our
                     team will come in touch with you as soon as possible.
                 </p>
+                <!-- This marks the form form all the other elements of this section.-->
                 <article class="form">
+                    <!-- The form element wraps all of the input, select andd text area elements.
+                        Authentication is made in the respective .js file.-->
                     <form>
                         <label for="txt_name">Name</label>
                         <input type="text" id="txt_name" 
