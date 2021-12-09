@@ -53,6 +53,9 @@ footer article:not(.links) {
 
 .social-media li {
     line-height: 0;
+    display: flex;
+    justify-content: center;
+    width: max(7.5%, 3em);
 }
 
 .social-media a {

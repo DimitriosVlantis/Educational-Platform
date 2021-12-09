@@ -61,8 +61,19 @@ header {
     Give a maximum width on the logo image - smaller than the header. Using border radius to make the image circular.
 */
 .logo {
-    max-width: calc(min(150px, 10vh) - 5%);
+    /* max-width: calc(min(150px, 10vh) - 5%); */
     border-radius: 50%;
+}
+
+.branding .logo-wrapper {
+    border-radius: 50%;
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: calc(min(150px, 10vh) - 5%);
+}
+
+.branding .logo-wrapper:hover::after {
+    width: 0;
 }
 
 /*
