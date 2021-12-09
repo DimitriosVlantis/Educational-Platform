@@ -150,6 +150,7 @@ section {
     left: -5px;
     box-sizing: content-box;
     border-left: 0 solid var(--accent-color);
+    margin: 0.5em 0;
 }
 
 .breadcrumbs .breadcrumb li svg {
@@ -381,5 +382,23 @@ section {
 .module-info table tfoot th,
 .module-info table tfoot td {
     border: 5px solid var(--text-color);
+}
+
+figure {
+    max-width: 50%;
+    margin: auto;
+}
+
+figure img {
+    border: var(--border-width) solid var(--brand-color);
+    border-radius: 50px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    padding: 0.4em 0;
+    color: var(--brand-color);
+    text-decoration: var(--underline-width) underline var(--link-color-hover);
 }
 
