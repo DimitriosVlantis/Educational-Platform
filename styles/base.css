@@ -231,6 +231,10 @@
     --focus-color: #B57725; /*#74fa5f;*/
     --background-color: #1A0C12; /*fafafaff*/
     --box-shadow-color: #08080866;
+    --error-color: #ff0033;
+
+    --progress-bar-gradient: linear-gradient(120deg, var(--link-color) 0%, var(--link-color-hover) 100%);
+    --progress-bar-gradient-moz: -moz-linear-gradient(120deg, var(--link-color) 0%, var(--link-color-hover) 100%);
 
     --font-family-title: roboto-slab;
     --font-family-text: fira-sans;

@@ -338,7 +338,7 @@ section {
     border: 5px solid var(--focus-color);
     border-collapse: collapse;
     padding: 0.8em 0.4em;
-    font-size: 90%;
+    font-size: 87.5%;
 }
 
 .module-info table tr:last-child td,
