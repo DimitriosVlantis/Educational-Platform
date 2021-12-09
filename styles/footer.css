@@ -1,3 +1,4 @@
+/* We give the footer a top border to separate from the main content.*/
 footer {
     border-top: var(--border-width) solid var(--complimentary-color);
     display: flex;
@@ -7,35 +8,44 @@ footer {
     background-color: var(--accent-color);
 }
 
+/* Give the footer 100% width*/
 footer article:not(.links) {
     width: 100%;
 }
 
+/* We make the two wrappers flexes with their content organized
+    in columns (.link-wrapper could rows too we only use to center the div in evey screen)*/
 .link-wrapper,
 .link-wrapper div {
     display: flex;
     flex-direction: column;
 }
 
+/* We make the div stay in the center*/
 .link-wrapper {
     align-items: center;
 }
 
+/* Making sure avery seems the same for all the browsers.*/
 .link-wrapper div {
     width: fit-content;
     width: -moz-fit-content;
 }
 
+/* Custom font.*/
 .links .heading {
     font-size: calc(var(--heading-font-size) * 0.45);
     font-weight: 450;
 }
 
+/* We make a paragraph effect here.*/
 .useful-links,
 .content {
     padding-left: 1.5em;
 }
 
+/* Basically when the links open the border expands in a same way as focus did
+    but here we change the color of the inside shadow.*/
 .links a:active,
 .links a:focus {
     background-color: var(--accent-color);
@@ -43,15 +53,22 @@ footer article:not(.links) {
     0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
 }
 
+/* Social media is a list of svg's and to organize them 
+    we make it a row directed flex*/
 .social-media {
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-evenly;
-    list-style-type: none;
+    list-style-type: none; /* We dont want the bullet of lists get in our way.*/
 }
 
+/* If we don't make zero the height just because svg's take the full height,
+    they begin to stretch downwards.*/
 .social-media li {
+    display:flex;
+    justify-content: center;
+    width: max(7.5%, 3em);
     line-height: 0;
 }
 
@@ -65,6 +82,7 @@ footer article:not(.links) {
     height: 100%;
 }
 
+/* Our usual effect.*/
 .social-media a:hover,
 .social-media a:focus,
 .social-media a:active {
@@ -72,17 +90,22 @@ footer article:not(.links) {
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
     0 0 0 calc(var(--border-width) * 1.75) var(--link-color-hover);
 }
+
+/* Here we change the color of the svg and make a transition.
+*/
 .social-media a svg path {
     fill: var(--link-color);
     transition: fill 0.25s ease-in-out;
 }
 
+/* Change color on hover.*/
 .social-media a:hover svg path,
 .social-media a:focus svg path,
 .social-media a:active svg path {
     fill: var(--link-color-hover);
 }
 
+/* We use a flex again to organize this article and we make it a bit transparent.*/
 .copyright {
     display: flex;
     justify-content: center;
@@ -91,25 +114,31 @@ footer article:not(.links) {
     padding: 0.75em 0;
 }
 
+/* We need the h3 keep the inline elements and not changing the line 
+    while we want to customize it, well inline-block was the answer.*/
 .copyright h3 {
     display: inline-block;
     margin: 0;
     color: var(--background-color);
 }
 
+/* We use the important value to overwright anything unwanted.*/
 .copyright #icon-container svg {
     width: 2.5em !important;
     height: 2.5em;
 }
 
+/* Color change.*/
 .copyright #icon-container svg path {
     fill: var(--complimentary-color);
 }
 
+/* On hover the cursor is a pointer.*/
 .copyright svg:hover {
     cursor: pointer;
 }
 
+/* Make the container align itself on the center of the vertical axis next to the Made with.*/
 .copyright .license-container {
     align-self: center;
 }
@@ -119,6 +148,12 @@ footer article:not(.links) {
     font-size: calc(var(--font-size) * 0.75);
 }
 
+/* -----
+    Media Queries.
+----- */
+
+/* For everything that is bigger than a small tablet make the content stay 
+    on the same line.*/
 @media only screen and (min-width: 30em) {
     .link-wrapper div {
         flex-flow: row wrap;

@@ -1,23 +1,34 @@
+/* -----
+    These are the styles needed for the index.html.
+----- */
+
+/* Hero section is a flex with space applied around each child.*/
 .hero-section {
-    /* padding: 0; */
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* This means that every section which is child of the main
+    and it's number of occurance is an even number, 
+    gets a different background color.*/
 main > section:nth-of-type(2n) {
     background-color: var(--accent-color);
 }
 
+/* In a same way 3d-buttons that are childs of those sections
+    get a different color.*/
 main > section:nth-of-type(2n) .link-3d-front {
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+/* We dont forget to do the same for the other side of the button.*/
 main > section:nth-of-type(2n) .link-3d-back {
     background-color: var(--focus-color);
 }
 
+/* Similarly we customize also link colors.*/
 body main > section:nth-of-type(2n) .heading a:focus,
 body main > section:nth-of-type(2n) .heading a:active {
     background-color: var(--accent-color);
@@ -25,6 +36,7 @@ body main > section:nth-of-type(2n) .heading a:active {
     0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
 }
 
+/* Customization for buttons*/
 body main > section:nth-of-type(2n) a.btn.secondary-button {
     background: linear-gradient(66deg, var(--accent-color) 30%, var(--complimentary-color) 60%, var(--brand-color) 80%)
     repeat 0 -180px;
@@ -32,10 +44,12 @@ body main > section:nth-of-type(2n) a.btn.secondary-button {
     transition: background-position 0.25s ease-in-out;
 }
 
+/* Customization for buttons on hover.*/
 body main > section:nth-of-type(2n) a.btn.secondary-button:hover {
     background-position: 0 0;
 }
 
+/* Customization for buttons on focus.*/
 body main > section:nth-of-type(2n) a.btn.secondary-button:focus,
 body main > section:nth-of-type(2n) a.btn.secondary-button:active {
     background-color: var(--complimentary-color);
@@ -43,6 +57,7 @@ body main > section:nth-of-type(2n) a.btn.secondary-button:active {
     0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
 }
 
+/* Customization for images.*/
 main > section:nth-of-type(2n) .card a:first-child:focus img,
 main > section:nth-of-type(2n) .card a:first-child:active img {
     border-radius: 1.3em;
@@ -52,17 +67,20 @@ main > section:nth-of-type(2n) .card a:first-child:active img {
     0 0 0 0.95em var(--hover-color);
 }
 
+/* Customization for links*/
 main > section:nth-of-type(2n) .card a:first-child:focus,
 main > section:nth-of-type(2n) .card a:first-child:active {
     background-color: var(--accent-color);
 }
 
+/* Customization for wrapper of the 3d-button*/
 main > section:nth-of-type(2n) .cta-link {
     border-radius: 0;
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--accent-color),
     0 0 0 calc(var(--border-width) * 1.75) var(--accent-color);
 }
 
+/* Customization for the 3d-button on focus.*/
 body main > section:nth-of-type(2n) a.btn.cta-link:active,
 body main > section:nth-of-type(2n) a.btn.cta-link:focus {
     background-color: var(--accent-color);
@@ -70,10 +88,12 @@ body main > section:nth-of-type(2n) a.btn.cta-link:focus {
     0 var(--border-width) 0 calc(var(--border-width) * 1.75) var(--focus-color);
 }
 
+/* Customization for the scrollbar if it exists.*/
 main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     background-color: var(--background-color);
 }
 
+/* Here we make some font changes*/
 .sponsors .heading {
     text-decoration: none;
     font-size: calc(var(--heading-font-size) * 0.7);
@@ -82,6 +102,11 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     text-align: center;
 }
 
+/* We choose a flex to organize all the the images.
+    We need wrap so the images change line when space is 
+    not enough. It also looks realy fluid.
+    Row gap has meaning when the images are distributed 
+    in defferent rows. It gives a space between them.*/
 .sponsors .images-wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -89,6 +114,9 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     row-gap: 4vmin;
 }
 
+/* By making the width equal to this calculation,
+    images change their size along with the viewport width, witch means 
+    that they stop wrapping randomly and maintain a certain form.*/
 .sponsors img {
     width: calc(33vw - 1em);
     border-radius: 50%;
@@ -96,6 +124,7 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     box-shadow: 0.1em 0.1em 0.9em 0.1em var(--box-shadow-color);
 }
 
+/* Styles for every educational content are trivial.*/
 .educational-content {
     padding-left: 0;
     padding-right: 0;
@@ -115,6 +144,7 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     font-size: calc(var(--heading-font-size) * 0.9);
 }
 
+/* With the fllowing styles we just give a paragraph effect to the promo section.*/
 .educational-content .promo {
     margin: 2.5em 0;
 }
@@ -129,30 +159,37 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     margin-left: 7.5%;
 }
 
+
+/* We center the button.*/
 .educational-content .cta-link {
     left: 50%;
     transform: translateX(-50%);
 }
 
+/* Outcomes have more padding vertically and as a background it utilizes a svg.*/
 .outcomes {
     padding: 1.6em 0.8em;
     background-image: url("../assets/images/graphics/backgrounds/background-pattern.svg");
 }
 
+/* Thats the costumization of the grey card in the middle.*/
 .outcomes .background-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1.8em;
     background-color: var(--accent-color);
-    opacity: 0.97;
-    border-radius: 20px;
+    opacity: 0.97; /* As you can see it's transparent.*/
+    border-radius: 20px; /* With rounded corder.*/
 }
 
+/* .no-mobile is a class given to elements that don't appear in
+    the mobile version. Here this is an image snd we set the max width.*/
 .outcomes .no-mobile {
     max-width: min(45vw, 550px);
 }
 
+/* Further trivial customization o single elements.*/
 .outcomes .heading {
     font-size: calc(var(--font-size) * 1.4);
     margin-top: 0;
@@ -177,10 +214,15 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     0 0 0 calc(var(--border-width) * 1.75) var(--link-color-hover);
 }
 
+/* Specific costumization for the font in testimonials.*/
 .testimonials > .heading {
     margin: 0 auto 1.5em;
 }
 
+/* The list of testimonials is a list organized by a grid.
+    By using the auto-fit value of grids we can let ther browser wrap 
+    the contents in different rows unless there is enough space in the same row 
+    to put several cards together.*/
 .testimonials article[role="region"] > ul {
     display: grid;
     list-style: none;
@@ -190,6 +232,9 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     gap: 2em;
 }
 
+/* Here we set the styles for the testimonial cards...
+    they are quite similar to the previous cards we made so explanation 
+    is trivial.*/
 .testimonial {
     padding: 0 1em;
     display: flex;
@@ -238,6 +283,8 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     padding-left: 1.75em;
 }
 
+/* This pseudo element contains the svg of the bolt. 
+    It appears before every list items in a regulated position of course.*/
 .info li::before {
     content: url('../assets/images/graphics/bolt.svg');
     position: absolute;
@@ -250,12 +297,16 @@ main > section:nth-of-type(2n) .description::-webkit-scrollbar-track {
     position: relative;
 }
 
+/* Same idea here with two pseydo elements, after and before.
+    The svg which is the content of the pseudo, appears after and before of the 
+    description.*/
 blockquote.description::before,
 blockquote.description::after {
     content: url("../assets/images/graphics/quote.svg");
     position: absolute;
 }
 
+/* Position regulations.*/
 blockquote.description::before {
     left: -3em;
     top: -3em;

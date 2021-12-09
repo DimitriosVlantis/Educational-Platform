@@ -332,22 +332,33 @@ a, a:link, a:visited {
     transition: color 187.5ms ease-in-out;
 }
 
-
+/* We customize the behaviour of links when somenone clicks on them
+    and also the behavior of other thinks clickable..*/
 a:focus, a:active, :focus {
     color: var(--link-color-hover);
-    outline: transparent;
+    outline: transparent; /* Mkaing sure the outline is transaparent.*/
     background-color: var(--background-color);
+    /* We give all links two shadows. The first has the background color and is smaller than the second 
+        although it appears like it has a higher z-index, so it's above the second. This creates a border like
+        effect when focusing on it. The values of box shadows are h and v-offset, blur, spread and color.*/
     box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--background-color),
-    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover); 
     border-radius: 0.3em;
+    /* We use  transitions to make sure there is an animation from one state to the other.
+        ease-it-out just makes things smoother and prohibits them from annoying flickering.
+        We declare on what we apply the transition by using the border value.*/
     transition: border 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out;
 }
 
+/* Link hover behaviour*/
 a:hover {
     color: var(--link-color-hover);
 }
 
+/* After is a pheudo element, this means although it looks, it doesn't exist in the 
+    .html file. This one is just a straight line, the line under the links.
+    We use after so we can have more options on costumizing the line.*/
 a::after {
     content: '';
     display: block;
@@ -361,6 +372,12 @@ a::after {
     transition: width 0.25s ease-in-out;
 }
 
+/* Here we costumize the behaviour of the pseudo element while hovering.
+    If you look closely we made a simple but interesting effect.
+    The line opens smoothly towards the right and then disapears towards the 
+    right following the first transition. We do that by making the line change 
+    sides under the link. The user does't get cause it's already full size but 
+    when he stops hovering the line disappears on the opposite direction.*/
 a:not(.btn):hover::after {
     right: auto;
     left: 0;
@@ -368,6 +385,7 @@ a:not(.btn):hover::after {
     height: calc(var(--border-width) * 0.4);
 }
 
+/* We make images blocks, it's the most easy way to customize the width and height.*/
 img {
     display: block;
     max-width: 100%;
@@ -375,26 +393,35 @@ img {
 }
 
 /* Tooltips */
+/* When some one hovers above an abbreviation the cursor turns into
+    a question mark.*/
 abbr {
     position: relative;
     cursor: help;
 }
 
+/* This pheudo element is for the custom pop up of an abbr,
+    it's a box with content th content of the titke of an abbr.
+    This box is invisible, it appears only when someone hovers above
+    the abbr.
+    */
 abbr::after {
     content: attr(title);
-    position: absolute;
+    position: absolute; /* Gets it out of the content flow.*/
     bottom: 100%;
     left: 0;
     display: block;
     font-size: 0.7em;
     line-height: 1.5em;
     opacity: 0;
-    width: 0;
+    width: 0; /* Makes it invisible.*/
     overflow: hidden;
     white-space: nowrap;
     background: var(--text-color);
     color: var(--background-color);
     border: var(--border-width) dashed var(--background-color);
+    /* Just because it is a pop up we need to make sure that everything is smooth.
+        So we put transitions on every little thing we came up with.*/
     transition: opacity 0.25s ease-out,
     background 0.25s ease-out,
     color 0.25s ease-out,
@@ -402,15 +429,18 @@ abbr::after {
     width 0.25s ease-out;
 }
 
+/* Here we manifest it.*/
 abbr:active::after,
 abbr:focus::after,
 abbr:hover::after {
     width: max-content;
     padding: 1em;
-    opacity: 1;
+    opacity: 1; /* Makes it a little bit transparent*/
+    /* This shadow is different from the others cause makes the abbr more 3d-like.*/
     box-shadow: var(--border-width) var(--border-width) var(--border-width) var(--border-width) var(--box-shadow-color);
 }
 
+/* Font costumization for strong.*/
 strong {
     font-weight: 650;
     text-decoration: underline;
@@ -418,10 +448,12 @@ strong {
     letter-spacing: 0.05em;
 }
 
+/* Font costumization for em.*/
 em {
     color: var(--brand-color);
 }
 
+/* Here we costumize some extra tags that are used atlist once.*/
 b.attention {
     text-decoration: underline double 2px;
 }

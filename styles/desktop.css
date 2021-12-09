@@ -1,3 +1,9 @@
+/* -----
+    Basic costumization of of things that dont look good 
+    on desktops by our default values.
+----- */
+
+/* We change the header so it looks better on desktops.*/
 header {
     border-bottom-width: 5px;
     padding: 1% 5%;
@@ -33,6 +39,7 @@ header {
     }
 }
 
+/* Costumization of the 3d button.*/
 .btn.cta-link {
     margin-top: 4em;
 }
@@ -42,15 +49,19 @@ body:not(.has-aside) .hero-section .btn.cta-link,
     margin-top: 2em;
 }
 
+/* On desktop there is more space to use so give
+    an extra margin in between things.*/
 .educational-content .heading,
 .educational-content .description {
     margin: 2%;
 }
 
+/* We make the first article a bit wider because the small desktop configuration is too narrow.*/
 .cta {
     width: calc(24em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
 }
 
+/* We let the heading go wider just a bit.*/
 .cta .heading {
     font-size: calc(var(--heading-font-size) * 0.85);
 }
@@ -59,34 +70,44 @@ body:not(.has-aside) .hero-section .btn.cta-link,
     font-size: calc(var(--heading-font-size) * 0.85);
 }
 
+/* We let the wrapper grow considerably bigger*/
 .sponsors .images-wrapper {
     max-width: 60vw;
     margin: auto;
     column-gap: 5.1em;
 }
 
+/* We have to change the max width cause the screen is wider 
+and the photo will seem huge.*/
 .sponsors img {
     max-width: 15vw;
 }
 
+/* We make the heading look more bold.*/
 .sponsors .heading {
     font-size: var(--heading-font-size);
 }
 
+/* Making sure this heading is as big as the space given.*/
 .outcomes .heading,
 .testimonials > .heading {
     font-size: calc(var(--font-size) * 2);
 }
 
+/* We make them a bit more narrower from the 100% ,
+    but it is not noticible or annoying to the user.*/
 .testimonials{
     max-width: 87.5%;
     margin: auto;
 }
 
+/* Social media can grow a bit bigger*/
 .social-media li {
     width: max(7.5%, 3em);
 }
 
+/* Hero section splits in two with the aid of 
+    a grid with two columns*/
 .has-aside .hero-section {
     grid-template-columns: 50% 50%;
     background: linear-gradient(66deg, var(--background-color) 30%,
@@ -95,46 +116,56 @@ body:not(.has-aside) .hero-section .btn.cta-link,
     var(--background-color) 97.5%);
 }
 
+/* We push the top heading a bit more downwards.*/
 .has-aside .hero-section .heading {
     margin-top: 0.4em;
     font-size: calc(var(--heading-font-size) * 0.95);
 }
 
+/* We make them smaller because they escalate with the wider screen.*/
 .has-aside .breadcrumbs .breadcrumb a {
     font-size: calc(var(--font-size) * 0.75);
     padding: 0 20px;
 }
 
+/* The border is needed to make it feel like a rectangle.*/
 .has-aside .breadcrumbs .breadcrumb li:first-child {
     border-left: 4px solid var(--accent-color);
 }
 
+/* Same as small desktop.*/
 .has-aside .breadcrumbs .breadcrumb li svg {
     width: 24px;
     height: 24px;
 }
 
+/* Same as small desktop.*/
 .has-aside .breadcrumbs .breadcrumb li:first-child::before,
 .has-aside .breadcrumbs .breadcrumb li:first-child::after {
     left: 5px;
 }
 
+/* Same as small desktop.*/
 .has-aside .module .heading {
     font-size: calc(0.6875 * var(--heading-font-size));
 }
 
+/* Same as small desktop.*/
 .has-aside .module details dt {
     font-size: calc(0.9 * var(--font-size));
 }
 
+/* Same as small desktop.*/
 .has-aside .module details dd {
     font-size: calc(0.7 * var(--font-size));
 }
 
+/* Same as small desktop.*/
 .has-aside .module details[open] > :not(summary, .heading) {
     padding: 0 2em;
 }
 
+/* Same as small desktop.*/
 .has-aside .module details .heading {
     padding-left: 1em;
     font-size: calc(0.75 * var(--heading-font-size));

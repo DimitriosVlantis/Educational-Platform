@@ -1,3 +1,9 @@
+/* -----
+    Tablets are literally the exact same as small tablets,
+    apart from the fact that we give every width there is, 
+    some extra pixels.
+------ */
+
 .branding h1 {
     font-size: 2rem;
 }

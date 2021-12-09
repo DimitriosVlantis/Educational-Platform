@@ -1,3 +1,8 @@
+/*
+    Layout sets the bsic structure for all pages.
+    It makes pages look like a one column grid by default.
+*/
+
 main {
     grid-area: main;
 }
@@ -10,6 +15,9 @@ aside {
     grid-area: aside;
 }
 
+/* As said the body is organized by a grid with main and foot
+    on two different rows. This is for mobile devices as our 
+    implementation follows the mobile first architecture.*/
 body {
     display: grid;
     grid-auto-rows: auto;
@@ -19,6 +27,7 @@ body {
         "foot";
 }
 
+/* In case there is an aside, the template changes as follows.*/
 body.has-aside {
     grid-template-areas:
         "main"
@@ -28,6 +37,12 @@ body.has-aside {
     padding-top: 0;
 }
 
+/* The layout for small tablets and tablets is a little bit different since there is 
+    slightly more space given. We make a two-column grid to organize the page.
+    Of course by default it looks like one-column but this implementation comes in 
+    handy when someone was to position elements using a grid (field.html) 
+    or when someone was to completely ignore ti make it otherwise (index.html).
+    It;s quite versatile*/
 @media only screen and (min-width: 48em) {
     body {
         grid-template-columns: 1fr 1fr;
@@ -44,6 +59,8 @@ body.has-aside {
         grid-area: module;
     }
 
+    /* Here we brake the main even more down to an another
+        two-column organization. This happens when aside exists.*/
     body.has-aside main {
         display: grid;
         grid-template:
@@ -53,6 +70,8 @@ body.has-aside {
         row-gap: 2em;
     }
 
+    /* Same as before in line 31, if there is an aside we
+        have to count it too.*/
     body.has-aside {
         grid-template-columns: 65% 10fr;
         grid-template-rows: 100vh minmax(100vh, max-content) 0;
@@ -63,11 +82,13 @@ body.has-aside {
         "foot foot";
     }
 
+    /* Here aside takes place ont the right column.*/
     aside {
         grid-row: 2 / 4;
     }
 }
 
+/* Here we set the layout for small desktops in a similar way.*/
 @media only screen and (min-width: 67.5em) {
     body {
         grid-template-columns: 1fr 1fr 1fr;
@@ -94,6 +115,7 @@ body.has-aside {
     }
 }
 
+/* And last but not least we set the layout for normal desktops.*/
 @media only screen and (min-width: 90em) {
     body {
         grid-template-columns: 1fr 32% 32% 32% 1fr;
