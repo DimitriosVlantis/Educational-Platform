@@ -28,12 +28,18 @@
 <body>
 <header>
     <div class="branding">
-        <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
-        <h1>Lecture Book</h1>
+        <a class="logo-wrapper" href="../index.html">
+            <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
+            <!-- Our custom logo.-->
+        </a>
+        <h1>Lecture Book</h1> <!-- Our name.-->
     </div>
-    <div class="menu">
-        <div class="button-wrapper">
+    <div class="menu"> <!-- This is the pop-up menu. It appears once you have pressed the link top right.-->
+        <div class="button-wrapper"> <!-- The wrapper, usefully for css and js functions.-->
+            <!-- When the menu opens, in the position where the wrapper was, the button changes to our complimentary color.
+                Well it doesn't, there is just a secondary wrapper above it.-->
             <span class="button-secondary-background"></span>
+            <!-- That's the menu button.-->
             <button
                     aria-controls="primary-menu"
                     aria-expanded="false"
@@ -42,37 +48,47 @@
                     class="button-toggle close"
                     id="menu-toggle"
             >
+                <!-- It consists of three spans, this is how we make the lines.-->
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
                 <span aria-hidden="true" class="line" tabindex="-1"></span>
             </button>
         </div>
+        <!-- This nav is basicaly the pop up menu.-->
         <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+            <!-- A list is the best way to implement it.-->
             <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Home</a>
+                    <a href="../index.html" role="menuitem" tabindex="-1">Home</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Fields</a>
+                    <a href="./fields/computer-science/computer-science.html" role="menuitem" tabindex="-1">
+                        Computer Science
+                    </a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Paths</a>
+                    <a href="./fields/mathematics/mathematics.html" role="menuitem"
+                       tabindex="-1">Mathematics</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Courses</a>
+                    <a href="./fields/chemistry/chemistry.html" role="menuitem" tabindex="-1">Chemistry</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">About Us</a>
+                    <a href="./fields/economics/economics.html" role="menuitem" tabindex="-1">Economics</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
+                    <a href="./about.html" role="menuitem" tabindex="-1">About Us</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+                    <a href="./contact.html" role="menuitem" tabindex="-1">Contact Us</a>
+                </li>
+                <li role="none">
+                    <a href="./signup.html" role="menuitem" tabindex="-1">Log In/Sign Up</a>
                 </li>
             </ul>
         </nav>
     </div>
+    <!-- This is practically the bottom green border of the header. Usefully for the gradient.-->
     <span aria-hidden="true" class="header-border"></span>
 </header>
 <main>
@@ -1397,19 +1413,19 @@
             <article class="links">
                 <h2 class="heading">Useful links</h2>
                 <ul class="useful-links">
-                    <li><a href="#">Join for free</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="./signup.html">Join for free</a></li>
+                    <li><a href="./contact.html">Contact us</a></li>
+                    <li><a href="./about.html">About us</a></li>
+                    <li><a href="./sitemap.html">Sitemap</a></li>
                 </ul>
             </article>
             <article class="links">
                 <h2 class="heading">Explore our content</h2>
                 <ul class="content">
-                    <li><a href="#">Fields</a></li>
-                    <li><a href="#">Paths</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Free Courses</a></li>
+                    <li><a href="./fields/computer-science/computer-science.html">Computer Science</a></li>
+                    <li><a href="./fields/chemistry/chemistry.html">Chemistry</a></li>
+                    <li><a href="./fields/economics/economics.html">Economics</a></li>
+                    <li><a href="./fields/mathematics/mathematics.html">Mathematics</a></li>
                 </ul>
             </article>
         </div>
