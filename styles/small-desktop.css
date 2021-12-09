@@ -14,7 +14,7 @@
 }
 
 .logo {
-    max-width: min(150px, 10vh);
+    /* max-width: min(150px, 10vh); */
 }
 
 .primary-navigation ul {

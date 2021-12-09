@@ -19,7 +19,7 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 2.5% 7.5%;
+    padding: min(2%, 15px) 5%;
     z-index: 2;
     background: linear-gradient(90deg,
     #ffffff00 0%,
@@ -48,13 +48,14 @@ header {
 .branding {
     display: flex;
     align-items: center;
-    max-width: 100%;
+    /* max-width: max-content; */
 }
 
 .branding h1 {
     margin: 0;
     padding: 0 0.3em;
     font-size: 1.3em;
+    white-space: nowrap;
 }
 
 /*
@@ -69,7 +70,8 @@ header {
     border-radius: 50%;
     width: fit-content;
     width: -moz-fit-content;
-    max-width: calc(min(150px, 10vh) - 5%);
+    max-width: fit-content;
+    min-width: min(20vmin, 100px);
 }
 
 .branding .logo-wrapper:hover::after {

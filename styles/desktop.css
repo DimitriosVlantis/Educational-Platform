@@ -6,7 +6,7 @@
 /* We change the header so it looks better on desktops.*/
 header {
     border-bottom-width: 5px;
-    padding: 1% 5%;
+    /* padding: 1% 5%; */
 }
 
 .branding h1 {
@@ -20,7 +20,7 @@ header {
 }
 
 .logo {
-    max-width: min(175px, 15vh);
+    /* max-width: min(175px, 15vh); */
 }
 
 .primary-navigation ul {

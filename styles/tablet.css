@@ -15,7 +15,7 @@
 }
 
 .logo {
-    max-width: calc(min(150px, 10vh) - 1%);
+    /* max-width: calc(min(150px, 10vh) - 1%); */
 }
 
 .primary-navigation ul {
