@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sign Up</title>
+    <meta content="SEO description <!--TODO" name="description"/>
+    <meta content="#FA5FC1ff" name="theme-color"/>
+    <link href="../styles/normalize.css" rel="stylesheet"/>
+    <link href="../styles/base.css" rel="stylesheet"/>
+    <link href="../styles/header.css" rel="stylesheet"/>
+    <link href="../styles/main.css" rel="stylesheet"/>
+    <link href="../styles/footer.css" rel="stylesheet"/>
+    <link href="../styles/layout.css" rel="stylesheet"/>
+    <link href="../styles/signup.css" rel="stylesheet"/>
+    <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)"
+          rel="stylesheet"/>
+    <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)"
+          rel="stylesheet"/>
+    <link href="../styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)"
+          rel="stylesheet"/>
+    <link href="../styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <script src="../scripts/signup.js"></script>
+</head>
+<body>
+<header>
+    <div class="branding">
+        <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
+        <h1>Lecture Book</h1>
+    </div>
+    <div class="menu">
+        <div class="button-wrapper">
+            <span class="button-secondary-background"></span>
+            <button
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Website links"
+                    class="button-toggle close"
+                    id="menu-toggle"
+            >
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+            </button>
+        </div>
+        <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+            <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Home</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Fields</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Paths</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Courses</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">About Us</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
+                </li>
+                <li role="none">
+                    <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <span aria-hidden="true" class="header-border"></span>
+</header>
+<main>
+    <article class="form-container hero-section">
+        <h2>Log In</h2>
+        <form autocomplete="on" class="form login" id="login-form" method="post">
+            <label for="username-login">
+                Username:
+                <input
+                        autocomplete="username"
+                        id="username-login"
+                        name="username-login"
+                        placeholder="e.g. iliaskap11"
+                        required="required"
+                        type="text"
+                />
+                <em
+                        aria-describedby="error-for-username-login"
+                        aria-hidden="true"
+                        class="validation-error"
+                ></em>
+            </label>
+            <label for="password-login">
+                Password:
+                <input
+                        autocomplete="current-password"
+                        id="password-login"
+                        name="password-login"
+                        placeholder="e.g. @uc8^^u56%59K"
+                        required="required"
+                        type="password"
+                />
+                <em
+                        aria-describedby="error-for-password-login"
+                        aria-hidden="true"
+                        class="validation-error"
+                ></em>
+            </label>
+            <button id="login" type="submit">Log In</button>
+            <label for="signed-in">
+                <input
+                        id="signed-in"
+                        name="signed-in"
+                        type="checkbox"
+                        value="signed-in"
+                />Stay signed in?
+            </label>
+            <button class="login account">Don't have an account?</button>
+        </form>
+        <section aria-hidden="true" class="progress-container sign-up disappear">
+            <h2><label for="progress-bar">Completion:</label></h2>
+            <progress id="progress-bar" max="100"></progress>
+            <div class="progress-percentage"></div>
+        </section>
+        <form aria-hidden="true" autocomplete="on" class="form sign-up disappear" id="sign-up-form" method="post">
+            <button class="sign-up account disappear">Already have an account?</button>
+            <p class="required">
+                <em>
+                    Required fields are marked with the symbol:
+                    <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                </em>
+            </p>
+            <section class="personal-info">
+                <h2>Personal Information</h2>
+                <div class="validation-wrapper">
+                    <fieldset class="identification">
+                        <legend>Name & Age:</legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="first-name">
+                                    First Name:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="given-name"
+                                            data-pattern-message="Only Greek or Latin characters are allowed in this field."
+                                            id="first-name"
+                                            maxlength="30"
+                                            minlength="2"
+                                            name="first-name"
+                                            pattern="[A-Za-z]+|[Α-Ωα-ω]+"
+                                            placeholder="e.g. Bill"
+                                            required="required"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-first-name"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="last-name">
+                                    Last Name:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="family-name"
+                                            data-pattern-message="Only Greek or Latin characters are allowed in this field."
+                                            id="last-name"
+                                            maxlength="30"
+                                            minlength="2"
+                                            name="last-name"
+                                            pattern="[A-Za-z]+|[Α-Ωα-ω]+"
+                                            placeholder="e.g. Pullman"
+                                            required="required"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-last-name"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="age">
+                                    Age:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="on"
+                                            id="age"
+                                            max="120"
+                                            min="18"
+                                            name="age"
+                                            placeholder="e.g. 27"
+                                            required="required"
+                                            type="number"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-age"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-technologies"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="address">
+                        <legend>Address:</legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="country">
+                                    Country:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="country-name"
+                                            id="country"
+                                            list="country-list"
+                                            name="country"
+                                            placeholder="e.g. Greece"
+                                            required="required"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-country"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                    <datalist id="country-list">
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Åland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas (the)</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia (Plurinational State of)</option>
+                                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory (the)</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="CV">Cabo Verde</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="KY">Cayman Islands (the)</option>
+                                        <option value="CF">Central African Republic (the)</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands (the)</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros (the)</option>
+                                        <option value="CD">Congo (the Democratic Republic of the)</option>
+                                        <option value="CG">Congo (the)</option>
+                                        <option value="CK">Cook Islands (the)</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CW">Curaçao</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czechia</option>
+                                        <option value="CI">Côte d'Ivoire</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic (the)</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="SZ">Eswatini</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (the) [Malvinas]</option>
+                                        <option value="FO">Faroe Islands (the)</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories (the)</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia (the)</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island and McDonald Islands</option>
+                                        <option value="VA">Holy See (the)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran (Islamic Republic of)</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IM">Isle of Man</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea (the Democratic People's Republic of)</option>
+                                        <option value="KR">Korea (the Republic of)</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic (the)</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands (the)</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia (Federated States of)</option>
+                                        <option value="MD">Moldova (the Republic of)</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands (the)</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger (the)</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands (the)</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestine, State of</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines (the)</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="MK">Republic of North Macedonia</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation (the)</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="RE">Réunion</option>
+                                        <option value="BL">Saint Barthélemy</option>
+                                        <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="MF">Saint Martin (French part)</option>
+                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SX">Sint Maarten (Dutch part)</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan (the)</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan (Province of China)</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands (the)</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates (the)</option>
+                                        <option value="GB">United Kingdom of Great Britain and Northern Ireland (the)
+                                        </option>
+                                        <option value="UM">United States Minor Outlying Islands (the)</option>
+                                        <option value="US">United States of America (the)</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela (Bolivarian Republic of)</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands (British)</option>
+                                        <option value="VI">Virgin Islands (U.S.)</option>
+                                        <option value="WF">Wallis and Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </datalist>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="state">
+                                    State/Province:
+                                    <input
+                                            autocomplete="address-level1"
+                                            data-pattern-message="Tabs and new lines are not allowed in this field."
+                                            id="state"
+                                            name="state"
+                                            pattern="[^\t^\n^\r]+"
+                                            placeholder="e.g. Attica"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-state"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="city">
+                                    City:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="address-level2"
+                                            data-pattern-message="Tabs and new lines are not allowed in this field."
+                                            id="city"
+                                            name="city"
+                                            pattern="[^\t^\n^\r]+"
+                                            placeholder="e.g. Artemis"
+                                            required="required"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-city"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="zip-code">
+                                    Zip Code:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="postal-code"
+                                            id="zip-code"
+                                            min="10000"
+                                            name="zip-code"
+                                            placeholder="e.g. 19016"
+                                            required="required"
+                                            type="number"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-zip-code"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="home-address">
+                                    Street Address:<strong><abbr aria-label="Required"
+                                                                 title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="address-line1"
+                                            data-pattern-message="Tabs and new lines are not allowed in this field."
+                                            id="home-address"
+                                            name="home-address"
+                                            pattern="[^\t^\n^\r]+"
+                                            placeholder="e.g. Sofokleous"
+                                            required="required"
+                                            type="text"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-home-address"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="home-number">
+                                    Street Number:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="address-line2"
+                                            id="home-number"
+                                            max="10000"
+                                            min="1"
+                                            name="home-number"
+                                            placeholder="e.g. 46"
+                                            required="required"
+                                            type="number"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-home-number"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-technologies"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="contact-info">
+                        <legend>Contact Information:</legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="phone-number">
+                                    Phone Number:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="tel-local"
+                                            data-pattern-message="Only numeric characters are allowed."
+                                            id="phone-number"
+                                            maxlength="10"
+                                            minlength="10"
+                                            name="phone-number"
+                                            pattern="[0-9]+"
+                                            placeholder="e.g. 6946007753"
+                                            required="required"
+                                            type="tel"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-phone-number"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="email">
+                                    Email Address:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                                    <input
+                                            autocomplete="email"
+                                            data-pattern-message="Only valid email formats are allowed in this field."
+                                            id="email"
+                                            name="email"
+                                            pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+                                            placeholder="e.g. p3180067@aueb.gr"
+                                            required="required"
+                                            type="email"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-email"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="phone-number-2">
+                                    Phone Number 2:
+                                    <input
+                                            autocomplete="tel-local"
+                                            data-pattern-message="Only numeric characters are allowed."
+                                            id="phone-number-2"
+                                            maxlength="10"
+                                            minlength="10"
+                                            name="phone-number"
+                                            pattern="[0-9]+"
+                                            placeholder="e.g. 6946007753"
+                                            type="tel"
+                                    />
+                                    <em
+                                            aria-describedby="error-for-phone-number"
+                                            aria-hidden="true"
+                                            class="validation-error"
+                                    ></em>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-technologies"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="credentials">
+                        <legend>Credentials:</legend>
+                        <label for="username">
+                            Username:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                            <input
+                                    autocomplete="username"
+                                    data-pattern-message="Spaces, tabs and new lines are not allowed in this field."
+                                    id="username"
+                                    name="username"
+                                    pattern="[^ ^\t^\n^\r]+"
+                                    placeholder="e.g. iliaskap11"
+                                    required="required"
+                                    type="text"
+                            />
+                            <em
+                                    aria-describedby="error-for-username"
+                                    aria-hidden="true"
+                                    class="validation-error"
+                            ></em>
+                        </label>
+                        <label for="password">
+                            Password(at least 12 characters):<strong><abbr aria-label="Required"
+                                                                           title="Required">*</abbr></strong>
+                            <input
+                                    autocomplete="new-password"
+                                    data-pattern-message="Tabs and new lines are not allowed in this field."
+                                    id="password"
+                                    minlength="12"
+                                    name="password"
+                                    pattern="[^\t^\n^\r]+"
+                                    placeholder="e.g. @uc8^^u56%59K"
+                                    required="required"
+                                    type="password"
+                            />
+                            <em
+                                    aria-describedby="error-for-password"
+                                    aria-hidden="true"
+                                    class="validation-error"
+                            ></em>
+                        </label>
+                        <label for="password-confirmation">
+                            Password Confirmation:<strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                            <input
+                                    autocomplete="new-password"
+                                    data-pattern-message="Tabs and new lines are not allowed in this field."
+                                    id="password-confirmation"
+                                    minlength="12"
+                                    name="password-confirmation"
+                                    pattern="[^\t^\n^\r]+"
+                                    placeholder="e.g. @uc8^^u56%59K"
+                                    required="required"
+                                    type="password"
+                            />
+                            <em
+                                    aria-describedby="error-for-password-confirmation"
+                                    aria-hidden="true"
+                                    class="validation-error"
+                            ></em>
+                        </label>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-technologies"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+            </section>
+            <section class="skills">
+                <h2>Acquired Skills</h2>
+                <div class="validation-wrapper">
+                    <fieldset class="technologies" data-required="true" id="technologies">
+                        <legend>Choose the technologies you are familiar with:
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="javascript">
+                                    <input
+                                            id="javascript"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="JavaScript"
+                                    />JavaScript
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="css">
+                                    <input
+                                            id="css"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="CSS"
+                                    /><abbr title="Cascading Style Sheets">CSS</abbr>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="html5">
+                                    <input
+                                            id="html5"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="HTML5"
+                                    /><abbr title="HyperText Markup Language 5">HTML5</abbr>
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="cpp">
+                                    <input
+                                            id="cpp"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="C++"
+                                    />C++
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="python">
+                                    <input
+                                            id="python"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="Python"
+                                    />Python
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="java">
+                                    <input
+                                            id="java"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="Java"
+                                    />Java
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="c">
+                                    <input
+                                            id="c"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="C"
+                                    />C
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="react">
+                                    <input
+                                            id="react"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="React"
+                                    />React
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="vue">
+                                    <input
+                                            id="vue"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="Vue"
+                                    />Vue
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="rust">
+                                    <input
+                                            id="rust"
+                                            name="technologies"
+                                            type="checkbox"
+                                            value="Rust"
+                                    />Rust
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-technologies"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="expertise" data-max="5" data-required="true" id="expertise">
+                        <legend>Choose your fields of expertise(maximum 5):
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="ui">
+                                    <input
+                                            id="ui"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="UI"
+                                    />UI Design
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="ux">
+                                    <input
+                                            id="ux"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="UX"
+                                    />UX Design
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="frontend">
+                                    <input
+                                            id="frontend"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Front-End"
+                                    />Front-End Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="backend">
+                                    <input
+                                            id="backend"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Back-End"
+                                    />Back-End Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="fullstack">
+                                    <input
+                                            id="fullstack"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Fullstack"
+                                    />Fullstack Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="desktop">
+                                    <input
+                                            id="desktop"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Desktop"
+                                    />Desktop Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="embedded">
+                                    <input
+                                            id="embedded"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Embedded"
+                                    />Embedded Systems Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="android">
+                                    <input
+                                            id="android"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Android"
+                                    />Android Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="ios">
+                                    <input
+                                            id="ios"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="iOS"
+                                    />iOS Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="systems">
+                                    <input
+                                            id="systems"
+                                            name="expertise"
+                                            type="checkbox"
+                                            value="Systems"
+                                    />Systems Development
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-expertise"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="education" data-required="true" id="education">
+                        <legend>Level of Education:
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong></legend>
+                        <label for="junior-high-school">
+                            <input
+                                    id="junior-high-school"
+                                    name="education"
+                                    required="required"
+                                    type="radio"
+                                    value="junior-high-school"
+                            />Junior High School
+                        </label>
+                        <label for="senior-high-school">
+                            <input
+                                    id="senior-high-school"
+                                    name="education"
+                                    required="required"
+                                    type="radio"
+                                    value="senior-high-school"
+                            />Senior High School
+                        </label>
+                        <label for="university">
+                            <input
+                                    id="university"
+                                    name="education"
+                                    required="required"
+                                    type="radio"
+                                    value="university"
+                            />University
+                        </label>
+                        <label for="bootcamp">
+                            <input
+                                    id="bootcamp"
+                                    name="education"
+                                    required="required"
+                                    type="radio"
+                                    value="bootcamp"
+                            />Bootcamp
+                        </label>
+                        <label for="self-taught">
+                            <input
+                                    id="self-taught"
+                                    name="education"
+                                    required="required"
+                                    type="radio"
+                                    value="self-taught"
+                            />Self-taught
+                        </label>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-education"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+            </section>
+            <section class="technological-interests">
+                <h2>Technological Interests</h2>
+                <div class="validation-wrapper">
+                    <fieldset
+                            class="fields-of-interest"
+                            data-max="3"
+                            data-min="3"
+                            data-required="true"
+                            id="fields-of-interest"
+                    >
+                        <legend>Choose 3 topics you are most interested in:
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="machine-learning">
+                                    <input
+                                            id="machine-learning"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="machine-learning"
+                                    />Machine Learning
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="web">
+                                    <input
+                                            id="web"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="web"
+                                    />Web Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="system-engineering">
+                                    <input
+                                            id="system-engineering"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="system-engineering"
+                                    />System Engineering
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="embedded-development">
+                                    <input
+                                            id="embedded-development"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="embedded-development"
+                                    />Embedded Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="algorithms">
+                                    <input
+                                            id="algorithms"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="algorithms"
+                                    />Algorithms
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="security">
+                                    <input
+                                            id="security"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="security"
+                                    />Security
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="database-administration">
+                                    <input
+                                            id="database-administration"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="database-administration"
+                                    />Database Administration
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="databases">
+                                    <input
+                                            id="databases"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="databases"
+                                    />Database Systems Development
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="quantum-computing">
+                                    <input
+                                            id="quantum-computing"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="quantum-computing"
+                                    />Quantum Computing
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="complexity-theory">
+                                    <input
+                                            id="complexity-theory"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="complexity-theory"
+                                    />Complexity Theory
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="computer-networks">
+                                    <input
+                                            id="computer-networks"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="computer-networks"
+                                    />Computer Networks
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="ci-cd">
+                                    <input
+                                            id="ci-cd"
+                                            name="fields-of-interest"
+                                            type="checkbox"
+                                            value="ci-cd"
+                                    /><abbr title="Continuous Integration/Continuous Delivery">CI/CD</abbr>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-fields-of-interest"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <label for="open-source">
+                    <input
+                            id="open-source"
+                            name="open-source"
+                            type="checkbox"
+                            value="interested"
+                    />I'm actively contributing to open-source software
+                </label>
+                <div class="validation-wrapper">
+                    <fieldset class="work-preference" id="work-preference">
+                        <legend>I prefer:<strong><abbr aria-label="Required" title="Required">*</abbr></strong></legend>
+                        <label for="ideal-technology">
+                            <input
+                                    id="ideal-technology"
+                                    name="work-preference"
+                                    required="required"
+                                    type="radio"
+                                    value="ideal-technology"
+                            />working with my favorite technology but in a group of people I don't get along with
+                        </label>
+                        <span>OR</span>
+                        <label for="ideal-team">
+                            <input
+                                    id="ideal-team"
+                                    name="work-preference"
+                                    required="required"
+                                    type="radio"
+                                    value="ideal-team"
+                            />working with my least favorite technology but in a group of people I consider to be the
+                            ideal team
+                        </label>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-work-preference"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="contribution-preference" data-max="1" data-required="true"
+                              id="contribution-preference">
+                        <legend>In my free time, I mostly prefer to:
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <label for="articles">
+                            <input
+                                    id="articles"
+                                    name="contribution-preference"
+                                    type="radio"
+                                    value="articles"
+                            />write articles about technological issues
+                        </label>
+                        <label for="studying">
+                            <input
+                                    id="studying"
+                                    name="contribution-preference"
+                                    type="radio"
+                                    value="studying"
+                            />study and learn new technologies
+                        </label>
+                        <label for="projects">
+                            <input
+                                    id="projects"
+                                    name="contribution-preference"
+                                    type="radio"
+                                    value="projects"
+                            />test and develop ideas that I have into new projects
+                        </label>
+                        <label for="freelance">
+                            <input
+                                    id="freelance"
+                                    name="contribution-preference"
+                                    type="radio"
+                                    value="freelance"
+                            />to work freelance
+                        </label>
+                        <label for="other">
+                            other(specify):
+                            <input
+                                    id="other"
+                                    name="contribution-preference"
+                                    placeholder="e.g. try solving hard computational problems"
+                                    type="text"
+                            />
+                        </label>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-contribution-preference"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+            </section>
+            <section class="experience">
+                <h2>Work Experience</h2>
+                <label for="experienced">
+                    <input
+                            id="experienced"
+                            name="experienced"
+                            type="checkbox"
+                            value="experienced"
+                    />I have been working for more than 3 years
+                </label>
+                <div class="validation-wrapper">
+                    <fieldset class="work-roles" data-required="true" id="work-roles">
+                        <legend>I have worked as a:
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <ul class="list">
+                            <li class="list-item">
+                                <label for="backend-engineer">
+                                    <input
+                                            id="backend-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="backend-engineer"
+                                    />Back-End Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="front-engineer">
+                                    <input
+                                            id="front-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="front-engineer"
+                                    />Front-End Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="fullstack-engineer">
+                                    <input
+                                            id="fullstack-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="fullstack-engineer"
+                                    />Fullstack Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="mobile-engineer">
+                                    <input
+                                            id="mobile-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="mobile-engineer"
+                                    />Mobile Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="desktop-engineer">
+                                    <input
+                                            id="desktop-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="desktop-engineer"
+                                    />Desktop Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="systems-engineer">
+                                    <input
+                                            id="systems-engineer"
+                                            name="work-roles"
+                                            type="checkbox"
+                                            value="systems-engineer"
+                                    />Systems Engineer
+                                </label>
+                            </li>
+                            <li class="list-item">
+                                <label for="other-engineer">
+                                    Other(specify, separate with commas):
+                                    <textarea
+                                            id="other-engineer"
+                                            name="work-roles"
+                                            placeholder="e.g. Data Scientist">
+                                    </textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-work-roles"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+                <div class="validation-wrapper">
+                    <fieldset class="teaching-experience" id="teaching-experience">
+                        <legend>Do you have any prior teaching or authorship experience?
+                            <strong><abbr aria-label="Required" title="Required">*</abbr></strong>
+                        </legend>
+                        <label for="yes">
+                            <input
+                                    id="yes"
+                                    name="teaching-experience"
+                                    required="required"
+                                    type="radio"
+                                    value="yes"
+                            />Yes
+                        </label>
+                        <label for="no">
+                            <input
+                                    id="no"
+                                    name="teaching-experience"
+                                    required="required"
+                                    type="radio"
+                                    value="no"
+                            />No
+                        </label>
+                    </fieldset>
+                    <em
+                            aria-describedby="error-for-teaching-experience"
+                            aria-hidden="true"
+                            class="validation-error"
+                    ></em>
+                </div>
+            </section>
+            <div class="submit">
+                <button class="btn" id="sign-up" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </article>
+</main>
+<footer>
+    <div class="link-wrapper">
+        <div>
+            <article class="links">
+                <h2 class="heading">Useful links</h2>
+                <ul class="useful-links">
+                    <li><a href="#">Join for free</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </article>
+            <article class="links">
+                <h2 class="heading">Explore our content</h2>
+                <ul class="content">
+                    <li><a href="#">Fields</a></li>
+                    <li><a href="#">Paths</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Free Courses</a></li>
+                </ul>
+            </article>
+        </div>
+    </div>
+    <article>
+        <ul class="social-media">
+            <li>
+                <a class="btn" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M10,0.5c-5.247,0-9.5,4.253-9.5,9.5c0,5.247,4.253,9.5,9.5,9.5c5.247
+                                                    ,0,9.5-4.253,9.5-9.5C19.5,4.753,15.247,0.5,10,0.5 M10,18.637c-4.77,
+                                                    0-8.636-3.867-8.636-8.637S5.23,1.364,10,1.364S18.637,5.23,18.637,10S14.77,
+                                                    18.637,10,18.637 M10.858,7.949c0-0.349,0.036-0.536,0.573-0.536h0.719v-1.3H11c-1.38,
+                                                    0-1.866,0.65-1.866,1.743v0.845h-0.86V10h0.86v3.887h1.723V10h1.149l0.152-1.299h-1.302L10.858,7.949z"
+                              fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="btn" href="https://www.instagram.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M9.969,0.594c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,
+                                                    9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.375,4.805,15.164,0.594,9.969,
+                                                    0.594 M9.969,18.552c-4.723,0-8.551-3.829-8.551-8.552s3.829-8.551,8.551-8.551S18.521,
+                                                    5.277,18.521,10S14.691,18.552,9.969,18.552 M12.534,5.724H7.403c-0.944,0-1.71,
+                                                    0.766-1.71,1.71v5.131c0,0.944,0.766,1.71,1.71,1.71h5.131c0.944,0,1.71-0.766,
+                                                    1.71-1.71V7.435C14.244,6.49,13.479,5.724,12.534,5.724M11.679,
+                                                    7.007h1.283V8.29h-1.283V7.007z M9.969,8.29c0.944,0,1.71,0.766,1.71,1.71s-0.766,
+                                                    1.71-1.71,1.71s-1.71-0.766-1.71-1.71S9.024,8.29,9.969,8.29 M13.39,12.565c0,0.472-0.384,0.854-0.855,
+                                                    0.854H7.403c-0.472,0-0.855-0.383-0.855-0.854V9.573h0.898C7.423,9.712,7.403,9.854,7.403,10c0,1.417,
+                                                    1.149,2.565,2.565,2.565c1.416,0,2.565-1.148,2.565-2.565c0-0.146-0.02-0.288-0.043-0.427h0.898V12.565z"
+                              fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="btn" href="https://twitter.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M14.467,6.707c-0.34,0.198-0.715,0.342-1.115,0.419c-0.318-0.335-0.775-0.545-1.279-0.545c-0.969
+                                                    ,0-1.754,0.773-1.754,1.727c0,0.135,0.015,0.267,0.045,0.394C8.905,8.628,7.612,7.94,6.747,
+                                                    6.896C6.596,7.151,6.509,7.448,6.509,7.764c0,0.599,0.31,1.128,0.78,1.438C7.002,9.192,6.732,9.115,
+                                                    6.495,8.985c0,0.007,0,0.014,0,0.021c0,0.837,0.605,1.535,1.408,1.694c-0.147,0.04-0.302,0.06-0.462,
+                                                    0.06c-0.113,0-0.223-0.011-0.33-0.031c0.223,0.687,0.871,1.186,1.638,1.199c-0.6,0.464-1.356,
+                                                    0.739-2.179,0.739c-0.142,0-0.281-0.007-0.418-0.023c0.777,0.489,1.699,0.775,2.689,0.775c3.228,0,
+                                                    4.991-2.63,4.991-4.913c0-0.075-0.002-0.149-0.004-0.223c0.342-0.244,0.639-0.547,0.875-0.894c-0.316,
+                                                    0.137-0.652,0.23-1.008,0.272C14.057,7.448,14.336,7.11,14.467,6.707 M10,0.594c-5.195,0-9.406,
+                                                    4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.196,0,9.407-4.211,9.407-9.406C19.406,4.805,
+                                                    15.195,0.594,10,0.594 M10,18.552c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.449,10,1.449c4.723,0,8.551,
+                                                    3.829,8.551,8.551S14.723,18.552,10,18.552" fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </article>
+    <article class="copyright">
+        <h3>Made with </h3><span aria-label="love" id="icon-container" title="love"></span>
+        <div class="license-container">
+            <small>, licensed under the <abbr title="Michigan Institute of Technology">MIT</abbr> license</small>
+        </div>
+    </article>
+</footer>
+<script src="../scripts/index.js" type="module"></script>
+<script src="../scripts/header-offset.js"></script>
+<script type="module">
+    import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
+
+    const container = document.getElementById('icon-container');
+    let state = 'play';
+
+    const animation = lottieWeb.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById('icon-container'), // required
+        path: '../assets/heart.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation.goToAndStop(0, true);
+
+    container.addEventListener('click', () => {
+        if (state === 'play') {
+            animation.playSegments([0, 10], true);
+            state = 'pause';
+        } else {
+            animation.playSegments([10, 0], true);
+            state = 'play';
+        }
+    });
+
+</script>
+</body>
+</html>

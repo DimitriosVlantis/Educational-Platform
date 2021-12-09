@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="1500px" width="1000px">
+    <defs>
+        <pattern id="doodad" width="80" height="80" viewBox="0 0 40 40" patternUnits="userSpaceOnUse"
+                 patternTransform="rotate(135)">
+            <rect width="100%" height="100%" fill="rgba(26, 12, 18,1)"/>
+            <path d="M20 20v0h-0v-0zM20 10v20l10-10h-20z" fill="rgba(26, 12, 18,1)"/>
+            <path d="M0 10v10l20-20h-0zM30 40h-10l20-20v0zM20 20h0v0h0z" fill="rgba(37, 181, 77,1)"/>
+        </pattern>
+    </defs>
+    <rect fill="url(#doodad)" height="200%" width="200%"/>
+</svg>

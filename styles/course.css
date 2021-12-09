@@ -1,0 +1,44 @@
+video {
+    max-width: 80%;
+    margin: 3em auto;
+    height: auto;
+}
+
+.toc {
+    display: flex;
+    flex-direction: column;
+}
+
+.toc video {
+    justify-self: center;
+}
+
+.toc ol {
+    border: var(--border-width) solid var(--brand-color);
+    padding: 2em 4em 1em;
+}
+
+.toc ol .lecture {
+    margin-bottom: 0.8em;
+}
+
+.toc ol + .heading {
+    margin: 2em 0 0.45em;
+}
+
+.toc ul {
+    gap: 0;
+    margin: 0;
+    padding: 0 0 0 0.5em;
+}
+
+.module.toc .requirement {
+    transform: translateX(0);
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.module.toc .requirement::before {
+    content: url(../assets/images/graphics/check.svg);
+}

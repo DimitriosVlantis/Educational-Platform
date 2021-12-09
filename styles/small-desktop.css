@@ -1,0 +1,122 @@
+/* -----
+    small- desktop is the just like desktop but 
+    with a couple of pixels less in every width style.
+----- */
+
+.branding h1 {
+    font-size: 2rem;
+}
+
+.button-wrapper {
+    width: min(5.3em, 8vmin);
+    height: min(5.3em, 8vmin);
+    padding: min(0.625em, 1vmin) min(0.75em, 0.85vmin);
+}
+
+.logo {
+    /* max-width: min(150px, 10vh); */
+}
+
+.primary-navigation ul {
+    font-size: 3em;
+}
+
+@keyframes jump-2 {
+    10% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    85%, 100% {
+        transform: translateY(-205%);
+    }
+}
+
+.educational-content .btn.cta-link {
+    margin-top: 3em;
+}
+
+.educational-content .heading,
+.educational-content .description {
+    margin: 2.5%;
+}
+
+.cta {
+    width: calc(20em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+}
+
+.cta .heading {
+    font-size: calc(0.9 * var(--heading-font-size));
+}
+
+.sponsors img {
+    max-width: 25vw;
+}
+
+.sponsors .heading {
+    font-size: calc(var(--heading-font-size) * 0.85);
+}
+
+.outcomes .heading,
+.testimonials > .heading {
+    font-size: calc(var(--font-size) * 1.9);
+}
+
+
+.has-aside .hero-section {
+    grid-template-columns: 50% 50%;
+    background: linear-gradient(66deg, var(--background-color) 30%,
+    var(--complimentary-color) 60%,
+    var(--brand-color) 80%,
+    var(--background-color) 97.5%);
+}
+
+.has-aside .hero-section .no-mobile {
+    /* max-width: 375px; */
+}
+
+.has-aside .hero-section .heading {
+    margin-top: 0.4em;
+    font-size: calc(var(--heading-font-size) * 0.9);
+}
+
+.has-aside .breadcrumbs .breadcrumb a {
+    font-size: calc(var(--font-size) * 0.9);
+    padding: 0 20px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li:first-child {
+    border-left: 3px solid var(--accent-color);
+}
+
+.has-aside .breadcrumbs .breadcrumb li svg {
+    width: 24px;
+    height: 24px;
+}
+
+.has-aside .breadcrumbs .breadcrumb li:first-child::before,
+.has-aside .breadcrumbs .breadcrumb li:first-child::after {
+    left: 5px;
+}
+
+.has-aside .module .heading {
+    font-size: calc(0.6875 * var(--heading-font-size));
+}
+
+.has-aside .module details dt {
+    font-size: calc(0.9 * var(--font-size));
+}
+
+.has-aside .module details dd {
+    font-size: calc(0.7 * var(--font-size));
+}
+
+.has-aside .module details[open] > :not(summary, .heading) {
+    padding: 0 2em;
+}
+
+.has-aside .module details .heading {
+    padding-left: 1em;
+    font-size: calc(0.75 * var(--heading-font-size));
+}

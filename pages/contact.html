@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+    <meta charset="UTF-8"/> <!-- character set -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <!-- fluid layout -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <!-- Tell IE to interpret the document in the latest available version -->
+    <title>Educational Platform</title> <!-- title -->
+    <meta content="SEO description <!--TODO" name="description"/> <!-- Excerpt in search engine results -->
+    <meta content="#FA5FC1ff" name="theme-color"/>
+    <!--
+        Set the theme color as the brand color (it appears in various places,
+        i.e. top of the Chrome browser on mobiles)
+     -->
+    <link href="../styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
+    <link href="../styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
+    <link href="../styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
+    <link href="../styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
+    <link href="../styles/contact.css" rel="stylesheet"/> <!-- Include contact css styles-->
+    <link href="../styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)"
+          rel="stylesheet"/>
+    <link href="../styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+    <link href="../styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)"
+          rel="stylesheet"/>
+    <link href="../styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+
+    <!-- Javascript imports are positioned here and at the end of the body-->
+    <script src="../scripts/contact_validation.js" type="module"></script>
+</head>
+<body>
+<!-- More info about the header can be found in the index.html file.-->
+<header>
+    <div class="branding">
+        <img alt="Logo" class="logo" src="../assets/images/graphics/logo/logo.svg"/>
+        <h1>Lecture Book</h1>
+    </div>
+    <div class="button-wrapper">
+        <span class="button-secondary-background"></span>
+        <button
+                aria-controls="primary-menu"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Website links"
+                class="button-toggle close"
+                id="menu-toggle"
+        >
+            <span aria-hidden="true" class="line" tabindex="-1"></span>
+            <span aria-hidden="true" class="line" tabindex="-1"></span>
+            <span aria-hidden="true" class="line" tabindex="-1"></span>
+        </button>
+    </div>
+    <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+        <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Home</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Fields</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Paths</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Courses</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">About Us</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+            </li>
+        </ul>
+    </nav>
+    <span aria-hidden="true" class="header-border" tabindex="-1"></span>
+</header>
+<main>
+    <!-- This section is used as a wrapper of the form which applies several
+        styles.-->
+    <section class="form_structure">
+        <h2 class="heading">Contact us!</h2>
+        <p class="description">
+            We are at your service to answer any question,
+            just fill the contact form bellow and our
+            team will come in touch with you as soon as possible.
+        </p>
+        <!-- This marks the form form all the other elements of this section.-->
+        <article class="form">
+            <!-- The form element wraps all of the input, select andd text area elements.
+                Authentication is made in the respective .js file.-->
+            <form>
+                <label for="txt_name">Name</label>
+                <input id="txt_name" placeholder="e.g. Jack "
+                       required
+                       type="text">
+                <label for="txt_surname">Surname</label>
+                <input id="txt_surname" placeholder="e.g. Sparrow "
+                       required
+                       type="text">
+                <label for="txt_email">Email</label>
+                <input id="txt_email" placeholder="e.g. JackSparrow@gmail.com "
+                       required
+                       type="text">
+                <label for="txt_phone_nub">Phone Number</label>
+                <input id="txt_phone_nub" placeholder="e.g. 210******* "
+                       required
+                       type="text">
+                <label for="slt_theme">Theme</label>
+                <select id="slt_theme">
+                    <option>Suggestions</option>
+                    <option>Complications</option>
+                    <option>Servise</option>
+                    <option>Question</option>
+                </select>
+                <label for="txt_question">Question</label>
+                <textarea cols="50" id="txt_question" required rows="7">
+                        </textarea>
+                <button id="btn_submit" type="submit">Submit</button>
+            </form>
+        </article>
+    </section>
+</main>
+<script src="../scripts/index.js" type="module"></script>
+</body>
+</html>

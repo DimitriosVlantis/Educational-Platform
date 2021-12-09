@@ -1,0 +1,140 @@
+genetics
+
+TOC
+Learn about introduction to world of Genetics
+Understanding of structure of DNA & RNA
+Mendelian law of Inheritance
+Gene Interactions [Epistasis, Multiple Parallelism]
+Crossing over & Linkage
+Cytoplasmic Inheritance
+Mutations
+Syndromes related to genetics
+
+REQUIREMENTS
+Basic understanding of Biology, Gene, Chromosome and Cell Division.
+Students who are in their graduation level
+
+
+microbiology
+
+TOC
+Intensive course for all microbiology subsections including Bacteriology, Mycobacteriology, Mycology, Virology, and Parasitology
+Identify the pathogenic organisms and normal flora in the different types of bacteriology culture
+Perfect photos for the colony morphology, the pigments, and gram stain of more than 50 types of pathogenic bacteria
+Interpret the bacterial growth using comprehensive flowcharts and the guidelines
+The basic and the advanced methods of identification and susceptibility testing
+Phenotypic and genotypic detection of superbugs including CRO, PDR, ESBL, MRSA, and VRE.
+Understand the procedures of microbiology laboratory using scenarios, technical suggestions, and troubleshooting
+Recovery and identification of Mycobacterium tuberculosis and MOTT from the culture, colony morphology, biochemical tests, and genotypic detection
+Clinical and morphological classification of mycology, principles of macroscopic and microscopic examination of the fungi and molds.
+Cell line (viral) culture, molecular detection and classification of the viruses including Herpesviridae, Myxoviridae, Flaviviridae, and Hepatitis viruses.
+Guidelines for the screening method to detect ova and parasites using iron-hematoxylin and modified kinyoun stains
+
+REQUIREMENTS
+General principles of medical microbiology.
+
+
+analytical chemistry
+
+TOC
+All topics covered in the first semester of college chemistry are contained in this course.
+Each topic is covered is great detail with plenty of examples.
+Course topics include:
+Physical and Chemical Properties of Matter
+Measurements, Significant Figures and Dimensional Analysis
+The Periodic Table, Chemical Formulas, Nomenclature
+Atomic Structure, Atomic Number and Atomic Weight
+The Mole Concept, Percent Composition
+Empirical and Molecular Formulas
+Stoichiometry, Limiting Reactant, Percent Yield
+Solutions, Concentrations
+Electrolytes and Non-Electrolytes
+Writing and Balancing Chemical Equations
+Ionic and Net Ionic Reactions
+Metathesis and Redox Reactions
+Acids, Bases and their Ionization Reactions
+Thermochemistry, Calorimetry, Enthalpy, Hess’s Law
+Quantum Numbers, Electron Configuration of Atoms
+Periodic Properties of Elements
+Ionization Energy, Electron Affinity
+Ionic and Covalent bonding, Bond Polarity, Electronegativity
+Bond Strength, Lattice Energy, Born-Haber Cycle
+Lewis Dot Structures, Formal Charge, Resonance
+Molecular Structure, Shapes, and Polarity
+Valence Bond Theory, Hybridization, Molecular Orbital Theory
+Gas Laws, including Combined Gas Law and Ideal Gas Law
+Gas Densities, Dalton’s Law of Partial Pressures
+Kinetic-Molecular Theory, Diffusion, Effusion
+
+Requirements
+A working knowledge of high school algebra.
+A desire and interest in learning chemistry.
+
+
+forensics chemistry
+
+TOC
+Units to describe biological activity
+An overview of drug discovery
+An introduction to chem informatics
+The SMILES representation of chemical structures
+Small molecule databases
+Physical chemical features that may influence oral bioavailability of drugs
+Pieces of software to analyze physical chemical features of compounds
+Strategies to change the structure of bioactive compounds
+
+REQUIREMENTS
+Very basic knowledge of chemistry and biology
+
+
+geo chemistry
+
+TOC
+Write general and specific chemical equations to numerous reactions.
+Should be able to have comprehensive knowledge on the subject.
+Understand and state various unique and contrasting physical properties with proper reasons.
+Should be able to give detailed account of metallic bonds, various chemical properties, reactivity series and extractions based on reactivity.
+
+REQUIREMENTS
+Basic understanding of terminologies of chemistry like elements, electronic configurations, chemical equations etc.
+
+
+bio organic chemistry
+
+TOC
+Take your exam in absolute confidence and get superb grades!
+Students will be able to fully understand their course material, learn easy shortcuts, and be ahead of the curve.
+It covers basic level Organic Chemistry for international exam like IGCSE, GCSE, O LEVEL, AP (Organic Chemistry), K-12 (High School) and IB basic part of it.
+Have a strong foundation in organic chemistry, ready to take more advances courses
+
+REQUIREMENTS
+To get the best understanding from this course, students should already know about; Matter is made of tiny particles called atoms Atomic Structure Electronic Configuration Concept of Chemical Bonding
+
+pharmaceutical chemistry
+
+TOC
+Learn essential facts about medicines and the structure of the pharmaceutical industry around the world
+Answer questions about the industry today and the major developments
+Explain where are the major markets and who are the major players
+Explain which drugs are the most successful
+Explain which disease areas are of the greatest interest
+Discover how the industry has evolved and how the industry is adapting
+
+REQUIREMENTS
+An interest and a willingness to start building your knowledge of the pharmaceutical industry
+No prior pharmaceutical knowledge is required
+
+physical chemistry
+
+TOC
+Concentration Terms which often appear in Physical Chemistry
+Mole concept, Mole fraction
+Mass %, Volume %, Mass/Volume %
+ppm, ppb & ppt
+Molarity, Modality
+Equivalent mass, Equivalents & Normality
+Numerical problems on all concentration terms
+
+REQUIREMENTS
+Basics of chemistry
+An idea of what is an Atom, Molecule, Solute, Solvent, Solution etc

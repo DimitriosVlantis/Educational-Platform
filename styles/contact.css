@@ -1,0 +1,86 @@
+.form_structure .heading {
+    margin: 5%;
+    position: relative;
+    font-size: calc(var(--heading-font-size) * 0.9);
+}
+
+.form_structure .description {
+    width: 60%;
+    margin: 7.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.form form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: content;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+    left: 7.5%;
+    border: 0.2em solid var(--complimentary-color);
+    /*background-color: var(--accent-color);*/
+    background-image: url("../assets/images/graphics/backgrounds/contact-pattern.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0.07em 0.07em 0.25em var(--box-shadow-color);
+}
+
+.form form label {
+    font-size: calc(var(--heading-font-size) * 0.5);
+    color: var(--title-color);
+    margin-top: 2.5em;
+    margin-bottom: 7px;
+}
+
+.form form input,
+.form form select {
+    width: 50%;
+    height: 2em;
+    border: 0.15em solid var(--brand-color);
+    border-radius: 15px;
+}
+
+.form form textarea {
+    width: 50%;
+    height: auto;
+    border: 0.15em solid var(--brand-color);
+    border-radius: 15px;
+}
+
+.form form button {
+    color: var(--title-color);
+    font-family: var(--font-family-title);
+    font-size: var(--font-size);
+    font-weight: 450;
+    height: 3em;
+    width: 7em;
+    position: absolute;
+    top: 110%;
+    left: 5%;
+    background-color: var(--background-color);
+    border: 0.2em solid var(--brand-color);
+    border-radius: 15px;
+    box-shadow: 0.07em 0.07em 0.25em var(--box-shadow-color);
+}
+
+.form form button:focus,
+.form form button:active,
+.form form button:hover {
+    color: var(--link-color-hover);
+    outline: transparent;
+    background-color: var(--background-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25 + var(--underline-width)) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75 + var(--underline-width)) var(--link-color-hover);
+    border-radius: 0.3em;
+    transition: border 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+}

@@ -1,0 +1,188 @@
+/* 3D Button - Begin */
+
+/*
+    Call to action link made appear as a 3D button.
+    Relative positioning to absolute place children elements. Inline-flex display to have flex flow within but make the
+    link (box) retain its inline functionality and not span entire row.
+    Text decoration to remove underline.
+    Perspective to give an angle (perspective) while the link rotates to make the 3D effect slightly more realistic.
+*/
+.btn.cta-link {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    perspective: 50vmax;
+    font-size: 1.5em;
+    margin-top: 1em;
+    border-radius: 0;
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--background-color);
+    transition: box-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/*
+    Set the wrapper (span) to inline-block to retain inline functionality and also have block level properties.
+    Set width to the full width of the parent.
+    Change the transform origin, meaning the point from where a transformation starts. Originally is (0, 0), which at a
+    box would be the upper left corner. We set it to 50% 50% (x-axis, y-axis) to place it on the center of the box in
+    2 dimensional space. The third value sets the origin of the z-axis, essentially dictating how close or far away the
+    user will interpret the box moving from him. By setting a small negative value proportional to the size of the text
+    we make it appear so that the movement happens backwards and slightly in place. The larger the value, the closer to
+    the user to box appears, the smaller, the further away.
+    transform-style: preserve-3d makes the children of the 3D element preserve their stacking context in the 3D space
+    and not flatten down to 2 dimensional space.
+    The transition dictates how the transformation will occur, and the cubic bezier function dictates how the object will
+    transform in time using the bezier parametric function.
+*/
+.link-3d-wrapper {
+    display: inline-block;
+    width: 100%;
+    transform-origin: 50% 50% calc(-0.5em - (0.25 * 1.25em));
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/*
+    On link hover, rotate the button 90 degrees to show its bottom side.
+*/
+.cta-link:hover .link-3d-wrapper,
+.cta-link:active .link-3d-wrapper,
+.cta-link:focus .link-3d-wrapper {
+    transform: rotateX(90deg);
+}
+
+.cta-link:active,
+.cta-link:focus {
+    border-radius: 0;
+    box-shadow: 0 var(--border-width) 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 var(--border-width) 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
+}
+
+/*
+    Make the box inline with flex flow inside it. Make the width the full of the parent element.
+    Add padding at this point because each side of the button (front, back) has different background color (so the
+    colors can't be applied directly to the link element and its background-color is transparent) and the padding at
+    the link element wouldn't be colored.
+    Backface visibility dictates whether the hidden sides of the 3D box are showing. Since the perspective is small,
+    there is rotation and the backgrounds aren't transparent there isn't any visible change but for maintenance
+    reasons we decided to keep it because if we change the opacity level a small line appears below the button.
+*/
+.link-3d-front,
+.link-3d-back {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.6em 1.5em;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    font-family: var(--font-family-title);
+}
+
+.link-3d-front {
+    color: var(--background-color);
+    background-color: var(--brand-color);
+}
+
+/*
+    Absolutely positioning the backface of the button which is a separate element so that it appears on the same place.
+    Then we add -90 degrees rotation on the x-axis to "hide" it below the other button.
+    We change its origin to happen from its relative center of the x-axis and from its relative top on the y-axis.
+*/
+.link-3d-back {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--text-color);
+    background-color: var(--complimentary-color);
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+}
+
+/* 3D Button - End */
+
+.heading {
+    margin: 0.8em 0;
+}
+
+.heading, .description {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.heading + .description {
+    margin-top: 0;
+}
+
+.secondary-button-wrapper {
+    padding: 1.6em 0.6em;
+}
+
+.btn.secondary-button {
+    border-radius: 50px;
+    display: block;
+    font-size: calc(var(--font-size) * 1.25);
+    padding: 0.75em 1.5em;
+    color: var(--text-color);
+    background: var(--brand-color);
+    background: linear-gradient(66deg, var(--background-color) 30%, var(--complimentary-color) 60%, var(--brand-color) 80%) repeat 0 -180px;
+    background-size: 100% 480px;
+    transition: background-position 0.25s ease-in-out;
+}
+
+.btn.secondary-button:hover {
+    background-position: 0 0;
+}
+
+body main a.btn.secondary-button:focus,
+body main a.btn.secondary-button:active {
+    background-color: var(--complimentary-color);
+    box-shadow: 0 0 0 calc(var(--border-width) * 1.25) var(--background-color),
+    0 0 0 calc(var(--border-width) * 1.75) var(--complimentary-color);
+    background-position: 0 0;
+}
+
+/* CTA - Begin */
+
+.cta {
+    width: calc(16em + (480 - 160) * ((100vw - 320px) / (7680 - 320 - 16)));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* CTA - End */
+
+@media only screen and (max-width: 67.5em) {
+    .no-mobile {
+        display: none;
+    }
+}
+
+.no-mobile {
+    min-width: 45vh;
+    max-width: min(1024px, 25vw);
+    width: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

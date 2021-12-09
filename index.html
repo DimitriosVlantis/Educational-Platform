@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+    <meta charset="utf-8"/> <!-- character set -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <!-- fluid layout -->
+    <!-- Tell IE to interpret the document in the latest available version -->
+    <title>Educational Platform</title> <!-- title -->
+    <meta content="SEO description <!--TODO" name="description"/> <!-- Excerpt in search engine results -->
+    <meta content="#FA5FC1ff" name="theme-color"/>
+    <!--
+        Set the theme color as the brand color (it appears in various places,
+        i.e. top of the Chrome browser on mobiles)
+     -->
+    <link href="./styles/normalize.css" rel="stylesheet"/> <!-- Include normalize CSS -->
+    <link href="./styles/base.css" rel="stylesheet"/> <!-- Include base CSS styles -->
+    <link href="./styles/header.css" rel="stylesheet"/> <!-- Include header CSS styles -->
+    <link href="./styles/main.css" rel="stylesheet"/> <!-- Include main CSS styles -->
+    <link href="./styles/footer.css" rel="stylesheet"/> <!-- Include footer CSS styles -->
+    <link href="./styles/layout.css" rel="stylesheet"/>
+    <link href="./styles/home.css" rel="stylesheet"/> <!-- Include home CSS styles -->
+    <link href="./styles/slider.css" rel="stylesheet"/> <!-- Include slider CSS styles -->
+    <link href="./styles/small-tablet.css" media="screen and (min-width: 30em) and (max-width: 48em)" rel="stylesheet"/>
+    <!-- Custom styles specificaly for small tablets.-->
+    <link href="./styles/tablet.css" media="screen and (min-width: 48em) and (max-width: 67.5em)" rel="stylesheet"/>
+    <!-- Custom styles specificaly for tablets-->
+    <link href="./styles/small-desktop.css" media="screen and (min-width: 67.5em) and (max-width: 90em)"
+          rel="stylesheet"/> <!-- Custom styles specificaly for small desktops.-->
+    <link href="./styles/desktop.css" media="screen and (min-width: 90em)" rel="stylesheet"/>
+    <!-- Custom styles specificaly for desktops.-->
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"> <!-- The icon next to the title.-->
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+</head>
+<body>
+<header>
+    <div class="branding">
+        <a class="logo-wrapper" href="index.html">
+            <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/> <!-- Our custom logo.-->
+        </a>
+        <h1>Lecture Book</h1> <!-- Our name.-->
+    </div>
+    <div class="menu"> <!-- This is the pop up menu. It appears once you have pressed the link top right.-->
+        <div class="button-wrapper"> <!-- The a wrapper, usefull for css and js functions.-->
+            <!-- When the menu opens, in the position where the wrapper was, the button changes to our complimentary color. 
+                Well it doesn't, there is just a secondary wrapper above it.-->
+            <span class="button-secondary-background"></span>
+            <!-- Thats the menu button.-->
+            <button
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Website links"
+                    class="button-toggle close"
+                    id="menu-toggle"
+            >
+                <!-- It consists of three spans, this is how we make the lines.-->
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+                <span aria-hidden="true" class="line" tabindex="-1"></span>
+            </button>
+        </div>
+        <!-- This nav is basicaly the pop up menu.-->
+        <nav aria-expanded="false" aria-label="Primary navigation" class="primary-navigation close">
+            <!-- A list is the best way to implement it.-->
+            <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
+                <li role="none">
+                    <a href="index.html" role="menuitem" tabindex="-1">Home</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/fields/computer-science/computer-science.html" role="menuitem" tabindex="-1">
+                        Computer Science
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="./pages/fields/mathematics/mathematics.html" role="menuitem" tabindex="-1">Mathematics</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/fields/chemistry/chemistry.html" role="menuitem" tabindex="-1">Chemistry</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/fields/economics/economics.html" role="menuitem" tabindex="-1">Economics</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/about.html" role="menuitem" tabindex="-1">About Us</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/contact.html" role="menuitem" tabindex="-1">Contact Us</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/signup.html" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- This is practicaly the bottom green border of the header. Usefull for the gradient.-->
+    <span aria-hidden="true" class="header-border"></span>
+</header>
+<main>
+    <!-- This is the hero section. It stands above all. Inside is a slogan and a promo.-->
+    <section class="hero-section">
+        <article class="cta">
+            <!-- From now on when there is a heading, it belongs to the "heading class"
+                custom sizes are given in the css for each one.-->
+            <h2 class="heading">Develop your Career</h2>
+            <p class="description">
+                You are presented with the unique opportunity to launch your dream career
+                utilizing the best resources online.
+                Will you take action?
+            </p>
+            <!-- This is the 3d button. For starters is has facades so to inline elements like em will do.-->
+            <a aria-label="Join for free" class="btn cta-link" href="./pages/signup.html">
+                <!-- They are wrapped with a span because there is no meaning on it
+                    and we want it to be inline-->
+                <span class="link-3d-wrapper">
+                    <em class="link-text link-3d-front">Join for free →</em>
+                    <em class="link-text link-3d-back">Join for free →</em>
+                </span>
+            </a>
+        </article>
+        <!-- This image apears only in desktops.-->
+        <img
+                alt="Career elevation illustration"
+                class="no-mobile"
+                height="500"
+                src="./assets/images/rasters/hero-section.png"
+                width="500"
+        />
+    </section>
+    <!-- These are all our sponsors.-->
+    <section class="sponsors">
+        <h2 class="heading">Backed up by the best organizations.</h2>
+        <!-- That's a semantic organization of all the sponsor images.-->
+        <div class="images-wrapper">
+            <!-- Our site is developed mobile first, so the original size of the image (src)
+                is only 400x400px. Further into the atributes we a establish a source set (srcset)
+                and the oppropriate sizes that the picture can take. Think of it as slots 
+                specialized for each devise (min-width).-->
+            <img
+                    alt="Athens University of Economics and Business logo"
+                    height="400"
+                    sizes="
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) calc(20vw - 1.75em),
+                                    (min-width: 30em) calc(30vw - 2.4em),
+                                    calc(33vw - 2em)
+                                  "
+                    src="./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg"
+                    srcset=
+                            "
+                                        ./assets/images/rasters/sponsors/aueb/aueb-400x400.jpeg 400w,
+                                        ./assets/images/rasters/sponsors/aueb/aueb-200x200.jpg 200w,
+                                        ./assets/images/rasters/sponsors/aueb/aueb-100x100.jpg 100w
+                                    "
+                    width="400"
+            />
+            <img
+                    alt="Central Intelligence Agency logo"
+                    height="750"
+                    sizes="
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) calc(20vw - 1.75em),
+                                    (min-width: 30em) calc(30vw - 2.4em),
+                                    calc(33vw - 2em)
+                                  "
+                    src="./assets/images/rasters/sponsors/cia/cia-750x750.jpg"
+                    srcset=
+                            "
+                                        ./assets/images/rasters/sponsors/cia/cia-750x750.jpg 750w,
+                                        ./assets/images/rasters/sponsors/cia/cia-500x500.jpg 500w,
+                                        ./assets/images/rasters/sponsors/cia/cia-200x200.jpg 200w,
+                                        ./assets/images/rasters/sponsors/cia/cia-100x100.jpg 100w
+                                    "
+                    width="750"
+            />
+            <img
+                    alt="SpaceX logo"
+                    height="750"
+                    sizes="
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) calc(20vw - 1.75em),
+                                    (min-width: 30em) calc(30vw - 2.4em),
+                                    calc(33vw - 2em)
+                                  "
+                    src="./assets/images/rasters/sponsors/space-x/spaceX-750x750.jpg"
+                    srcset=
+                            "
+                                        ./assets/images/rasters/sponsors/space-x/spaceX-750x750.jpg 750w,
+                                        ./assets/images/rasters/sponsors/space-x/spaceX-500x500.jpg 500w,
+                                        ./assets/images/rasters/sponsors/space-x/spaceX-200x200.jpg 200w,
+                                        ./assets/images/rasters/sponsors/space-x/spaceX-100x100.jpg 100w
+                                    "
+                    width="750"
+            />
+            <img
+                    alt="Crunchyroll logo"
+                    height="750"
+                    sizes="
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) calc(20vw - 1.75em),
+                                    (min-width: 30em) calc(30vw - 2.4em),
+                                    calc(33vw - 2em)
+                                  "
+                    src="./assets/images/rasters/sponsors/crunchyroll/crunchyroll-750x750.jpg"
+                    srcset=
+                            "
+                                        ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-750x750.jpg 750w,
+                                        ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-400x400.jpg 400w,
+                                        ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-200x200.jpg 200w,
+                                        ./assets/images/rasters/sponsors/crunchyroll/crunchyroll-100x100.jpg 100w
+                                    "
+                    width="750"
+            />
+            <img
+                    alt="Red Bull Racing logo"
+                    height="1240"
+                    sizes="
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) calc(20vw - 1.75em),
+                                    (min-width: 30em) calc(33vw - 2.4em),
+                                    calc(33vw - 2em)
+                                  "
+                    src="./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1240x1240.jpg"
+                    srcset=
+                            "
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1240x1240.jpg 1240w,
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-1080x1080.jpg 1080w,
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-750x750.jpg 750w,
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-500x500.jpg 500w,
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-200x200.jpg 200w,
+                                        ./assets/images/rasters/sponsors/redbull-racing/redbull-racing-100x100.jpg 100w
+                                    "
+                    width="1240"
+            />
+        </div>
+    </section>
+    <!-- From now on begins the educational content. This one is in general all the fields.-->
+    <section class="educational-content" id="fields">
+        <h2 class="heading">Fields</h2>
+        <!-- More slogans and promos.-->
+        <section class="promo">
+            <h3 class="heading">
+                Join for exclusive curriculums curated by the top educational organizations around the world.
+            </h3>
+            <p class="description">
+                Get job-ready for an in-demand career.
+                Break into a new field like computer science or logistics.
+                No prior experience necessary to get started.
+            </p>
+        </section>
+        <!-- This part of the fields is the slider.
+            The slider is a fancy way to represent all of our fields at once.
+            If the viewport is long enough all the allign one next to another,
+            but when the viewport is to shot (smartphone devices) only one (or more depends on the vw)
+            is being shown and the others are accesed through the arrows.-->
+        <article
+                aria-label="Slider of provided fields of study"
+                aria-live="polite"
+                aria-roledescription="Slider"
+                class="slider"
+                id="fields-slider"
+                role="region"
+        >
+            <!-- This fieldset is used for organization of the two buttons (arrows)-->
+            <fieldset aria-controls="fields-slider" aria-label="Slider buttons" class="slider-controls">
+                <!-- Every arrow is nothing but a button which contains a svg.-->
+                <button aria-label="Previous slider card" class="arrow left">
+                    <!-- We use svg's all the time because the are scallable (as their name sais).
+                        Apart from that they are amazing we much support on web and easy to use and customize with css-->
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                fill="none"
+                        ></path>
+                    </svg>
+                </button>
+                <button aria-label="Next slider card" class="arrow right">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M11.611,
+                            10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
+                            0.012-1.105c0.309-0.304,
+                            0.803-0.293,
+                            1.105,
+                            0.012l5.306,
+                            5.433c0.304,
+                            0.31,
+                            0.296,
+                            0.805-0.012,
+                            1.105L7.83,
+                            15.928c-0.152,
+                            0.148-0.35,
+                            0.223-0.547,
+                            0.223c-0.203,
+                            0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
+                            0.012-1.104L11.611,
+                            10.049z" fill="none"
+                        ></path>
+                    </svg>
+                </button>
+            </fieldset>
+            <!-- All the field cards are organized into an list for convinience.
+                Each list element is a card by it's self.-->
+            <ul>
+                <!-- That's a card.-->
+                <li aria-roledescription="slide">
+                    <article class="card" id="computer-science">
+                        <!-- A link to the appriate .html file of field.-->
+                        <a href="./pages/fields/computer-science/computer-science.html">
+                            <!-- Just as before more options are given into the srcset 
+                                for device scalability.-->
+                            <img
+                                    alt="Computer science illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/computer-science/computer-science-1024x1024.png"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/computer-science/computer-science-1024x1024.png 1024w,
+                                        ./assets/images/rasters/fields/computer-science/computer-science-720x720.png 720w,
+                                        ./assets/images/rasters/fields/computer-science/computer-science-480x480.png 480w,
+                                        ./assets/images/rasters/fields/computer-science/computer-science-360x360.png 360w,
+                                        ./assets/images/rasters/fields/computer-science/computer-science-240x240.png 240w,
+                                        ./assets/images/rasters/fields/computer-science/computer-science-150x150.png 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/computer-science/computer-science.html">Computer Science</a>
+                        </h3>
+                        <p class="description">
+                            The most important aspect of computer science is problem-solving, an essential
+                            skill for life. Students study the design, development and analysis of software and
+                            hardware used to solve problems in a variety of business, scientific and social
+                            contexts. Explore computer science paths and courses today.
+                        </p>
+                        <!-- This is just a wrapper for stylling purposes.-->
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/computer-science/computer-science.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="economics">
+                        <a href="./pages/fields/economics/economics.html">
+                            <img
+                                    alt="Economics illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/economics/economics-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/economics/economics-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/economics/economics-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/economics/economics-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/economics/economics-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/economics/economics-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/economics/economics-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/economics/economics.html">Economics</a>
+                        </h3>
+                        <p class="description">
+                            Studying economics can prepare you not only for careers in the financial services
+                            sector, but also for tasks in your everyday life. Studying economics can prepare you
+                            to work in corporate and government financial management, banking,
+                            and financial planning.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button" href="./pages/fields/economics/economics.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="mathematics">
+                        <a href="./pages/fields/mathematics/mathematics.html">
+                            <img
+                                    alt="Mathematics illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/mathematics/mathematics-1024x1024.png"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/mathematics/mathematics-1024x1024.png 1024w,
+                                        ./assets/images/rasters/fields/mathematics/mathematics-720x720.png 720w,
+                                        ./assets/images/rasters/fields/mathematics/mathematics-480x480.png 480w,
+                                        ./assets/images/rasters/fields/mathematics/mathematics-360x360.png 360w,
+                                        ./assets/images/rasters/fields/mathematics/mathematics-240x240.png 240w,
+                                        ./assets/images/rasters/fields/mathematics/mathematics-150x150.png 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/mathematics/mathematics.html">Mathematics</a>
+                        </h3>
+                        <p class="description">
+                            Math teaches us to think logically; to identify and state the problem clearly;
+                            to plan how to solve the problem; and then to apply the appropriate methods to
+                            evaluate and solve the problem. We learn to evaluate and draw conclusions
+                            based on our knowledge. Mathematicians are needed in many professional contexts,
+                            from policymaking to medical research. Study Mathematics and your career could see
+                            you play a part in solving some of the world's many complex problems.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button" href="./pages/fields/mathematics/mathematics.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="chemistry">
+                        <a href="./pages/fields/chemistry/chemistry.html">
+                            <img
+                                    alt="Chemistry illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/chemistry/chemistry-1024x1024.png"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/chemistry/chemistry-1024x1024.png 1024w,
+                                        ./assets/images/rasters/fields/chemistry/chemistry-720x720.png 720w,
+                                        ./assets/images/rasters/fields/chemistry/chemistry-480x480.png 480w,
+                                        ./assets/images/rasters/fields/chemistry/chemistry-360x360.png 360w,
+                                        ./assets/images/rasters/fields/chemistry/chemistry-240x240.png 240w,
+                                        ./assets/images/rasters/fields/chemistry/chemistry-150x150.png 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/chemistry/chemistry.html">Chemistry</a>
+                        </h3>
+                        <p class="description">
+                            Chemistry is the science and study of matter, including its properties, composition
+                            as well as reactivity. Chemistry relates to everything that can be sensed from the
+                            minute elements to complex structures. The atom and molecules are the basic unit or
+                            components of Chemistry.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button" href="./pages/fields/chemistry/chemistry.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </article>
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
+            <span class="link-3d-wrapper">
+                <em class="link-3d-front">Explore fields →</em>
+                <em class="link-3d-back">Explore fields →</em>
+            </span>
+        </a>
+    </section>
+    <!-- We propose some very popular paths. the structure is the same as fields.-->
+    <section class="educational-content" id="popular-paths">
+        <h2 class="heading">Popular Paths</h2>
+        <section class="promo">
+            <h3 class="heading">
+                Take advantage of our highly specialized paths to take your skills to the next
+                level.
+            </h3>
+            <p class="description">
+                Choose a path from our expert-crafted list
+                and become an expert in the domain you like most.
+            </p>
+        </section>
+        <article
+                aria-label="Slider of provided popular paths"
+                aria-live="polite"
+                aria-roledescription="Slider"
+                class="slider"
+                id="paths-slider"
+                role="region"
+        >
+            <fieldset aria-controls="paths-slider" aria-label="Slider buttons" class="slider-controls">
+                <button aria-label="Previous slider card" class="arrow left">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                fill="none"
+                        ></path>
+                    </svg>
+                </button>
+                <button aria-label="Next slider card" class="arrow right">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M11.611,
+                            10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
+                            0.012-1.105c0.309-0.304,
+                            0.803-0.293,
+                            1.105,
+                            0.012l5.306,
+                            5.433c0.304,
+                            0.31,
+                            0.296,
+                            0.805-0.012,
+                            1.105L7.83,
+                            15.928c-0.152,
+                            0.148-0.35,
+                            0.223-0.547,
+                            0.223c-0.203,
+                            0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
+                            0.012-1.104L11.611,
+                            10.049z" fill="none"
+                        ></path>
+                    </svg>
+                </button>
+            </fieldset>
+            <ul>
+                <li aria-roledescription="slide">
+                    <article class="card" id="programming">
+                        <a href="./pages/fields/computer-science/paths/programming/programming.html">
+                            <img
+                                    alt="Programming illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/computer-science/paths/programming/programming-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/computer-science/paths/programming/programming-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/computer-science/paths/programming/programming.html">Programming</a>
+                        </h3>
+                        <p class="description">
+                            Learn all about how to become an expert computer programmer and write and test code
+                            that allows computer applications and software programs to function properly using
+                            different programming languages and programming paradigms.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/computer-science/paths/programming/programming.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="bio-chemistry">
+                        <a href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">
+                            <img
+                                    alt="Biochemistry illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/chemistry/paths/biochemistry/biochemistry-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">Biochemistry</a>
+                        </h3>
+                        <p class="description">
+                            Biochemistry is the application of chemistry to the study of biological processes at
+                            the cellular and molecular level. It emerged as a distinct discipline around the
+                            beginning of the 20th century when scientists combined chemistry, physiology, and
+                            biology to investigate the chemistry of living systems.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="calculus">
+                        <a href="./pages/fields/mathematics/paths/calculus/calculus.html">
+                            <img
+                                    alt="Calculus illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/mathematics/paths/calculus/calculus-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/mathematics/paths/calculus/calculus-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/mathematics/paths/calculus/calculus.html">Calculus</a>
+                        </h3>
+                        <p class="description">
+                            Calculus, originally called infinitesimal calculus or
+                            "the calculus of infinitesimals", is the mathematical study of continuous change,
+                            in the same way that geometry is the study of shape and algebra is the study of
+                            generalizations of arithmetic operations.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/mathematics/paths/calculus/calculus.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="macroeconomics">
+                        <a href="./pages/fields/economics/paths/macro-economics/macro-economics.html">
+                            <img
+                                    alt="Macroeconomics illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/economics/paths/macro-economics/macroeconomics-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/economics/paths/macro-economics/macro-economics.html">Macroeconomics</a>
+                        </h3>
+                        <p class="description">
+                            Macroeconomics is a branch of economics that studies how an overall economy,the
+                            market or other systems that operate on a large scale, behaves. Macroeconomics
+                            studies economy-wide phenomena such as inflation, price levels, rate of economic
+                            growth, national income, gross domestic product (GDP), and changes in unemployment.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/economics/paths/macro-economics/macro-economics.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="backend">
+                        <a href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">
+                            <img
+                                    alt="Backend development illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/computer-science/paths/back-end-development/backend-development-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">Backend
+                                Development</a>
+                        </h3>
+                        <p class="description">
+                            Learn all about back-end development and how to develop applications and APIs that
+                            communicate with distributed components like databases and different front-ends and
+                            use this knowledge to become an expert problem-solver.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </article>
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
+            <span class="link-3d-wrapper">
+                <em class="link-3d-front">Explore courses →</em>
+                <em class="link-3d-back">Explore courses →</em>
+            </span>
+        </a>
+    </section>
+    <!-- Same as the fields and paths.-->
+    <section class="educational-content" id="free-courses">
+        <h2 class="heading">Free Courses</h2>
+        <section class="promo">
+            <h3 class="heading">
+                Join our subscription-free courses to quick started
+                your career.
+            </h3>
+            <p class="description">
+                We have purposefully kept some of our courses free
+                so everyone can have an opportunity to change his future.
+            </p>
+        </section>
+        <article
+                aria-label="Slider of provided free courses"
+                aria-live="polite"
+                aria-roledescription="Slider"
+                class="slider"
+                id="courses-slider"
+                role="region"
+        >
+            <fieldset aria-controls="courses-slider" aria-label="Slider buttons" class="slider-controls">
+                <button aria-label="Previous slider card" class="arrow left">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"
+                                fill="none"
+                        ></path>
+                    </svg>
+                </button>
+                <button aria-label="Next slider card" class="arrow right">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path
+                                d="M11.611,
+                            10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,
+                            0.012-1.105c0.309-0.304,
+                            0.803-0.293,
+                            1.105,
+                            0.012l5.306,
+                            5.433c0.304,
+                            0.31,
+                            0.296,
+                            0.805-0.012,
+                            1.105L7.83,
+                            15.928c-0.152,
+                            0.148-0.35,
+                            0.223-0.547,
+                            0.223c-0.203,
+                            0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,
+                            0.012-1.104L11.611,
+                            10.049z" fill="none"
+                        ></path>
+                    </svg>
+                </button>
+            </fieldset>
+            <ul>
+                <li aria-roledescription="slide">
+                    <article class="card" id="html">
+                        <a href="./pages/fields/computer-science/paths/front-end-development/html/html.html">
+                            <img
+                                    alt="HTML illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-1024x1024.png"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-1024x1024.png 1024w,
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-720x720.png 720w,
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-480x480.png 480w,
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-360x360.png 360w,
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-240x240.png 240w,
+                                        ./assets/images/rasters/fields/computer-science/paths/front-end-development/html/html-150x150.png 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/computer-science/paths/front-end-development/html/html.html">HTML</a>
+                        </h3>
+                        <p class="description">
+                            Discover how to write semantic HTML and enrich text content with the appropriate
+                            tags and attributes to transform it to a professional web document ready for the
+                            world-wide web and the popular search engines.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/computer-science/paths/front-end-development/html/html.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="intro-to-financial-economics">
+                        <a href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">
+                            <img
+                                    alt="Introduction to financial economics illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/economics/paths/financial-economics/intro-to-financial-economics/financial-economics-intro-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">Introduction
+                                to financial economics</a>
+                        </h3>
+                        <p class="description">
+                            Underlying all of financial economics are the concepts of present value and expectation.
+                            Calculating their present value allows the decision maker to aggregate the cashflows
+                            to be produced by the asset in the future, to a single value at the date in question,
+                            and to thus more readily compare two opportunities; this concept is, therefore, the
+                            starting point for financial decision-making.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="slide">
+                    <article class="card" id="trigonometry">
+                        <a href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">
+                            <img
+                                    alt="Trigonometry illustration"
+                                    height="1024"
+                                    sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(80vw - 2em)
+                                  "
+                                    src="./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-1024x1024.jpg"
+                                    srcset=
+                                            "
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-1024x1024.jpg 1024w,
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-720x720.jpg 720w,
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-480x480.jpg 480w,
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-360x360.jpg 360w,
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-240x240.jpg 240w,
+                                        ./assets/images/rasters/fields/mathematics/paths/algebra/trigonometry/trigonometry-150x150.jpg 150w
+                                    "
+                                    width="1024"
+                            />
+                        </a>
+                        <h3 class="heading">
+                            <a href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">Trigonometry</a>
+                        </h3>
+                        <p class="description">
+                            This course focuses on trigonometric principles as an extension of algebraic and
+                            geometrical concepts. Students will study angles, arcs, the unit circle, right
+                            triangle trigonometry, the six trig functions, inverse functions, fundamental trig
+                            identities, verifying trig identities, solving trig equations, the law of sines,
+                            the law of cosines, vectors, complex numbers, and polar coordinates.
+                        </p>
+                        <div class="secondary-button-wrapper">
+                            <a class="btn secondary-button"
+                               href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">
+                                Check it out
+                            </a>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </article>
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
+            <span class="link-3d-wrapper">
+                <em class="link-3d-front">Explore courses →</em>
+                <em class="link-3d-back">Explore courses →</em>
+            </span>
+        </a>
+    </section>
+    <!-- This section is a promo for all the good outcomes e-learning offers.
+        Apart from that this section uses many of the tags know by the lectures, so 
+        we found out this was a good place to use some.-->
+    <section class="outcomes">
+        <div class="background-wrapper">
+            <img alt="Career outcomes illustration" class="no-mobile" src="./assets/images/rasters/outcomes.png">
+            <div class="content-wrapper">
+                <h2 class="heading">The outcomes of our students speak for themselves</h2>
+                <p class="description">
+                    <!-- We don't use strong for the austhetics here, we use it to give emphasis to it's child.-->
+                    <strong>93% of people</strong> learning for professional development report career benefits
+                    like getting a promotion, a raise, or starting a new career.
+                </p>
+                <p class="report description">
+                    <em>- Lecture book</em>
+                    <!-- Cite is used to refer on the words of someone else!-->
+                    <cite>
+                        <a href="https://en.wikipedia.org/wiki/Report" rel="noreferrer noopener" target="_blank"> report
+                            (
+                            <!-- We use the tag time too so we can descriminate the time from a plane text.-->
+                            <time datetime="03-2021">March 2021</time>
+                            )
+                        </a>
+                    </cite>
+                </p>
+                <a aria-label="Join for free" class="btn cta-link" href="./pages/signup.html">
+                    <span class="link-3d-wrapper">
+                        <em class="link-3d-front">Join for free →</em>
+                        <em class="link-3d-back">Join for free →</em>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Here we give some of the people's excellent experiences. -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="heading">What people say about us</h2>
+        <!-- All of them are wrapped from an article for semantic consistency and css styling.-->
+        <article
+                aria-label="Grid of testimonials"
+                aria-roledescription="Grid"
+                role="region"
+        >
+            <!-- All of them are just list items.-->
+            <ul>
+                <li aria-roledescription="testimonial">
+                    <article class="testimonial" id="testimonial-1">
+                        <img
+                                alt="Picture of the person of the testimonial"
+                                height="360"
+                                sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(75vw - 2em)
+                                  "
+                                src="./assets/images/rasters/testimonials/person-1-360x360.jpg"
+                                srcset=
+                                        "
+                                        ./assets/images/rasters/testimonials/person-1-360x360.jpg 360w,
+                                        ./assets/images/rasters/testimonials/person-1-240x240.jpg 240w,
+                                        ./assets/images/rasters/testimonials/person-1-150x150.jpg 150w
+                                    "
+                                width="360"
+                        />
+                        <div class="content-wrapper">
+                            <h3 class="heading">
+                                <!-- We use the tag q too so we can mark a small quotation.-->
+                                <!-- We also use i for emphasis on some kind of text.-->
+                                <q>Without <strong>Lecture Book</strong> I wouldn't have landed my dream job at <i>Google</i></q>
+                            </h3>
+                            <ul class="info">
+                                <li class="name">Joshua Rivera</li>
+                                <li class="job">Node.js developer</li>
+                                <li class="country">USA</li>
+                            </ul>
+                            <!-- Blockquote used too, for marking the opinion of someone else.-->
+                            <blockquote class="description">
+                                I went from a self-taught, no degree developer to a software engineer at <i>Google</i>
+                                with only 115 hours of studying the computer science track of <em>Lecture Book</em>.
+                                I could not be any happier with how this has turned out. <em>Lecture Book</em> has
+                                actually <strong>changed my life</strong> with this opportunity.
+                            </blockquote>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="testimonial">
+                    <article class="testimonial" id="testimonial-2">
+                        <img
+                                alt="Picture of the person of the testimonial"
+                                height="360"
+                                sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    ,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(75vw - 2em)
+                                  "
+                                src="./assets/images/rasters/testimonials/person-2-360x360.jpg"
+                                srcset=
+                                        "
+                                        ./assets/images/rasters/testimonials/person-2-360x360.jpg 360w,
+                                        ./assets/images/rasters/testimonials/person-2-240x240.jpg 240w,
+                                        ./assets/images/rasters/testimonials/person-2-150x150.jpg 150w
+                                    "
+                                width="360"
+                        />
+                        <div class="content-wrapper">
+                            <h3 class="heading">
+                                <q>I'm very thrilled with <strong>Lecture Book</strong></q>
+                            </h3>
+                            <ul class="info">
+                                <li class="name">Hjördís Wikström</li>
+                                <li class="job">Portfolio management expert</li>
+                                <li class="country">Sweden</li>
+                            </ul>
+                            <blockquote class="description">
+                                <strong>Lecture Book</strong> got me from zero to ready in 6 weeks. While I bought other
+                                learning material, <strong>Lecture Book</strong> was easily the best one because of its
+                                problem
+                                curation, whiteboard videos, optimized solutions, and edge-case testing. Everything I
+                                needed
+                                for a real learning experience!
+                            </blockquote>
+                        </div>
+                    </article>
+                </li>
+                <li aria-roledescription="testimonial">
+                    <article class="testimonial" id="testimonial-3">
+                        <img
+                                alt="Picture of the person of the testimonial"
+                                height="360"
+                                sizes="
+                                    (min-width: 90em) 17.5vw,
+                                    (min-width: 67.5em) 25vw,
+                                    (min-width: 48em) 35vw,
+                                    (min-width: 30em) calc(67.5vw - 2em),
+                                    calc(75vw - 2em)
+                                  "
+                                src="./assets/images/rasters/testimonials/person-3-360x360.jpg"
+                                srcset=
+                                        "
+                                        ./assets/images/rasters/testimonials/person-3-360x360.jpg 360w,
+                                        ./assets/images/rasters/testimonials/person-3-240x240.jpg 240w,
+                                        ./assets/images/rasters/testimonials/person-3-150x150.jpg 150w
+                                    "
+                                width="360"
+                        />
+                        <div class="content-wrapper">
+                            <h3 class="heading">
+                                <q>From cruise ship worker to forensics chemist in just 5 months</q>
+                            </h3>
+                            <ul class="info">
+                                <li class="name">Siyabonga Mmeremikwu</li>
+                                <li class="job">Forensics chemist</li>
+                                <li class="country">Chad</li>
+                            </ul>
+                            <blockquote class="description">
+                                I worked as a cleaner at a cruise ship when COVID-19 hit, and crushed the industry. So
+                                in
+                                <time datetime="06-2020">July 2020</time>
+                                , I started learning <em>forensics chemistry</em>
+                                on <strong>Lecture Book</strong>. Five months later, I got a job as a forensics chemist
+                                in
+                                Chad's capital police station. <strong>Lecture Book has changed my life!</strong>
+                            </blockquote>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </article>
+    </section>
+</main>
+<footer>
+    <div class="link-wrapper">
+        <div>
+            <article class="links">
+                <h2 class="heading">Useful links</h2>
+                <ul class="useful-links">
+                    <li><a href="./pages/signup.html">Join for free</a></li>
+                    <li><a href="./pages/contact.html">Contact us</a></li>
+                    <li><a href="./pages/about.html">About us</a></li>
+                    <li><a href="./pages/sitemap.html">Sitemap</a></li>
+                </ul>
+            </article>
+            <article class="links">
+                <h2 class="heading">Explore our content</h2>
+                <ul class="content">
+                    <li><a href="./pages/fields/computer-science/computer-science.html">Computer Science</a></li>
+                    <li><a href="./pages/fields/chemistry/chemistry.html">Chemistry</a></li>
+                    <li><a href="./pages/fields/economics/economics.html">Economics</a></li>
+                    <li><a href="./pages/fields/mathematics/mathematics.html">Mathematics</a></li>
+                </ul>
+            </article>
+        </div>
+    </div>
+    <article>
+        <ul class="social-media">
+            <li>
+                <a class="btn" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M10,0.5c-5.247,0-9.5,4.253-9.5,9.5c0,5.247,4.253,9.5,9.5,9.5c5.247
+                                                    ,0,9.5-4.253,9.5-9.5C19.5,4.753,15.247,0.5,10,0.5 M10,18.637c-4.77,
+                                                    0-8.636-3.867-8.636-8.637S5.23,1.364,10,1.364S18.637,5.23,18.637,10S14.77,
+                                                    18.637,10,18.637 M10.858,7.949c0-0.349,0.036-0.536,0.573-0.536h0.719v-1.3H11c-1.38,
+                                                    0-1.866,0.65-1.866,1.743v0.845h-0.86V10h0.86v3.887h1.723V10h1.149l0.152-1.299h-1.302L10.858,7.949z"
+                              fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="btn" href="https://www.instagram.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M9.969,0.594c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,
+                                                    9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.375,4.805,15.164,0.594,9.969,
+                                                    0.594 M9.969,18.552c-4.723,0-8.551-3.829-8.551-8.552s3.829-8.551,8.551-8.551S18.521,
+                                                    5.277,18.521,10S14.691,18.552,9.969,18.552 M12.534,5.724H7.403c-0.944,0-1.71,
+                                                    0.766-1.71,1.71v5.131c0,0.944,0.766,1.71,1.71,1.71h5.131c0.944,0,1.71-0.766,
+                                                    1.71-1.71V7.435C14.244,6.49,13.479,5.724,12.534,5.724M11.679,
+                                                    7.007h1.283V8.29h-1.283V7.007z M9.969,8.29c0.944,0,1.71,0.766,1.71,1.71s-0.766,
+                                                    1.71-1.71,1.71s-1.71-0.766-1.71-1.71S9.024,8.29,9.969,8.29 M13.39,12.565c0,0.472-0.384,0.854-0.855,
+                                                    0.854H7.403c-0.472,0-0.855-0.383-0.855-0.854V9.573h0.898C7.423,9.712,7.403,9.854,7.403,10c0,1.417,
+                                                    1.149,2.565,2.565,2.565c1.416,0,2.565-1.148,2.565-2.565c0-0.146-0.02-0.288-0.043-0.427h0.898V12.565z"
+                              fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="btn" href="https://twitter.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M14.467,6.707c-0.34,0.198-0.715,0.342-1.115,0.419c-0.318-0.335-0.775-0.545-1.279-0.545c-0.969
+                                                    ,0-1.754,0.773-1.754,1.727c0,0.135,0.015,0.267,0.045,0.394C8.905,8.628,7.612,7.94,6.747,
+                                                    6.896C6.596,7.151,6.509,7.448,6.509,7.764c0,0.599,0.31,1.128,0.78,1.438C7.002,9.192,6.732,9.115,
+                                                    6.495,8.985c0,0.007,0,0.014,0,0.021c0,0.837,0.605,1.535,1.408,1.694c-0.147,0.04-0.302,0.06-0.462,
+                                                    0.06c-0.113,0-0.223-0.011-0.33-0.031c0.223,0.687,0.871,1.186,1.638,1.199c-0.6,0.464-1.356,
+                                                    0.739-2.179,0.739c-0.142,0-0.281-0.007-0.418-0.023c0.777,0.489,1.699,0.775,2.689,0.775c3.228,0,
+                                                    4.991-2.63,4.991-4.913c0-0.075-0.002-0.149-0.004-0.223c0.342-0.244,0.639-0.547,0.875-0.894c-0.316,
+                                                    0.137-0.652,0.23-1.008,0.272C14.057,7.448,14.336,7.11,14.467,6.707 M10,0.594c-5.195,0-9.406,
+                                                    4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.196,0,9.407-4.211,9.407-9.406C19.406,4.805,
+                                                    15.195,0.594,10,0.594 M10,18.552c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.449,10,1.449c4.723,0,8.551,
+                                                    3.829,8.551,8.551S14.723,18.552,10,18.552" fill="none">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </article>
+    <article class="copyright">
+        <h3>Made with </h3><span aria-label="love" id="icon-container" title="love"></span>
+        <div class="license-container">
+            <small>, licensed under the <abbr title="Michigan Institute of Technology">MIT</abbr> license</small>
+        </div>
+    </article>
+</footer>
+<!-- These are all the scripts we use for the page.-->
+<script src="./scripts/index.js" type="module"></script><!-- This one is for the pop up menu.-->
+<script src="./scripts/header-offset.js"></script>
+<!-- This one helps calculate the padding need for the hero section.-->
+<!-- The last one is for the effect of the heart.
+    The heart is a lottie, we saw what it was and made one here. 
+    An svg was the easy go-to option but lotties have animations based on a given .json file.
+    The json file has basicaly mathematic equations and data.-->
+<script type="module">
+    import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
+
+    const container = document.getElementById('icon-container');
+    let state = 'play';
+
+    const animation = lottieWeb.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById('icon-container'), // required
+        path: './assets/heart.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation.goToAndStop(0, true);
+
+    container.addEventListener('click', () => {
+        if (state === 'play') {
+            animation.playSegments([0, 10], true);
+            state = 'pause';
+        } else {
+            animation.playSegments([10, 0], true);
+            state = 'play';
+        }
+    });
+
+</script>
+</body>
+</html>
+<!-- 
+    EXTRA features, languages and effort to be noted : 
+    We used git to circulate the code amongst the members of our team. 
+    We also used a .json file to organize all of our context.
+    Svg's and images were made or taken by external tools.
+    The images are copyright free and were taken by a
+    subscription based site that one of our members owns.
+    And many, many more can be found in every each of our pages.
+    Thank you for checking out our extra effort!!!
+-->
