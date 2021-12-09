@@ -20,7 +20,6 @@ section {
 }
 
 .hero-section .no-mobile {
-    max-width: 420px;
     border: var(--border-width) solid var(--brand-color);
     border-radius: 50px;
 }

@@ -68,7 +68,7 @@ header {
 
 .branding .logo-wrapper {
     border-radius: 50%;
-    width: min(20vmin, 100px);
+    width: calc(10vh + (320 - 100) * ((100vw - 320px) / (7680 - 320 - 16)));
 }
 
 .branding .logo-wrapper:hover::after {

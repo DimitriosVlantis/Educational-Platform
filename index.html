@@ -31,7 +31,9 @@
 <body>
 <header>
     <div class="branding">
-        <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/> <!-- Our custom logo.-->
+        <a href="index.html" class="logo-wrapper">
+            <img alt="Logo" class="logo" src="./assets/images/graphics/logo/logo.svg"/> <!-- Our custom logo.-->
+        </a>
         <h1>Lecture Book</h1> <!-- Our name.-->
     </div>
     <div class="menu"> <!-- This is the pop up menu. It appears once you have pressed the link top right.-->
@@ -59,25 +61,30 @@
             <!-- A list is the best way to implement it.-->
             <ul aria-labelledby="menu-toggle" id="primary-menu" role="menu">
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Home</a>
+                    <a href="index.html" role="menuitem" tabindex="-1">Home</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Fields</a>
+                    <a href="./pages/fields/computer-science/computer-science.html" role="menuitem" tabindex="-1">
+                        Computer Science
+                    </a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Paths</a>
+                    <a href="./pages/fields/mathematics/mathematics.html" role="menuitem" tabindex="-1">Mathematics</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Courses</a>
+                    <a href="./pages/fields/chemistry/chemistry.html" role="menuitem" tabindex="-1">Chemistry</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">About Us</a>
+                    <a href="./pages/fields/economics/economics.html" role="menuitem" tabindex="-1">Economics</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Contact Us</a>
+                    <a href="./pages/about.html" role="menuitem" tabindex="-1">About Us</a>
                 </li>
                 <li role="none">
-                    <a href="#" role="menuitem" tabindex="-1">Log In/Sign Up</a>
+                    <a href="./pages/contact.html" role="menuitem" tabindex="-1">Contact Us</a>
+                </li>
+                <li role="none">
+                    <a href="./pages/signup.html" role="menuitem" tabindex="-1">Log In/Sign Up</a>
                 </li>
             </ul>
         </nav>
@@ -98,7 +105,7 @@
                 Will you take action?
             </p>
             <!-- This is the 3d button. For starters is has facades so to inline elements like em will do.-->
-            <a aria-label="Join for free" class="btn cta-link" href="#">
+            <a aria-label="Join for free" class="btn cta-link" href="./pages/signup.html">
                 <!-- They are wrapped with a span because there is no meaning on it
                     and we want it to be inline-->
                 <span class="link-3d-wrapper">
@@ -295,7 +302,7 @@
                 <li aria-roledescription="slide">
                     <article class="card" id="computer-science">
                         <!-- A link to the appriate .html file of field.-->
-                        <a href="#">
+                        <a href="./pages/fields/computer-science/computer-science.html">
                             <!-- Just as before more options are given into the srcset 
                                 for device scalability.-->
                             <img
@@ -322,7 +329,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Computer Science</a>
+                            <a href="./pages/fields/computer-science/computer-science.html">Computer Science</a>
                         </h3>
                         <p class="description">
                             The most important aspect of computer science is problem-solving, an essential
@@ -332,7 +339,7 @@
                         </p>
                         <!-- This is just a wrapper for stylling purposes.-->
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/computer-science/computer-science.html">
                                 Check it out
                             </a>
                         </div>
@@ -340,7 +347,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="economics">
-                        <a href="#">
+                        <a href="./pages/fields/economics/economics.html">
                             <img
                                     alt="Economics illustration"
                                     height="1024"
@@ -365,7 +372,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Economics</a>
+                            <a href="./pages/fields/economics/economics.html">Economics</a>
                         </h3>
                         <p class="description">
                             Studying economics can prepare you not only for careers in the financial services
@@ -374,7 +381,7 @@
                             and financial planning.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/economics/economics.html">
                                 Check it out
                             </a>
                         </div>
@@ -382,7 +389,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="mathematics">
-                        <a href="#">
+                        <a href="./pages/fields/mathematics/mathematics.html">
                             <img
                                     alt="Mathematics illustration"
                                     height="1024"
@@ -407,7 +414,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Mathematics</a>
+                            <a href="./pages/fields/mathematics/mathematics.html">Mathematics</a>
                         </h3>
                         <p class="description">
                             Math teaches us to think logically; to identify and state the problem clearly;
@@ -418,7 +425,7 @@
                             you play a part in solving some of the world's many complex problems.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/mathematics/mathematics.html">
                                 Check it out
                             </a>
                         </div>
@@ -426,7 +433,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="chemistry">
-                        <a href="#">
+                        <a href="./pages/fields/chemistry/chemistry.html">
                             <img
                                     alt="Chemistry illustration"
                                     height="1024"
@@ -451,7 +458,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Chemistry</a>
+                            <a href="./pages/fields/chemistry/chemistry.html">Chemistry</a>
                         </h3>
                         <p class="description">
                             Chemistry is the science and study of matter, including its properties, composition
@@ -460,7 +467,7 @@
                             components of Chemistry.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/chemistry/chemistry.html">
                                 Check it out
                             </a>
                         </div>
@@ -468,7 +475,7 @@
                 </li>
             </ul>
         </article>
-        <a aria-label="Join for free" class="btn cta-link" href="#">
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore fields →</em>
                 <em class="link-3d-back">Explore fields →</em>
@@ -533,7 +540,7 @@
             <ul>
                 <li aria-roledescription="slide">
                     <article class="card" id="programming">
-                        <a href="#">
+                        <a href="./pages/fields/computer-science/paths/programming/programming.html">
                             <img
                                     alt="Programming illustration"
                                     height="1024"
@@ -558,7 +565,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Programming</a>
+                            <a href="./pages/fields/computer-science/paths/programming/programming.html">Programming</a>
                         </h3>
                         <p class="description">
                             Learn all about how to become an expert computer programmer and write and test code
@@ -566,7 +573,7 @@
                             different programming languages and programming paradigms.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/computer-science/paths/programming/programming.html">
                                 Check it out
                             </a>
                         </div>
@@ -574,7 +581,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="bio-chemistry">
-                        <a href="#">
+                        <a href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">
                             <img
                                     alt="Biochemistry illustration"
                                     height="1024"
@@ -599,7 +606,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Biochemistry</a>
+                            <a href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">Biochemistry</a>
                         </h3>
                         <p class="description">
                             Biochemistry is the application of chemistry to the study of biological processes at
@@ -608,7 +615,7 @@
                             biology to investigate the chemistry of living systems.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/chemistry/paths/biochemistry/biochemistry.html">
                                 Check it out
                             </a>
                         </div>
@@ -616,7 +623,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="calculus">
-                        <a href="#">
+                        <a href="./pages/fields/mathematics/paths/calculus/calculus.html">
                             <img
                                     alt="Calculus illustration"
                                     height="1024"
@@ -641,7 +648,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Calculus</a>
+                            <a href="./pages/fields/mathematics/paths/calculus/calculus.html">Calculus</a>
                         </h3>
                         <p class="description">
                             Calculus, originally called infinitesimal calculus or
@@ -650,7 +657,7 @@
                             generalizations of arithmetic operations.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/mathematics/paths/calculus/calculus.html">
                                 Check it out
                             </a>
                         </div>
@@ -658,7 +665,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="macroeconomics">
-                        <a href="#">
+                        <a href="./pages/fields/economics/paths/macro-economics/macro-economics.html">
                             <img
                                     alt="Macroeconomics illustration"
                                     height="1024"
@@ -683,7 +690,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Macroeconomics</a>
+                            <a href="./pages/fields/economics/paths/macro-economics/macro-economics.html">Macroeconomics</a>
                         </h3>
                         <p class="description">
                             Macroeconomics is a branch of economics that studies how an overall economy,the
@@ -692,7 +699,7 @@
                             growth, national income, gross domestic product (GDP), and changes in unemployment.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/economics/paths/macro-economics/macro-economics.html">
                                 Check it out
                             </a>
                         </div>
@@ -700,7 +707,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="backend">
-                        <a href="#">
+                        <a href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">
                             <img
                                     alt="Backend development illustration"
                                     height="1024"
@@ -725,7 +732,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Backend Development</a>
+                            <a href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">Backend Development</a>
                         </h3>
                         <p class="description">
                             Learn all about back-end development and how to develop applications and APIs that
@@ -733,7 +740,7 @@
                             use this knowledge to become an expert problem-solver.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/computer-science/paths/back-end-development/backend-development.html">
                                 Check it out
                             </a>
                         </div>
@@ -741,7 +748,7 @@
                 </li>
             </ul>
         </article>
-        <a aria-label="Join for free" class="btn cta-link" href="#">
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore courses →</em>
                 <em class="link-3d-back">Explore courses →</em>
@@ -806,7 +813,7 @@
             <ul>
                 <li aria-roledescription="slide">
                     <article class="card" id="html">
-                        <a href="#">
+                        <a href="./pages/fields/computer-science/paths/front-end-development/html/html.html">
                             <img
                                     alt="HTML illustration"
                                     height="1024"
@@ -831,7 +838,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">HTML</a>
+                            <a href="./pages/fields/computer-science/paths/front-end-development/html/html.html">HTML</a>
                         </h3>
                         <p class="description">
                             Discover how to write semantic HTML and enrich text content with the appropriate
@@ -839,7 +846,7 @@
                             world-wide web and the popular search engines.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/computer-science/paths/front-end-development/html/html.html">
                                 Check it out
                             </a>
                         </div>
@@ -847,7 +854,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="intro-to-financial-economics">
-                        <a href="#">
+                        <a href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">
                             <img
                                     alt="Introduction to financial economics illustration"
                                     height="1024"
@@ -872,7 +879,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Introduction to financial economics</a>
+                            <a href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">Introduction to financial economics</a>
                         </h3>
                         <p class="description">
                             Underlying all of financial economics are the concepts of present value and expectation.
@@ -882,7 +889,7 @@
                             starting point for financial decision-making.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/economics/paths/financial-economics/intro-to-financial-economics/intro-to-financial-economics.html">
                                 Check it out
                             </a>
                         </div>
@@ -890,7 +897,7 @@
                 </li>
                 <li aria-roledescription="slide">
                     <article class="card" id="trigonometry">
-                        <a href="#">
+                        <a href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">
                             <img
                                     alt="Trigonometry illustration"
                                     height="1024"
@@ -915,7 +922,7 @@
                             />
                         </a>
                         <h3 class="heading">
-                            <a href="#">Trigonometry</a>
+                            <a href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">Trigonometry</a>
                         </h3>
                         <p class="description">
                             This course focuses on trigonometric principles as an extension of algebraic and
@@ -925,7 +932,7 @@
                             the law of cosines, vectors, complex numbers, and polar coordinates.
                         </p>
                         <div class="secondary-button-wrapper">
-                            <a class="btn secondary-button" href="#">
+                            <a class="btn secondary-button" href="./pages/fields/mathematics/paths/algebra/trigonometry/trigonometry.html">
                                 Check it out
                             </a>
                         </div>
@@ -933,7 +940,7 @@
                 </li>
             </ul>
         </article>
-        <a aria-label="Join for free" class="btn cta-link" href="#">
+        <a aria-label="Join for free" class="btn cta-link" href="./pages/fields/fields.html">
             <span class="link-3d-wrapper">
                 <em class="link-3d-front">Explore courses →</em>
                 <em class="link-3d-back">Explore courses →</em>
@@ -957,14 +964,14 @@
                     <em>- Lecture book</em>
                     <!-- Cite is used to refer on the words of someone else!-->
                     <cite>
-                        <a href="#"> report (
+                        <a href="https://en.wikipedia.org/wiki/Report" target="_blank" rel="noreferrer noopener"> report (
                             <!-- We use the tag time too so we can descriminate the time from a plane text.-->
                             <time datetime="03-2021">March 2021</time>
                             )
                         </a>
                     </cite>
                 </p>
-                <a aria-label="Join for free" class="btn cta-link" href="#">
+                <a aria-label="Join for free" class="btn cta-link" href="./pages/signup.html">
                     <span class="link-3d-wrapper">
                         <em class="link-3d-front">Join for free →</em>
                         <em class="link-3d-back">Join for free →</em>
@@ -1118,27 +1125,25 @@
         <div>
             <article class="links">
                 <h2 class="heading">Useful links</h2>
-                <!-- Just a list with further options.-->
                 <ul class="useful-links">
-                    <li><a href="#">Join for free</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="./pages/signup.html">Join for free</a></li>
+                    <li><a href="./pages/contact.html">Contact us</a></li>
+                    <li><a href="./pages/about.html">About us</a></li>
+                    <li><a href="./pages/sitemap.html">Sitemap</a></li>
                 </ul>
             </article>
             <article class="links">
                 <h2 class="heading">Explore our content</h2>
                 <ul class="content">
-                    <li><a href="#">Fields</a></li>
-                    <li><a href="#">Paths</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Free Courses</a></li>
+                    <li><a href="./pages/fields/computer-science/computer-science.html">Computer Science</a></li>
+                    <li><a href="./pages/fields/chemistry/chemistry.html">Chemistry</a></li>
+                    <li><a href="./pages/fields/economics/economics.html">Economics</a></li>
+                    <li><a href="./pages/fields/mathematics/mathematics.html">Mathematics</a></li>
                 </ul>
             </article>
         </div>
     </div>
     <article>
-        <!-- This list is used for organization of the media svg's.-->
         <ul class="social-media">
             <li>
                 <a class="btn" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
@@ -1191,12 +1196,9 @@
             </li>
         </ul>
     </article>
-    <!-- A copyright section for our content.-->
     <article class="copyright">
         <h3>Made with </h3><span aria-label="love" id="icon-container" title="love"></span>
         <div class="license-container">
-            <!-- Here we use small and abbr. Small for something of little essence and abbr for
-                an abbreviation such as MIT.-->
             <small>, licensed under the <abbr title="Michigan Institute of Technology">MIT</abbr> license</small>
         </div>
     </article>
