@@ -159,7 +159,7 @@ body main a.btn.secondary-button:active {
 }
 
 .no-mobile {
-    min-width: 400px;
+    min-width: 45vh;
     max-width: min(1024px, 25vw);
     width: 75%;
 }

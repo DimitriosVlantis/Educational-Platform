@@ -99,19 +99,19 @@ body.has-aside {
 
     body.has-aside main {
         grid-template:
-                "hero hero hero" 100vh
-                "module module ." minmax(100vh, max-content)
+            "hero hero hero" 125vh
+            "module module ." minmax(125vh, max-content)
                 / 35% 25% 30fr;
     }
 
     body.has-aside {
         grid-template-columns: 35% 25% 30fr;
-        grid-template-rows: 100vh minmax(100vh, max-content) 0;
+        grid-template-rows: 125vh minmax(125vh, max-content) 0;
         grid-template-areas:
-        "main main main"
-        "main main main"
-        ". . aside"
-        "foot foot foot";
+            "main main main"
+            "main main main"
+            ". . aside"
+            "foot foot foot";
     }
 }
 
